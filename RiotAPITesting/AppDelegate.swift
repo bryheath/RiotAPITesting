@@ -6,12 +6,12 @@
 //
 
 import UIKit
-
+import LeagueAPI
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
-
+//    let league = LeagueAPI(APIToken: "RGAPI-20b1ad21-3c0e-46c0-91d1-889aaee01953")
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
