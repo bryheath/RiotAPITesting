@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		BE1B794126A3709E00AB3A46 /* GameListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1B794026A3709E00AB3A46 /* GameListTableViewController.swift */; };
+		BE1B794426A37BD300AB3A46 /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1B794326A37BD300AB3A46 /* GameTableViewCell.swift */; };
+		BE1B794726A383C100AB3A46 /* MatchDataList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1B794626A383C100AB3A46 /* MatchDataList.swift */; };
+		BE1B794926A3843A00AB3A46 /* MatchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1B794826A3843A00AB3A46 /* MatchData.swift */; };
 		BE711C0A269E7AC400CA57CE /* LeagueAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE711C09269E7AC400CA57CE /* LeagueAPI.framework */; };
 		BE711C0B269E7AC800CA57CE /* LeagueAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE711C09269E7AC400CA57CE /* LeagueAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BE711C0D269E878A00CA57CE /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE711C0C269E878A00CA57CE /* File.swift */; };
@@ -18,6 +21,11 @@
 		BEC1E4982698E9EA00BC3F62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC1E4962698E9EA00BC3F62 /* Main.storyboard */; };
 		BEC1E49A2698E9EB00BC3F62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEC1E4992698E9EB00BC3F62 /* Assets.xcassets */; };
 		BEC1E49D2698E9EB00BC3F62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC1E49B2698E9EB00BC3F62 /* LaunchScreen.storyboard */; };
+		BEEA302526A7C20F009E3C78 /* RiotAPITesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEA302426A7C20F009E3C78 /* RiotAPITesting.swift */; };
+		BEEA303726A7D93D009E3C78 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEA302726A7D93D009E3C78 /* UIImageViewExtension.swift */; };
+		BEEA303826A7D93D009E3C78 /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEA302826A7D93D009E3C78 /* UITextViewExtension.swift */; };
+		BEEA303926A7D93D009E3C78 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEA302926A7D93D009E3C78 /* UILabelExtension.swift */; };
+		BEEA304526A7D93D009E3C78 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEA303626A7D93D009E3C78 /* UITableViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,6 +44,9 @@
 
 /* Begin PBXFileReference section */
 		BE1B794026A3709E00AB3A46 /* GameListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListTableViewController.swift; sourceTree = "<group>"; };
+		BE1B794326A37BD300AB3A46 /* GameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
+		BE1B794626A383C100AB3A46 /* MatchDataList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDataList.swift; sourceTree = "<group>"; };
+		BE1B794826A3843A00AB3A46 /* MatchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchData.swift; sourceTree = "<group>"; };
 		BE711C09269E7AC400CA57CE /* LeagueAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LeagueAPI.framework; sourceTree = "<group>"; };
 		BE711C0C269E878A00CA57CE /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		BE711C0E269E883F00CA57CE /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -47,6 +58,11 @@
 		BEC1E4992698E9EB00BC3F62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEC1E49C2698E9EB00BC3F62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEC1E49E2698E9EB00BC3F62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEEA302426A7C20F009E3C78 /* RiotAPITesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiotAPITesting.swift; sourceTree = "<group>"; };
+		BEEA302726A7D93D009E3C78 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		BEEA302826A7D93D009E3C78 /* UITextViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewExtension.swift; sourceTree = "<group>"; };
+		BEEA302926A7D93D009E3C78 /* UILabelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
+		BEEA303626A7D93D009E3C78 /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +85,23 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		BE1B794226A37BB500AB3A46 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BE1B794326A37BD300AB3A46 /* GameTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BE1B794526A3836800AB3A46 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BE1B794626A383C100AB3A46 /* MatchDataList.swift */,
+				BE1B794826A3843A00AB3A46 /* MatchData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		BEC1E4842698E9EA00BC3F62 = {
 			isa = PBXGroup;
 			children = (
@@ -88,19 +121,34 @@
 		BEC1E48F2698E9EA00BC3F62 /* RiotAPITesting */ = {
 			isa = PBXGroup;
 			children = (
+				BE1B794526A3836800AB3A46 /* Model */,
+				BE1B794226A37BB500AB3A46 /* Views */,
 				BE1B793F26A3707900AB3A46 /* View Controllers */,
 				BEC1E4902698E9EA00BC3F62 /* AppDelegate.swift */,
 				BEC1E4922698E9EA00BC3F62 /* SceneDelegate.swift */,
 				BEC1E4942698E9EA00BC3F62 /* ViewController.swift */,
 				BE711C0E269E883F00CA57CE /* Player.swift */,
 				BE711C0C269E878A00CA57CE /* File.swift */,
+				BEEA302626A7D93D009E3C78 /* UIElements */,
 				BEC1E4962698E9EA00BC3F62 /* Main.storyboard */,
 				BEC1E4992698E9EB00BC3F62 /* Assets.xcassets */,
 				BEC1E49B2698E9EB00BC3F62 /* LaunchScreen.storyboard */,
 				BEC1E49E2698E9EB00BC3F62 /* Info.plist */,
 				BE711C09269E7AC400CA57CE /* LeagueAPI.framework */,
+				BEEA302426A7C20F009E3C78 /* RiotAPITesting.swift */,
 			);
 			path = RiotAPITesting;
+			sourceTree = "<group>";
+		};
+		BEEA302626A7D93D009E3C78 /* UIElements */ = {
+			isa = PBXGroup;
+			children = (
+				BEEA302726A7D93D009E3C78 /* UIImageViewExtension.swift */,
+				BEEA302826A7D93D009E3C78 /* UITextViewExtension.swift */,
+				BEEA302926A7D93D009E3C78 /* UILabelExtension.swift */,
+				BEEA303626A7D93D009E3C78 /* UITableViewExtension.swift */,
+			);
+			path = UIElements;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,12 +222,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE1B794426A37BD300AB3A46 /* GameTableViewCell.swift in Sources */,
+				BEEA302526A7C20F009E3C78 /* RiotAPITesting.swift in Sources */,
+				BE1B794726A383C100AB3A46 /* MatchDataList.swift in Sources */,
+				BEEA303826A7D93D009E3C78 /* UITextViewExtension.swift in Sources */,
+				BEEA304526A7D93D009E3C78 /* UITableViewExtension.swift in Sources */,
 				BEC1E4952698E9EA00BC3F62 /* ViewController.swift in Sources */,
+				BE1B794926A3843A00AB3A46 /* MatchData.swift in Sources */,
 				BE711C0D269E878A00CA57CE /* File.swift in Sources */,
+				BEEA303726A7D93D009E3C78 /* UIImageViewExtension.swift in Sources */,
 				BEC1E4912698E9EA00BC3F62 /* AppDelegate.swift in Sources */,
 				BE711C0F269E883F00CA57CE /* Player.swift in Sources */,
 				BEC1E4932698E9EA00BC3F62 /* SceneDelegate.swift in Sources */,
 				BE1B794126A3709E00AB3A46 /* GameListTableViewController.swift in Sources */,
+				BEEA303926A7D93D009E3C78 /* UILabelExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

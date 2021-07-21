@@ -9,11 +9,46 @@ import UIKit
 import LeagueAPI
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+//    let league = LeagueAPI(APIToken: "RGAPI-70c99cc7-efbf-402d-adfe-35d54578ed6c") //issued 7-17-21 255pm
+//    var accountID:AccountId = AccountId("U3JswvnYvMkTywOokmYUpAi0i0dLlW-LKY8m6yaKj0dWtPw")
+    //var accountID:AccountId = AccountId("U3JswvnYvMkTywOokmYUpAi0i0dLlW-LKY8m6yaKj0dWtPw")
+    var summoner: Summoner?
+    var matchList: MatchList?
+    var region: Region?
+//    var championsDetailArray = [ChampionDetails]()
+   
+    
 
 //    let league = LeagueAPI(APIToken: "RGAPI-20b1ad21-3c0e-46c0-91d1-889aaee01953")
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+       league.lolAPI.getAllChampionIds() { (championsIDs, errorMsg) in
+            if championsIDs != nil {
+                for i in 0..<championsIDs!.count {
+                    league.lolAPI.getChampionDetails(by: championsIDs![i]) { (champ, errorMsg) in
+                        if let champ = champ {
+                            championNamesDictionary.updateValue(champ.name, forKey: champ.championId.value)
+                            
+                        }
+                        
+                    }
+                }
+            }
+           
+        }
+        league.lolAPI.getSummonerSpells() { (spells, errorMsg) in
+            if let spells = spells {
+                for spell in 0..<spells.count {
+                    let name = spells[spell].name
+                    let id = spells[spell].id.value
+                    summonerSpellDictionary.updateValue(name, forKey: id)
+                }
+            }
+           
+        }
+       
+        
+        
         return true
     }
 
