@@ -22,8 +22,7 @@ public var preferredWorldRegion: WorldRegion {
 }
 public var preferredSummoner: String = ""
 public var matches: [MatchReference] = []
-public var championNamesDictionary = [Long: String]()
-public var summonerSpellDictionary = [Long: String]()
+
 
 extension Array where Element: Equatable {
     func indexes(of element: Element) -> [Int] {
