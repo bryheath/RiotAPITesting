@@ -40,7 +40,7 @@ class MatchData: NSObject {
     var gameDurationSeconds: Int
     var gameCreation: Date
     var gameID: GameId
-    var victory: UIColor?
+    var victory: Bool
 
     
 //    init(player: MatchParticipant, championID: Long, championName: String, stats: MatchParticipantStats, timeline: MatchParticipantTimeline, kills: Int, deaths: Int, assists: Int, lane: String, role: String, level: Int, queueMode: String, gameMode: String, gameType:String, gameDurationMinutes: Int, gameDurationSeconds: Int, gameCreation: Date) {
@@ -67,6 +67,7 @@ class MatchData: NSObject {
         self.gameID = match.gameId
         self.dSpell = summonerSpellDictionary[player.summonerSpell1.value]!
         self.fSpell = summonerSpellDictionary[player.summonerSpell2.value]!
+        self.victory = false
         
 //        self.position = self.getPosition(role: self.role, lane: self.lane)
     }

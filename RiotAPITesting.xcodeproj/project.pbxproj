@@ -7,32 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE153B2C26B74F5E0019447E /* GameDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE153B2B26B74F5E0019447E /* GameDetailsViewController.swift */; };
 		BE1B794126A3709E00AB3A46 /* GameListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1B794026A3709E00AB3A46 /* GameListTableViewController.swift */; };
-		BE1B794426A37BD300AB3A46 /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1B794326A37BD300AB3A46 /* GameTableViewCell.swift */; };
 		BE1B794726A383C100AB3A46 /* MatchDataList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1B794626A383C100AB3A46 /* MatchDataList.swift */; };
 		BE1B794926A3843A00AB3A46 /* MatchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1B794826A3843A00AB3A46 /* MatchData.swift */; };
+		BE2877F226B8F9E0005B119E /* LeagueAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE2877F126B8F9E0005B119E /* LeagueAPI.framework */; };
+		BE2877F326B8FA04005B119E /* LeagueAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE2877F126B8F9E0005B119E /* LeagueAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BE6B708A26A8CE3B0074BEA4 /* OfflineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6B708926A8CE3B0074BEA4 /* OfflineData.swift */; };
 		BE6B708C26A8D0790074BEA4 /* ChampionFull.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6B708B26A8D0790074BEA4 /* ChampionFull.swift */; };
 		BE6B708F26A8DA720074BEA4 /* JSONNull.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6B708E26A8DA720074BEA4 /* JSONNull.swift */; };
 		BE6B709126A8DA8A0074BEA4 /* JSONCodingKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6B709026A8DA8A0074BEA4 /* JSONCodingKey.swift */; };
 		BE6B709326A8DAA90074BEA4 /* JSONAny.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6B709226A8DAA90074BEA4 /* JSONAny.swift */; };
-		BE6B709526A8EB1A0074BEA4 /* championFull.json in Resources */ = {isa = PBXBuildFile; fileRef = BE6B709426A8EB1A0074BEA4 /* championFull.json */; };
 		BE6B709726A8EC2A0074BEA4 /* Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6B709626A8EC2A0074BEA4 /* Champion.swift */; };
-		BE711C0A269E7AC400CA57CE /* LeagueAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE711C09269E7AC400CA57CE /* LeagueAPI.framework */; };
-		BE711C0B269E7AC800CA57CE /* LeagueAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE711C09269E7AC400CA57CE /* LeagueAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BE711C0D269E878A00CA57CE /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE711C0C269E878A00CA57CE /* File.swift */; };
 		BE711C0F269E883F00CA57CE /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE711C0E269E883F00CA57CE /* Player.swift */; };
+		BE76437726B498D70032F479 /* Akshan.json in Resources */ = {isa = PBXBuildFile; fileRef = BE76437626B498D70032F479 /* Akshan.json */; };
+		BE949E8726B8C0E200E23670 /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1B794326A37BD300AB3A46 /* GameTableViewCell.swift */; };
+		BE949E8826B8C0E200E23670 /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE949E8526B8C03000E23670 /* TeamTableViewCell.swift */; };
+		BE949E8926B8C0E200E23670 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC0C88C26B8B45200F1146C /* PlayerTableViewCell.swift */; };
 		BEC1E4912698E9EA00BC3F62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC1E4902698E9EA00BC3F62 /* AppDelegate.swift */; };
 		BEC1E4932698E9EA00BC3F62 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC1E4922698E9EA00BC3F62 /* SceneDelegate.swift */; };
 		BEC1E4952698E9EA00BC3F62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC1E4942698E9EA00BC3F62 /* ViewController.swift */; };
 		BEC1E4982698E9EA00BC3F62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC1E4962698E9EA00BC3F62 /* Main.storyboard */; };
 		BEC1E49A2698E9EB00BC3F62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEC1E4992698E9EB00BC3F62 /* Assets.xcassets */; };
 		BEC1E49D2698E9EB00BC3F62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC1E49B2698E9EB00BC3F62 /* LaunchScreen.storyboard */; };
-		BED12FCC26A8C71B007D367D /* item.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F2626A8C71A007D367D /* item.json */; };
-		BED12FCD26A8C71B007D367D /* runesReforged.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F2726A8C71A007D367D /* runesReforged.json */; };
-		BED12FCE26A8C71B007D367D /* language.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F2826A8C71A007D367D /* language.json */; };
-		BED12FD026A8C71B007D367D /* summoner.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F2A26A8C71A007D367D /* summoner.json */; };
-		BED12FD226A8C71B007D367D /* mission-assets.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F2C26A8C71A007D367D /* mission-assets.json */; };
 		BED12FD326A8C71B007D367D /* JarvanIV.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F2E26A8C71A007D367D /* JarvanIV.json */; };
 		BED12FD426A8C71B007D367D /* AurelionSol.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F2F26A8C71A007D367D /* AurelionSol.json */; };
 		BED12FD526A8C71B007D367D /* Riven.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F3026A8C71A007D367D /* Riven.json */; };
@@ -188,14 +186,13 @@
 		BED1306B26A8C71B007D367D /* Kaisa.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FC626A8C71B007D367D /* Kaisa.json */; };
 		BED1306C26A8C71B007D367D /* Taric.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FC726A8C71B007D367D /* Taric.json */; };
 		BED1306D26A8C71B007D367D /* Cassiopeia.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FC826A8C71B007D367D /* Cassiopeia.json */; };
-		BED1306E26A8C71B007D367D /* sticker.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FC926A8C71B007D367D /* sticker.json */; };
-		BED1306F26A8C71B007D367D /* profileicon.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FCA26A8C71B007D367D /* profileicon.json */; };
-		BED1307026A8C71B007D367D /* map.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FCB26A8C71B007D367D /* map.json */; };
+		BED25B4326B3433500B2FC71 /* StatRankings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED25B4226B3433500B2FC71 /* StatRankings.swift */; };
 		BEEA302526A7C20F009E3C78 /* RiotAPITesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEA302426A7C20F009E3C78 /* RiotAPITesting.swift */; };
 		BEEA303726A7D93D009E3C78 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEA302726A7D93D009E3C78 /* UIImageViewExtension.swift */; };
 		BEEA303826A7D93D009E3C78 /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEA302826A7D93D009E3C78 /* UITextViewExtension.swift */; };
 		BEEA303926A7D93D009E3C78 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEA302926A7D93D009E3C78 /* UILabelExtension.swift */; };
 		BEEA304526A7D93D009E3C78 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEA303626A7D93D009E3C78 /* UITableViewExtension.swift */; };
+		BEF0C81626B35FF30078245A /* WhatWasIDoingLast.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF0C81526B35FF30078245A /* WhatWasIDoingLast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -205,7 +202,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BE711C0B269E7AC800CA57CE /* LeagueAPI.framework in Embed Frameworks */,
+				BE2877F326B8FA04005B119E /* LeagueAPI.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,20 +210,23 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BE153B2B26B74F5E0019447E /* GameDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsViewController.swift; sourceTree = "<group>"; };
 		BE1B794026A3709E00AB3A46 /* GameListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListTableViewController.swift; sourceTree = "<group>"; };
 		BE1B794326A37BD300AB3A46 /* GameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
 		BE1B794626A383C100AB3A46 /* MatchDataList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDataList.swift; sourceTree = "<group>"; };
 		BE1B794826A3843A00AB3A46 /* MatchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchData.swift; sourceTree = "<group>"; };
+		BE2877F126B8F9E0005B119E /* LeagueAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LeagueAPI.framework; sourceTree = "<group>"; };
 		BE6B708926A8CE3B0074BEA4 /* OfflineData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineData.swift; sourceTree = "<group>"; };
 		BE6B708B26A8D0790074BEA4 /* ChampionFull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionFull.swift; sourceTree = "<group>"; };
 		BE6B708E26A8DA720074BEA4 /* JSONNull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONNull.swift; sourceTree = "<group>"; };
 		BE6B709026A8DA8A0074BEA4 /* JSONCodingKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONCodingKey.swift; sourceTree = "<group>"; };
 		BE6B709226A8DAA90074BEA4 /* JSONAny.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONAny.swift; sourceTree = "<group>"; };
-		BE6B709426A8EB1A0074BEA4 /* championFull.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = championFull.json; sourceTree = "<group>"; };
 		BE6B709626A8EC2A0074BEA4 /* Champion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Champion.swift; sourceTree = "<group>"; };
-		BE711C09269E7AC400CA57CE /* LeagueAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LeagueAPI.framework; sourceTree = "<group>"; };
 		BE711C0C269E878A00CA57CE /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		BE711C0E269E883F00CA57CE /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		BE76437626B498D70032F479 /* Akshan.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Akshan.json; sourceTree = "<group>"; };
+		BE949E8526B8C03000E23670 /* TeamTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
+		BEC0C88C26B8B45200F1146C /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
 		BEC1E48D2698E9EA00BC3F62 /* RiotAPITesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RiotAPITesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEC1E4902698E9EA00BC3F62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEC1E4922698E9EA00BC3F62 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -235,11 +235,6 @@
 		BEC1E4992698E9EB00BC3F62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEC1E49C2698E9EB00BC3F62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEC1E49E2698E9EB00BC3F62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BED12F2626A8C71A007D367D /* item.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = item.json; sourceTree = "<group>"; };
-		BED12F2726A8C71A007D367D /* runesReforged.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = runesReforged.json; sourceTree = "<group>"; };
-		BED12F2826A8C71A007D367D /* language.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = language.json; sourceTree = "<group>"; };
-		BED12F2A26A8C71A007D367D /* summoner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = summoner.json; sourceTree = "<group>"; };
-		BED12F2C26A8C71A007D367D /* mission-assets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "mission-assets.json"; sourceTree = "<group>"; };
 		BED12F2E26A8C71A007D367D /* JarvanIV.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JarvanIV.json; sourceTree = "<group>"; };
 		BED12F2F26A8C71A007D367D /* AurelionSol.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AurelionSol.json; sourceTree = "<group>"; };
 		BED12F3026A8C71A007D367D /* Riven.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Riven.json; sourceTree = "<group>"; };
@@ -395,14 +390,13 @@
 		BED12FC626A8C71B007D367D /* Kaisa.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Kaisa.json; sourceTree = "<group>"; };
 		BED12FC726A8C71B007D367D /* Taric.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Taric.json; sourceTree = "<group>"; };
 		BED12FC826A8C71B007D367D /* Cassiopeia.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Cassiopeia.json; sourceTree = "<group>"; };
-		BED12FC926A8C71B007D367D /* sticker.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sticker.json; sourceTree = "<group>"; };
-		BED12FCA26A8C71B007D367D /* profileicon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = profileicon.json; sourceTree = "<group>"; };
-		BED12FCB26A8C71B007D367D /* map.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = map.json; sourceTree = "<group>"; };
+		BED25B4226B3433500B2FC71 /* StatRankings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatRankings.swift; sourceTree = "<group>"; };
 		BEEA302426A7C20F009E3C78 /* RiotAPITesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiotAPITesting.swift; sourceTree = "<group>"; };
 		BEEA302726A7D93D009E3C78 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		BEEA302826A7D93D009E3C78 /* UITextViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewExtension.swift; sourceTree = "<group>"; };
 		BEEA302926A7D93D009E3C78 /* UILabelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		BEEA303626A7D93D009E3C78 /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		BEF0C81526B35FF30078245A /* WhatWasIDoingLast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatWasIDoingLast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -410,7 +404,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE711C0A269E7AC400CA57CE /* LeagueAPI.framework in Frameworks */,
+				BE2877F226B8F9E0005B119E /* LeagueAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +415,7 @@
 			isa = PBXGroup;
 			children = (
 				BE1B794026A3709E00AB3A46 /* GameListTableViewController.swift */,
+				BE153B2B26B74F5E0019447E /* GameDetailsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -429,6 +424,8 @@
 			isa = PBXGroup;
 			children = (
 				BE1B794326A37BD300AB3A46 /* GameTableViewCell.swift */,
+				BE949E8526B8C03000E23670 /* TeamTableViewCell.swift */,
+				BEC0C88C26B8B45200F1146C /* PlayerTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -441,6 +438,7 @@
 				BE6B708926A8CE3B0074BEA4 /* OfflineData.swift */,
 				BE6B708B26A8D0790074BEA4 /* ChampionFull.swift */,
 				BE6B709626A8EC2A0074BEA4 /* Champion.swift */,
+				BED25B4226B3433500B2FC71 /* StatRankings.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -478,38 +476,30 @@
 				BE1B794526A3836800AB3A46 /* Model */,
 				BE1B794226A37BB500AB3A46 /* Views */,
 				BE1B793F26A3707900AB3A46 /* View Controllers */,
-				BEC1E4902698E9EA00BC3F62 /* AppDelegate.swift */,
-				BEC1E4922698E9EA00BC3F62 /* SceneDelegate.swift */,
-				BEC1E4942698E9EA00BC3F62 /* ViewController.swift */,
-				BE711C0E269E883F00CA57CE /* Player.swift */,
-				BE711C0C269E878A00CA57CE /* File.swift */,
 				BEEA302626A7D93D009E3C78 /* UIElements */,
+				BEC1E4942698E9EA00BC3F62 /* ViewController.swift */,
 				BEC1E4962698E9EA00BC3F62 /* Main.storyboard */,
 				BEC1E4992698E9EB00BC3F62 /* Assets.xcassets */,
 				BEC1E49B2698E9EB00BC3F62 /* LaunchScreen.storyboard */,
 				BEC1E49E2698E9EB00BC3F62 /* Info.plist */,
-				BE711C09269E7AC400CA57CE /* LeagueAPI.framework */,
+				BE2877F126B8F9E0005B119E /* LeagueAPI.framework */,
+				BE711C0E269E883F00CA57CE /* Player.swift */,
+				BE711C0C269E878A00CA57CE /* File.swift */,
+				BEC1E4902698E9EA00BC3F62 /* AppDelegate.swift */,
+				BEC1E4922698E9EA00BC3F62 /* SceneDelegate.swift */,
 				BEEA302426A7C20F009E3C78 /* RiotAPITesting.swift */,
-				BED12F2526A8C71A007D367D /* en_US */,
+				BED12F2526A8C71A007D367D /* RiotAPI Assets */,
+				BEF0C81526B35FF30078245A /* WhatWasIDoingLast.swift */,
 			);
 			path = RiotAPITesting;
 			sourceTree = "<group>";
 		};
-		BED12F2526A8C71A007D367D /* en_US */ = {
+		BED12F2526A8C71A007D367D /* RiotAPI Assets */ = {
 			isa = PBXGroup;
 			children = (
-				BED12F2626A8C71A007D367D /* item.json */,
-				BED12F2726A8C71A007D367D /* runesReforged.json */,
-				BED12F2826A8C71A007D367D /* language.json */,
-				BED12F2A26A8C71A007D367D /* summoner.json */,
-				BE6B709426A8EB1A0074BEA4 /* championFull.json */,
-				BED12F2C26A8C71A007D367D /* mission-assets.json */,
 				BED12F2D26A8C71A007D367D /* champion */,
-				BED12FC926A8C71B007D367D /* sticker.json */,
-				BED12FCA26A8C71B007D367D /* profileicon.json */,
-				BED12FCB26A8C71B007D367D /* map.json */,
 			);
-			path = en_US;
+			path = "RiotAPI Assets";
 			sourceTree = "<group>";
 		};
 		BED12F2D26A8C71A007D367D /* champion */ = {
@@ -518,6 +508,7 @@
 				BED12FB626A8C71B007D367D /* Aatrox.json */,
 				BED12F4126A8C71A007D367D /* Ahri.json */,
 				BED12F7226A8C71A007D367D /* Akali.json */,
+				BE76437626B498D70032F479 /* Akshan.json */,
 				BED12F6A26A8C71A007D367D /* Alistar.json */,
 				BED12F4D26A8C71A007D367D /* Amumu.json */,
 				BED12F6B26A8C71A007D367D /* Anivia.json */,
@@ -744,7 +735,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BED1300926A8C71B007D367D /* TahmKench.json in Resources */,
-				BED12FCC26A8C71B007D367D /* item.json in Resources */,
 				BED1300D26A8C71B007D367D /* XinZhao.json in Resources */,
 				BED1305126A8C71B007D367D /* Nidalee.json in Resources */,
 				BED1303F26A8C71B007D367D /* Braum.json in Resources */,
@@ -780,9 +770,9 @@
 				BED1302526A8C71B007D367D /* Shaco.json in Resources */,
 				BED12FF226A8C71B007D367D /* Amumu.json in Resources */,
 				BED12FFC26A8C71B007D367D /* Ezreal.json in Resources */,
-				BED12FD226A8C71B007D367D /* mission-assets.json in Resources */,
 				BED12FE226A8C71B007D367D /* Vladimir.json in Resources */,
 				BED1303126A8C71B007D367D /* Xerath.json in Resources */,
+				BE76437726B498D70032F479 /* Akshan.json in Resources */,
 				BED12FFB26A8C71B007D367D /* Blitzcrank.json in Resources */,
 				BED1306A26A8C71B007D367D /* MissFortune.json in Resources */,
 				BED1305426A8C71B007D367D /* Qiyana.json in Resources */,
@@ -804,16 +794,13 @@
 				BED1306326A8C71B007D367D /* Rakan.json in Resources */,
 				BED1303826A8C71B007D367D /* Zoe.json in Resources */,
 				BED1303226A8C71B007D367D /* Thresh.json in Resources */,
-				BED1307026A8C71B007D367D /* map.json in Resources */,
 				BED1306426A8C71B007D367D /* Quinn.json in Resources */,
-				BED12FCE26A8C71B007D367D /* language.json in Resources */,
 				BED1304526A8C71B007D367D /* Gragas.json in Resources */,
 				BED12FDD26A8C71B007D367D /* Kalista.json in Resources */,
 				BED1303326A8C71B007D367D /* Talon.json in Resources */,
 				BED1301126A8C71B007D367D /* Sion.json in Resources */,
 				BED1306D26A8C71B007D367D /* Cassiopeia.json in Resources */,
 				BED1304326A8C71B007D367D /* Corki.json in Resources */,
-				BED12FD026A8C71B007D367D /* summoner.json in Resources */,
 				BED1300C26A8C71B007D367D /* Garen.json in Resources */,
 				BED12FED26A8C71B007D367D /* Trundle.json in Resources */,
 				BED1302426A8C71B007D367D /* Senna.json in Resources */,
@@ -828,7 +815,6 @@
 				BED1305626A8C71B007D367D /* Gwen.json in Resources */,
 				BED1300826A8C71B007D367D /* Annie.json in Resources */,
 				BED12FFE26A8C71B007D367D /* Khazix.json in Resources */,
-				BED1306F26A8C71B007D367D /* profileicon.json in Resources */,
 				BED1300A26A8C71B007D367D /* Syndra.json in Resources */,
 				BED1305926A8C71B007D367D /* Illaoi.json in Resources */,
 				BED1305026A8C71B007D367D /* Ashe.json in Resources */,
@@ -876,7 +862,6 @@
 				BED1306C26A8C71B007D367D /* Taric.json in Resources */,
 				BED1305826A8C71B007D367D /* Katarina.json in Resources */,
 				BED1303526A8C71B007D367D /* Viktor.json in Resources */,
-				BED12FCD26A8C71B007D367D /* runesReforged.json in Resources */,
 				BED1304226A8C71B007D367D /* Tristana.json in Resources */,
 				BED12FF126A8C71B007D367D /* Lucian.json in Resources */,
 				BED1300226A8C71B007D367D /* Nami.json in Resources */,
@@ -898,14 +883,12 @@
 				BED12FEA26A8C71B007D367D /* Leona.json in Resources */,
 				BED1302326A8C71B007D367D /* RekSai.json in Resources */,
 				BED12FE726A8C71B007D367D /* Skarner.json in Resources */,
-				BE6B709526A8EB1A0074BEA4 /* championFull.json in Resources */,
 				BED1302E26A8C71B007D367D /* Veigar.json in Resources */,
 				BED12FDB26A8C71B007D367D /* Hecarim.json in Resources */,
 				BED1305A26A8C71B007D367D /* Rell.json in Resources */,
 				BED12FF026A8C71B007D367D /* Soraka.json in Resources */,
 				BED12FD926A8C71B007D367D /* Velkoz.json in Resources */,
 				BED12FD326A8C71B007D367D /* JarvanIV.json in Resources */,
-				BED1306E26A8C71B007D367D /* sticker.json in Resources */,
 				BED1304426A8C71B007D367D /* Malzahar.json in Resources */,
 				BED1304726A8C71B007D367D /* Lissandra.json in Resources */,
 				BED1300726A8C71B007D367D /* Yone.json in Resources */,
@@ -920,16 +903,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE949E8726B8C0E200E23670 /* GameTableViewCell.swift in Sources */,
+				BE949E8826B8C0E200E23670 /* TeamTableViewCell.swift in Sources */,
+				BE949E8926B8C0E200E23670 /* PlayerTableViewCell.swift in Sources */,
 				BE6B709726A8EC2A0074BEA4 /* Champion.swift in Sources */,
-				BE1B794426A37BD300AB3A46 /* GameTableViewCell.swift in Sources */,
 				BEEA302526A7C20F009E3C78 /* RiotAPITesting.swift in Sources */,
 				BE1B794726A383C100AB3A46 /* MatchDataList.swift in Sources */,
 				BE6B709326A8DAA90074BEA4 /* JSONAny.swift in Sources */,
+				BED25B4326B3433500B2FC71 /* StatRankings.swift in Sources */,
 				BEEA303826A7D93D009E3C78 /* UITextViewExtension.swift in Sources */,
 				BEEA304526A7D93D009E3C78 /* UITableViewExtension.swift in Sources */,
 				BEC1E4952698E9EA00BC3F62 /* ViewController.swift in Sources */,
 				BE6B708F26A8DA720074BEA4 /* JSONNull.swift in Sources */,
 				BE6B708A26A8CE3B0074BEA4 /* OfflineData.swift in Sources */,
+				BE153B2C26B74F5E0019447E /* GameDetailsViewController.swift in Sources */,
 				BE1B794926A3843A00AB3A46 /* MatchData.swift in Sources */,
 				BE6B708C26A8D0790074BEA4 /* ChampionFull.swift in Sources */,
 				BE711C0D269E878A00CA57CE /* File.swift in Sources */,
@@ -940,6 +927,7 @@
 				BEC1E4932698E9EA00BC3F62 /* SceneDelegate.swift in Sources */,
 				BE1B794126A3709E00AB3A46 /* GameListTableViewController.swift in Sources */,
 				BEEA303926A7D93D009E3C78 /* UILabelExtension.swift in Sources */,
+				BEF0C81626B35FF30078245A /* WhatWasIDoingLast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1101,6 +1089,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Debug;
 		};
@@ -1124,6 +1113,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Release;
 		};

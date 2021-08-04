@@ -8,7 +8,7 @@
 import Foundation
 import LeagueAPI
 
-public let league: LeagueAPI = LeagueAPI(APIToken: "RGAPI-e6c6306c-a090-4aeb-8b6e-23f23c0fd423")
+public let league: LeagueAPI = LeagueAPI(APIToken: "RGAPI-9b872625-3629-4e82-af68-b3eb2fd81a39")
 public var preferredRegion: Region = Region.NA
 public var preferredWorldRegion: WorldRegion {
     switch preferredRegion {
@@ -27,5 +27,22 @@ public var matches: [MatchReference] = []
 extension Array where Element: Equatable {
     func indexes(of element: Element) -> [Int] {
         return self.enumerated().filter({ element == $0.element }).map({ $0.offset })
+    }
+}
+
+extension String {
+    func capitalizingFirstLetter() -> String {
+      return prefix(1).uppercased() + self.lowercased().dropFirst()
+    }
+
+    mutating func capitalizeFirstLetter() {
+      self = self.capitalizingFirstLetter()
+    }
+}
+
+class ReplaceSegue: UIStoryboardSegue {
+
+    override func perform() {
+        source.navigationController?.setViewControllers([destination], animated: true)
     }
 }

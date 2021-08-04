@@ -24,6 +24,7 @@ class GameTableViewCell: UITableViewCell {
     @IBOutlet var matchTypeLabel: UILabel!
     @IBOutlet var durationLabel: UILabel!
     var backgroundColorIsSet: Bool = false
+    var match: MatchData?
     
     
     override func setSelected(_ selected: Bool, animated: Bool) {
