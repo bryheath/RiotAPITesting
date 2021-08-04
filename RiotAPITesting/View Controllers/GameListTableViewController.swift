@@ -15,7 +15,8 @@ class GameListTableViewController: UITableViewController {
 
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
-    var matchDataList:[MatchData] = []
+    //var matchDataList:[MatchData] = []
+    var matchDataList: [Int: MatchData] = [:]
     
 
     override func viewDidLoad() {
@@ -28,52 +29,48 @@ class GameListTableViewController: UITableViewController {
 
     func setupMatchCell(match: MatchReference, index:IndexPath) -> GameTableViewCell {
         let gameCell: GameTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "gameCell") as! GameTableViewCell
-        if let found = matchDataList.first(where:{$0.gameID == match.gameId}) {
-            gameCell.scoreLabel.setText("\(found.kills)/\(found.deaths)/\(found.assists)")
-            
-            gameCell.kdaLabel.setText("\(found.KDA):1 KDA")
-            gameCell.matchTypeLabel.setText(found.queueMode)
-            gameCell.durationLabel.setText("\(found.gameDurationMinutes) m \(found.gameDurationSeconds) s")
-            if found.victory {
-                gameCell.backgroundColor = UIColor.green
-            } else {
-                gameCell.backgroundColor = UIColor.red
-            }
-            
-            
-            gameCell.rune1ImageView.image = found.primaryRuneImage
-            gameCell.rune2ImageView.image = found.secondaryRuneImage
-            gameCell.dSpellImageView.image = found.dSpellImage
-            gameCell.fSpellImageView.image = found.fSpellImage
-            gameCell.championImageView.image = found.championImage
-            gameCell.match = found
-            
-            
-            print("Already in array")
-
-            
-        } else {
+//        if let found = matchDataList.first(where:{$0.gameID == match.gameId}) {
+//            gameCell.scoreLabel.setText("\(found.kills)/\(found.deaths)/\(found.assists)")
+//
+//            gameCell.kdaLabel.setText("\(found.KDA):1 KDA")
+//            gameCell.matchTypeLabel.setText(found.queueMode)
+//            gameCell.durationLabel.setText("\(found.gameDurationMinutes) m \(found.gameDurationSeconds) s")
+//            if found.victory {
+//                gameCell.backgroundColor = UIColor.green
+//            } else {
+//                gameCell.backgroundColor = UIColor.red
+//            }
+//
+//
+//            gameCell.rune1ImageView.image = found.primaryRuneImage
+//            gameCell.rune2ImageView.image = found.secondaryRuneImage
+//            gameCell.dSpellImageView.image = found.dSpellImage
+//            gameCell.fSpellImageView.image = found.fSpellImage
+//            gameCell.championImageView.image = found.championImage
+//            gameCell.match = found
+//
+//
+//
+//
+//
+//        } else {
             self.getYourDataFromMatch(gameID: match.gameId) { game in
                 
                 self.currentGame = game
                 gameCell.scoreLabel.setText("\(game.kills)/\(game.deaths)/\(game.assists)")
-                
                 gameCell.kdaLabel.setText("\(game.KDA):1 KDA")
                 gameCell.matchTypeLabel.setText(game.queueMode)
                 gameCell.durationLabel.setText("\(game.gameDurationMinutes) m \(game.gameDurationSeconds) s")
 
                 if let summonerWon = game.match.teamsInfo.filter({ team in
                     return team.teamId == game.player.teamId
-
                 }).first?.win {
                     DispatchQueue.main.async {
-
                         gameCell.backgroundColorIsSet = true
                         game.victory = summonerWon
                         gameCell.backgroundColor = game.victory ? UIColor.green : UIColor.red
                     }
                 }
-
                 getSummonerSpells(participant: game.player) { (dSpellImage, fSpellImage) in
                     game.dSpellImage = dSpellImage
                     game.fSpellImage = fSpellImage
@@ -91,16 +88,13 @@ class GameListTableViewController: UITableViewController {
                 getChampionImage(championId: match.championId) { image in
                     game.championImage = image
                     gameCell.championImageView.setImage(image)
-                    
                 }
-                self.matchDataList.append(game)
-//                print("Match #\(index.row)")
-//                print("\(game.match.participants[6].player.summonerName)")
-//                print("\(game.match.participantsInfo[6].teamId)")
-                print("New Match Appeneded in array")
+//                self.matchDataList.append(game)
+//                self.matchDataList = self.matchDataList.sorted(by: {$0.match.gameId.value > $1.match.gameId.value})
+                self.matchDataList[index.row] = game
+                print("index: \(index.row) - gameID: \(game.match.gameId)")
             }
-            
-        }
+        //}
         
         
 
@@ -209,7 +203,12 @@ class GameListTableViewController: UITableViewController {
             if let gameDetailsViewController = segue.destination as? GameDetailsViewController {
                 //gameDetailsViewController.match =
                 if let index = self.tableView.indexPathForSelectedRow?.row {
+//                    print("Selected Index: \(index) - GameID: \(matchDataList[index].match.gameId)")
+
+                    print("Selected Index: \(index) - GameID: \(self.matchDataList[index]!.match.gameId)")
                     gameDetailsViewController.matchData = matchDataList[index]
+                } else {
+                    print("Error")
                 }
                 
             }

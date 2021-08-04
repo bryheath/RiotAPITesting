@@ -60,11 +60,19 @@ class GameDetailsViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func setupTeamCell(index: IndexPath) -> TeamTableViewCell {
+        let teamCell: TeamTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "teamCell", for: index) as! TeamTableViewCell
+        
         let team = matchData.match.teamsInfo[index.section]
         var teamColor = ""
-        let winString = team.win ? "Win" : "Loss"
-
-        let teamCell: TeamTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "teamCell", for: index) as! TeamTableViewCell
+        var winString = ""
+        if team.win {
+            winString = "Win"
+            teamCell.backgroundColor = UIColor.init(red: 0, green: 0.75, blue: 0, alpha: 1)
+        } else {
+            winString = "Loss"
+            teamCell.backgroundColor = UIColor.init(red: 0.75, green: 0, blue: 0, alpha: 1)
+        }
+        
         
         teamCell.frame.size.height = 44
         if team.teamId == 100 {
@@ -72,6 +80,7 @@ class GameDetailsViewController: UIViewController, UITableViewDelegate, UITableV
             let kda:Double = Double((blueTeamKills+blueTeamAssists))/Double(blueTeamDeaths)
             let newKDA = formatter.string(for:kda)
             teamCell.leftLabel.text = "\(winString) (\(teamColor)) KDA - \(blueTeamKills) / \(blueTeamDeaths) / \(blueTeamAssists) -- \(newKDA!): 1"
+            
         } else {
             teamColor = "Red"
             let kda:Double = Double((redTeamKills+redTeamAssists))/Double(redTeamDeaths)
@@ -89,39 +98,38 @@ class GameDetailsViewController: UIViewController, UITableViewDelegate, UITableV
         if index.section == 1 {
             participantIndex += 5
         }
-        
         let matchParticipant = matchData.match.participantsInfo[participantIndex]
-        let championId = matchParticipant.championId
-        let championName = championJSONNames[championId.value]!
+//        playerCell.matchParticipant = matchData.match.participantsInfo[participantIndex]
+//        playerCell.matchData = matchData
+        //playerCell.setup()
         
-        if let image = UIImage(named: championName) {
-            playerCell.championImageView.image = image
-        }
+        playerCell.setChampionImage(participant: matchData.match.participantsInfo[participantIndex])
         
         playerCell.setSummonerSpellsForCell(participant: matchParticipant)
         
         playerCell.setRunePathImages(stats: matchParticipant.stats)
 //        getRunePathImage(runePathId: matchParticipant.stats.primaryRunePath!) { image in playerCell.primaryRuneImageView.setImage(image) }
 //        getRunePathImage(runePathId: matchParticipant.stats.secondaryRunePath!) { image in playerCell.secondaryRuneImageView.setImage(image) }
-        
+        playerCell.setPlayerNameLabel(summonerName: matchData.match.participants[participantIndex].player.summonerName)
         playerCell.playerNameLabel.text = matchData.match.participants[participantIndex].player.summonerName
         
         playerCell.setKDAForCell(stats: matchParticipant.stats)
-        playerCell.setCSAndGoldLabel(matchData: matchData)
+        playerCell.setCSAndGoldLabel(stats: matchParticipant.stats, gameDuration: matchData.match.gameDuration)
+        playerCell.setItemImages(matchData: matchData, index: participantIndex)
         
-        var imagesDict = [Int: UIImage]()
-        let stats = matchParticipant.stats
-        let itemIDArray = [stats.item0, stats.item1, stats.item2, stats.item3, stats.item4, stats.item5, stats.item6]
-        let itemImageViewArray = [playerCell.item0ImageView, playerCell.item1ImageView, playerCell.item2ImageView, playerCell.item3ImageView, playerCell.item4ImageView, playerCell.item5ImageView, playerCell.item6ImageView]
-        
-        for item in 0..<itemIDArray.count {
-            getItemImage(itemId: itemIDArray[item]) { image in
-                imagesDict[item] = image
-                if let itemImage = itemImageViewArray[item] {
-                    itemImage.setImage(imagesDict[item])
-                }
-            }
-        }
+//        var imagesDict = [Int: UIImage]()
+//        let stats = matchParticipant.stats
+//        let itemIDArray = [stats.item0, stats.item1, stats.item2, stats.item3, stats.item4, stats.item5, stats.item6]
+//        let itemImageViewArray = [playerCell.item0ImageView, playerCell.item1ImageView, playerCell.item2ImageView, playerCell.item3ImageView, playerCell.item4ImageView, playerCell.item5ImageView, playerCell.item6ImageView]
+//
+//        for item in 0..<itemIDArray.count {
+//            getItemImage(itemId: itemIDArray[item]) { image in
+//                imagesDict[item] = image
+//                if let itemImage = itemImageViewArray[item] {
+//                    itemImage.setImage(imagesDict[item])
+//                }
+//            }
+//        }
         return playerCell
     }
     

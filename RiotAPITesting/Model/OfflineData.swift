@@ -162,13 +162,11 @@ public func getRunePathImage(runePathId: RunePathId, completion: @escaping (UIIm
 public func getChampionImage(championId: ChampionId, completion: @escaping (UIImage?) -> Void) {
     
     if let image = UIImage(named: championJSONNames[championId.value]!) {
-        print("image from offlinedata")
         completion(image)
     } else {
         league.lolAPI.getChampionDetails(by: championId) { (champion, errorMsg) in
             if let champion = champion, let defaultSkin = champion.images?.square {
                 defaultSkin.getImage() { (image, error) in
-                    print("image from online")
                     completion(image)
                 }
             } else {
