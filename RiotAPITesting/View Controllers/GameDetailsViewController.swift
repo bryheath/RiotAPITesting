@@ -39,6 +39,7 @@ class GameDetailsViewController: UIViewController, UITableViewDelegate, UITableV
     var redTeamAssists = 0
     let formatter = NumberFormatter()
     
+    
     func getTeamStats() {
         for participant in 0..<matchData.match.participantsInfo.count {
             //                print("\(game.match.participants[6].player.summonerName)")
@@ -97,16 +98,16 @@ class GameDetailsViewController: UIViewController, UITableViewDelegate, UITableV
             playerCell.championImageView.image = image
         }
         
-        setSummonerSpellsForCell(participant: matchParticipant, cell: playerCell)
+        playerCell.setSummonerSpellsForCell(participant: matchParticipant)
         
-
-        getRunePathImage(runePathId: matchParticipant.stats.primaryRunePath!) { image in playerCell.primaryRuneImageView.setImage(image) }
-        getRunePathImage(runePathId: matchParticipant.stats.secondaryRunePath!) { image in playerCell.secondaryRuneImageView.setImage(image) }
+        playerCell.setRunePathImages(stats: matchParticipant.stats)
+//        getRunePathImage(runePathId: matchParticipant.stats.primaryRunePath!) { image in playerCell.primaryRuneImageView.setImage(image) }
+//        getRunePathImage(runePathId: matchParticipant.stats.secondaryRunePath!) { image in playerCell.secondaryRuneImageView.setImage(image) }
         
         playerCell.playerNameLabel.text = matchData.match.participants[participantIndex].player.summonerName
         
-        setKDAForCell(stats: matchParticipant.stats, cell: playerCell)
-        setCSAndGoldLabel(stats: matchParticipant.stats, cell: playerCell)
+        playerCell.setKDAForCell(stats: matchParticipant.stats)
+        playerCell.setCSAndGoldLabel(matchData: matchData)
         
         var imagesDict = [Int: UIImage]()
         let stats = matchParticipant.stats
@@ -129,21 +130,14 @@ class GameDetailsViewController: UIViewController, UITableViewDelegate, UITableV
         self.tableView.estimatedRowHeight = 60
         self.tableView.rowHeight = UITableView.automaticDimension
         
-        
         formatter.numberStyle = .decimal
         formatter.maximumSignificantDigits = 3
-        
-//        self.tableView.rowHeight = 80
+
         if let matchData = matchData {
-            print(matchData.gameID)
-            print(matchData.championName)
             getTeamStats()
             var sinceGame = ""
-            if matchData.victory {
-                victoryLabel.text = "Win"
-            } else {
-                victoryLabel.text = "Loss"
-            }
+            victoryLabel.text = matchData.victory ? "Win" : "Loss"
+                
             let currentTime = Date()
             let difference = Calendar.current.dateComponents([.hour, .minute], from: matchData.gameCreation, to: currentTime)
             if let days = difference.day {
@@ -178,31 +172,4 @@ class GameDetailsViewController: UIViewController, UITableViewDelegate, UITableV
         }
     }
     
-    func setSummonerSpellsForCell(participant: MatchParticipant, cell: PlayerTableViewCell) {
-        let dSpell = summonerSpellFileNames[participant.summonerSpell1.value]
-        let fSpell = summonerSpellFileNames[participant.summonerSpell2.value]
-        cell.dSpellImageView.image = UIImage(named: dSpell!)
-        cell.fSpellImageView.image = UIImage(named: fSpell!)
-    }
-    
-    func setKDAForCell(stats: MatchParticipantStats, cell: PlayerTableViewCell) {
-        let kills = stats.kills
-        let deaths = stats.deaths
-        let assists = stats.assists
-        let kda = Double(kills+assists)/Double(deaths)
-        let newKDA = formatter.string(for:kda)
-        cell.kdaLabel.text = "\(kills) / \(deaths) / \(assists) -- \(newKDA!): 1"
-    }
-    
-    func setCSAndGoldLabel(stats: MatchParticipantStats, cell: PlayerTableViewCell) {
-        let cs = stats.totalMinionsKilled
-        let gameDuration = Double(matchData.match.gameDuration.minutes) + (Double(matchData.match.gameDuration.seconds) / 60.0)
-        let csPerMinute = Double(cs) / gameDuration
-        let newCSPerMinute = formatter.string(for: csPerMinute)
-        let gold:Double = Double(stats.goldEarned) / 1000.0
-        
-        let newGold = formatter.string(for:gold)
-        cell.csGoldLabel.text = "\(cs)(\(newCSPerMinute!)) / \(newGold!)k"
-        cell.damageLabel.text = String(stats.totalDamageDealtToChampions)
-    }
 }
