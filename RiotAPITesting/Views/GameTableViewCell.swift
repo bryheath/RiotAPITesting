@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import LeagueAPI
 
 class GameTableViewCell: UITableViewCell {
 
@@ -23,8 +24,9 @@ class GameTableViewCell: UITableViewCell {
     @IBOutlet var kdaLabel: UILabel!
     @IBOutlet var matchTypeLabel: UILabel!
     @IBOutlet var durationLabel: UILabel!
+    @IBOutlet var indexLabel: UILabel!
     var backgroundColorIsSet: Bool = false
-    var match: MatchData?
+    var match: Match?
     
     
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -157,3 +157,19 @@ import Foundation
 //////                print(masteries)
 ////            }
 ////        }
+
+
+
+/*
+ 
+ {
+ "id": "bbG7MVAkzdJ1sGFA4_5gMG-i3uCIHXlA8kuOjtJXWG35qqM",
+ "accountId": "56-nTcnBTly_qpchi4Q6Cfi0ZCDyw3IJ581gAFgpcxT1fVc",
+ "puuid": "OoDNhtz1YucubaketIqogTiU2_EVa0qaeyl_cUCvMiVY31eEqeIg59EmEpAMPnuc667AdKI-p_C1vQ",
+ "name": "SunraiRW",
+ "profileIconId": 5043,
+ "revisionDate": 1652509977000,
+ "summonerLevel": 433
+ }
+ 
+ */

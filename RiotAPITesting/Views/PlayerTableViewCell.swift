@@ -31,9 +31,8 @@ class PlayerTableViewCell: UITableViewCell {
     @IBOutlet var damageLabel: UILabel!
     
     let formatter = NumberFormatter()
-//    var matchData: MatchData?
-//    var matchParticipant: MatchParticipant?
-//    var participantIndex: Int = 0
+    var match: Match?
+
     
     
     override func awakeFromNib() {
@@ -44,6 +43,7 @@ class PlayerTableViewCell: UITableViewCell {
         formatter.numberStyle = .decimal
         formatter.maximumSignificantDigits = 3
         
+        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -51,59 +51,34 @@ class PlayerTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
-//    func setSummonerSpellsForCell(participant: MatchParticipant) {
-//        let dSpell = summonerSpellFileNames[participant.summonerSpell1.value]
-//        let fSpell = summonerSpellFileNames[participant.summonerSpell2.value]
-//        dSpellImageView.image = UIImage(named: dSpell!)
-//        fSpellImageView.image = UIImage(named: fSpell!)
-//    }
+
     func setSummonerSpellsForCell(participant: MatchParticipant) {
-            let dSpell = summonerSpellFileNames[participant.summonerSpell1.value]
-            let fSpell = summonerSpellFileNames[participant.summonerSpell2.value]
+        let dSpell = summonerSpellFileNames[participant.summoner1Id.value]
+        let fSpell = summonerSpellFileNames[participant.summoner2Id.value]
             dSpellImageView.image = UIImage(named: dSpell!)
             fSpellImageView.image = UIImage(named: fSpell!)
     }
     
-//    func setKDAForCell(stats: MatchParticipantStats) {
-//        let kills = stats.kills
-//        let deaths = stats.deaths
-//        let assists = stats.assists
-//        let kda = Double(kills+assists)/Double(deaths)
-//        let newKDA = formatter.string(for:kda)
-//        kdaLabel.text = "\(kills) / \(deaths) / \(assists) -- \(newKDA!): 1"
-//    }
-    func setKDAForCell(stats: MatchParticipantStats) {
-            let kills = stats.kills
-            let deaths = stats.deaths
-            let assists = stats.assists
+    func setKDAForCell(participant: MatchParticipant) {
+            let kills = participant.kills
+            let deaths = participant.deaths
+            let assists = participant.assists
             let kda = Double(kills+assists)/Double(deaths)
             let newKDA = formatter.string(for:kda)
             kdaLabel.text = "\(kills) / \(deaths) / \(assists) -- \(newKDA!): 1"
     }
-    
-//    func setCSAndGoldLabel(matchData: MatchData) {
-//        let cs = matchData.stats.totalMinionsKilled
-//        let gameDuration = Double(matchData.match.gameDuration.minutes) + (Double(matchData.match.gameDuration.seconds) / 60.0)
-//        let csPerMinute = Double(cs) / gameDuration
-//        let newCSPerMinute = formatter.string(for: csPerMinute)
-//        let gold:Double = Double(matchData.stats.goldEarned) / 1000.0
-//
-//        let newGold = formatter.string(for:gold)
-//        csGoldLabel.text = "\(cs)(\(newCSPerMinute!)) / \(newGold!)k"
-//        damageLabel.text = String(matchData.stats.totalDamageDealtToChampions)
-//    }
-    func setCSAndGoldLabel(stats: MatchParticipantStats, gameDuration: Duration) {
+
+    func setCSAndGoldLabel(participant: MatchParticipant, gameDuration: Duration) {
         
-        let cs = stats.totalMinionsKilled
+        let cs = participant.totalMinionsKilled
             let decimalGameDuration = Double(gameDuration.minutes) + (Double(gameDuration.seconds) / 60.0)
             let csPerMinute = Double(cs) / decimalGameDuration
             let newCSPerMinute = formatter.string(for: csPerMinute)
-            let gold:Double = Double(stats.goldEarned) / 1000.0
+            let gold:Double = Double(participant.goldEarned) / 1000.0
             
             let newGold = formatter.string(for:gold)
             csGoldLabel.text = "\(cs)(\(newCSPerMinute!)) / \(newGold!)k"
-            damageLabel.text = String(stats.totalDamageDealtToChampions)
+            damageLabel.text = String(participant.totalDamageDealtToChampions)
         
     }
     
@@ -113,11 +88,11 @@ class PlayerTableViewCell: UITableViewCell {
 //        getRunePathImage(runePathId: stats.secondaryRunePath!) { image in
 //            self.secondaryRuneImageView.setImage(image) }
 //    }
-    func setRunePathImages(stats: MatchParticipantStats) {
-            getRunePathImage(runePathId: stats.primaryRunePath!) { image in
-                self.primaryRuneImageView.setImage(image) }
-            getRunePathImage(runePathId: stats.secondaryRunePath!) { image in
-                self.secondaryRuneImageView.setImage(image) }
+    func setRunePathImages(participant: MatchParticipant) {
+        getRunePathImage(runePathId: participant.perks.styles[0].style) { image in
+            self.primaryRuneImageView.setImage(image) }
+        getRunePathImage(runePathId: participant.perks.styles[1].style) { image in
+            self.secondaryRuneImageView.setImage(image) }
     }
     
     func setPlayerNameLabel(summonerName: String) {
@@ -126,12 +101,13 @@ class PlayerTableViewCell: UITableViewCell {
     
     func setItemImages(matchData: MatchData, index: Int) {
         var imagesDict = [Int: UIImage]()
-        let matchParticipant = matchData.match.participantsInfo[index]
-        let stats = matchParticipant.stats
-        let itemIDArray = [stats.item0, stats.item1, stats.item2, stats.item3, stats.item4, stats.item5, stats.item6]
+        let player = matchData.info.participants[index]
+
+        let itemIDArray = [player.item0, player.item1, player.item2, player.item3, player.item4, player.item5, player.item6]
         let itemImageViewArray = [item0ImageView, item1ImageView, item2ImageView, item3ImageView, item4ImageView, item5ImageView, item6ImageView]
         
         for item in 0..<itemIDArray.count {
+            
             getItemImage(itemId: itemIDArray[item]) { image in
                 imagesDict[item] = image
                 if let itemImage = itemImageViewArray[item] {

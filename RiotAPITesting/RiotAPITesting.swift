@@ -8,7 +8,7 @@
 import Foundation
 import LeagueAPI
 
-public let league: LeagueAPI = LeagueAPI(APIToken: "RGAPI-9b872625-3629-4e82-af68-b3eb2fd81a39")
+public let league: League_API = League_API(APIToken: "RGAPI-f3edc4d3-4204-4cb9-900a-362a01b3961e") //09-22-22
 public var preferredRegion: Region = Region.NA
 public var preferredWorldRegion: WorldRegion {
     switch preferredRegion {
@@ -18,10 +18,16 @@ public var preferredWorldRegion: WorldRegion {
             return .Asia
         case .EUNE, .EUW, .TR, .RU:
             return .Europe
+        default:
+            return .America
     }
 }
-public var preferredSummoner: String = ""
-public var matches: [MatchReference] = []
+
+
+
+public var preferredSummoner: String = "SunraiRW"
+//OoDNhtz1YucubaketIqogTiU2_EVa0qaeyl_cUCvMiVY31eEqeIg59EmEpAMPnuc667AdKI-p_C1vQ
+
 
 
 extension Array where Element: Equatable {

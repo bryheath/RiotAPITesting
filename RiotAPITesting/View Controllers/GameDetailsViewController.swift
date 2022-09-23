@@ -26,7 +26,7 @@ class GameDetailsViewController: UIViewController, UITableViewDelegate, UITableV
     }
 
     
-    var matchData: MatchData!
+    var matchData: Match!
     @IBOutlet var victoryLabel: UILabel!
     @IBOutlet var modeTimeDurationLabel: UILabel!
     @IBOutlet var SDBSegmentedControl: UISegmentedControl!
@@ -41,19 +41,22 @@ class GameDetailsViewController: UIViewController, UITableViewDelegate, UITableV
     
     
     func getTeamStats() {
-        for participant in 0..<matchData.match.participantsInfo.count {
+        for participant in 0..<matchData.info.participants.count {
+            
             //                print("\(game.match.participants[6].player.summonerName)")
             //                print("\(game.match.participantsInfo[6].teamId)")
-            let teamID = matchData.match.participantsInfo[participant].teamId
+            let players = matchData.info.participants
+            let teamID = players[participant].teamId
+            let stats = players[participant]
             
             if teamID == 100 {
-                blueTeamKills += matchData.match.participantsInfo[participant].stats.kills
-                blueTeamDeaths += matchData.match.participantsInfo[participant].stats.deaths
-                blueTeamAssists += matchData.match.participantsInfo[participant].stats.assists
+                blueTeamKills += stats.kills
+                blueTeamDeaths += stats.deaths
+                blueTeamAssists += stats.assists
             } else {
-                redTeamKills += matchData.match.participantsInfo[participant].stats.kills
-                redTeamDeaths += matchData.match.participantsInfo[participant].stats.deaths
-                redTeamAssists += matchData.match.participantsInfo[participant].stats.assists
+                redTeamKills += stats.kills
+                redTeamDeaths += stats.deaths
+                redTeamAssists += stats.assists
             }
             
         }
@@ -62,7 +65,13 @@ class GameDetailsViewController: UIViewController, UITableViewDelegate, UITableV
     func setupTeamCell(index: IndexPath) -> TeamTableViewCell {
         let teamCell: TeamTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "teamCell", for: index) as! TeamTableViewCell
         
-        let team = matchData.match.teamsInfo[index.section]
+        let team = matchData.info.teams[index.section]
+        let objectives = team.objectives
+        let baron = objectives.baron
+        let dragon = objectives.dragon
+        let tower = objectives.tower
+        let inhibitor = objectives.inhibitor
+        
         var teamColor = ""
         var winString = ""
         if team.win {
@@ -87,7 +96,7 @@ class GameDetailsViewController: UIViewController, UITableViewDelegate, UITableV
             let newKDA = formatter.string(for: kda)
             teamCell.leftLabel.text = "\(winString) (\(teamColor)) KDA - \(redTeamKills) / \(redTeamDeaths) / \(redTeamAssists) -- \(newKDA!): 1"
         }
-        teamCell.rightLabel.text = "\(team.baronKills)B \(team.dragonKills)D \(team.towerKills)T"
+        teamCell.rightLabel.text = "\(baron.kills)B \(dragon.kills)D \(tower.kills)T \(inhibitor.kills)I"
         return teamCell
     }
    
@@ -98,38 +107,19 @@ class GameDetailsViewController: UIViewController, UITableViewDelegate, UITableV
         if index.section == 1 {
             participantIndex += 5
         }
-        let matchParticipant = matchData.match.participantsInfo[participantIndex]
-//        playerCell.matchParticipant = matchData.match.participantsInfo[participantIndex]
-//        playerCell.matchData = matchData
-        //playerCell.setup()
-        
-        playerCell.setChampionImage(participant: matchData.match.participantsInfo[participantIndex])
-        
+        let matchParticipant = matchData.info.participants[participantIndex]
+
+        playerCell.setChampionImage(participant: matchParticipant)
         playerCell.setSummonerSpellsForCell(participant: matchParticipant)
-        
-        playerCell.setRunePathImages(stats: matchParticipant.stats)
-//        getRunePathImage(runePathId: matchParticipant.stats.primaryRunePath!) { image in playerCell.primaryRuneImageView.setImage(image) }
-//        getRunePathImage(runePathId: matchParticipant.stats.secondaryRunePath!) { image in playerCell.secondaryRuneImageView.setImage(image) }
-        playerCell.setPlayerNameLabel(summonerName: matchData.match.participants[participantIndex].player.summonerName)
-        playerCell.playerNameLabel.text = matchData.match.participants[participantIndex].player.summonerName
-        
-        playerCell.setKDAForCell(stats: matchParticipant.stats)
-        playerCell.setCSAndGoldLabel(stats: matchParticipant.stats, gameDuration: matchData.match.gameDuration)
-        playerCell.setItemImages(matchData: matchData, index: participantIndex)
-        
-//        var imagesDict = [Int: UIImage]()
-//        let stats = matchParticipant.stats
-//        let itemIDArray = [stats.item0, stats.item1, stats.item2, stats.item3, stats.item4, stats.item5, stats.item6]
-//        let itemImageViewArray = [playerCell.item0ImageView, playerCell.item1ImageView, playerCell.item2ImageView, playerCell.item3ImageView, playerCell.item4ImageView, playerCell.item5ImageView, playerCell.item6ImageView]
-//
-//        for item in 0..<itemIDArray.count {
-//            getItemImage(itemId: itemIDArray[item]) { image in
-//                imagesDict[item] = image
-//                if let itemImage = itemImageViewArray[item] {
-//                    itemImage.setImage(imagesDict[item])
-//                }
-//            }
-//        }
+        playerCell.setRunePathImages(participant: matchParticipant)
+        playerCell.setPlayerNameLabel(summonerName: matchParticipant.summonerName)
+        //playerCell.playerNameLabel.text = matchParticipant.summonerName
+    
+        playerCell.setKDAForCell(participant: matchParticipant)
+        let duration = Duration(minutes: Double(matchData.info.gameDuration))
+        playerCell.setCSAndGoldLabel(participant: matchParticipant, gameDuration: duration)
+        //playerCell.setItemImages(matchData: matchData, index: participantIndex)
+
         return playerCell
     }
     
@@ -144,10 +134,12 @@ class GameDetailsViewController: UIViewController, UITableViewDelegate, UITableV
         if let matchData = matchData {
             getTeamStats()
             var sinceGame = ""
-            victoryLabel.text = matchData.victory ? "Win" : "Loss"
+            //victoryLabel.text = matchData.you.win ? "Win" : "Loss"
                 
             let currentTime = Date()
-            let difference = Calendar.current.dateComponents([.hour, .minute], from: matchData.gameCreation, to: currentTime)
+            //let gameEndTime = TimeInterval(matchData.info.gameCreation + matchData.info.gameDuration)
+            let gameEnd = Date(timeIntervalSince1970: TimeInterval(matchData.info.gameEndTimestamp/1000))
+            let difference = Calendar.current.dateComponents([.day, .hour, .minute], from: gameEnd, to: currentTime)
             if let days = difference.day {
                 sinceGame += "\(days)d ago"
             } else {
@@ -160,7 +152,8 @@ class GameDetailsViewController: UIViewController, UITableViewDelegate, UITableV
                 }
                 
             }
-            modeTimeDurationLabel.text = "\(matchData.gameMode) | \(sinceGame) | \(matchData.gameDurationMinutes):\(matchData.gameDurationSeconds)"
+            let duration = Duration(minutes: Double(matchData.info.gameDuration))
+            modeTimeDurationLabel.text = "\(matchData.info.gameMode.mode.description) | \(sinceGame) | \(duration.minutes):\(duration.seconds)"
         }
         
     }

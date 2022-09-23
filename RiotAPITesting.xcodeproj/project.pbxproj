@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,8 +11,8 @@
 		BE1B794126A3709E00AB3A46 /* GameListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1B794026A3709E00AB3A46 /* GameListTableViewController.swift */; };
 		BE1B794726A383C100AB3A46 /* MatchDataList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1B794626A383C100AB3A46 /* MatchDataList.swift */; };
 		BE1B794926A3843A00AB3A46 /* MatchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1B794826A3843A00AB3A46 /* MatchData.swift */; };
-		BE2877F226B8F9E0005B119E /* LeagueAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE2877F126B8F9E0005B119E /* LeagueAPI.framework */; };
-		BE2877F326B8FA04005B119E /* LeagueAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE2877F126B8F9E0005B119E /* LeagueAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BE20297128DD53FF00263339 /* LeagueAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE20296F28DD53F500263339 /* LeagueAPI.framework */; };
+		BE20297228DD53FF00263339 /* LeagueAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE20296F28DD53F500263339 /* LeagueAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BE6B708A26A8CE3B0074BEA4 /* OfflineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6B708926A8CE3B0074BEA4 /* OfflineData.swift */; };
 		BE6B708C26A8D0790074BEA4 /* ChampionFull.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6B708B26A8D0790074BEA4 /* ChampionFull.swift */; };
 		BE6B708F26A8DA720074BEA4 /* JSONNull.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6B708E26A8DA720074BEA4 /* JSONNull.swift */; };
@@ -25,6 +25,7 @@
 		BE949E8726B8C0E200E23670 /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1B794326A37BD300AB3A46 /* GameTableViewCell.swift */; };
 		BE949E8826B8C0E200E23670 /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE949E8526B8C03000E23670 /* TeamTableViewCell.swift */; };
 		BE949E8926B8C0E200E23670 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC0C88C26B8B45200F1146C /* PlayerTableViewCell.swift */; };
+		BEAD338926BF22A700A487B1 /* UsedChampions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAD338826BF22A700A487B1 /* UsedChampions.swift */; };
 		BEC1E4912698E9EA00BC3F62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC1E4902698E9EA00BC3F62 /* AppDelegate.swift */; };
 		BEC1E4932698E9EA00BC3F62 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC1E4922698E9EA00BC3F62 /* SceneDelegate.swift */; };
 		BEC1E4952698E9EA00BC3F62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC1E4942698E9EA00BC3F62 /* ViewController.swift */; };
@@ -187,6 +188,7 @@
 		BED1306C26A8C71B007D367D /* Taric.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FC726A8C71B007D367D /* Taric.json */; };
 		BED1306D26A8C71B007D367D /* Cassiopeia.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FC826A8C71B007D367D /* Cassiopeia.json */; };
 		BED25B4326B3433500B2FC71 /* StatRankings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED25B4226B3433500B2FC71 /* StatRankings.swift */; };
+		BEE6DCA22899EEC500AD4EBC /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE6DCA12899EEC500AD4EBC /* TimeInterval.swift */; };
 		BEEA302526A7C20F009E3C78 /* RiotAPITesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEA302426A7C20F009E3C78 /* RiotAPITesting.swift */; };
 		BEEA303726A7D93D009E3C78 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEA302726A7D93D009E3C78 /* UIImageViewExtension.swift */; };
 		BEEA303826A7D93D009E3C78 /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEA302826A7D93D009E3C78 /* UITextViewExtension.swift */; };
@@ -196,13 +198,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		BEC1E4AB2698F35600BC3F62 /* Embed Frameworks */ = {
+		BEF38F8B28D82872004BBC3F /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BE2877F326B8FA04005B119E /* LeagueAPI.framework in Embed Frameworks */,
+				BE20297228DD53FF00263339 /* LeagueAPI.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,7 +217,7 @@
 		BE1B794326A37BD300AB3A46 /* GameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
 		BE1B794626A383C100AB3A46 /* MatchDataList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDataList.swift; sourceTree = "<group>"; };
 		BE1B794826A3843A00AB3A46 /* MatchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchData.swift; sourceTree = "<group>"; };
-		BE2877F126B8F9E0005B119E /* LeagueAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LeagueAPI.framework; sourceTree = "<group>"; };
+		BE20296F28DD53F500263339 /* LeagueAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LeagueAPI.framework; sourceTree = "<group>"; };
 		BE6B708926A8CE3B0074BEA4 /* OfflineData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineData.swift; sourceTree = "<group>"; };
 		BE6B708B26A8D0790074BEA4 /* ChampionFull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionFull.swift; sourceTree = "<group>"; };
 		BE6B708E26A8DA720074BEA4 /* JSONNull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONNull.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 		BE711C0E269E883F00CA57CE /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		BE76437626B498D70032F479 /* Akshan.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Akshan.json; sourceTree = "<group>"; };
 		BE949E8526B8C03000E23670 /* TeamTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
+		BEAD338826BF22A700A487B1 /* UsedChampions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsedChampions.swift; sourceTree = "<group>"; };
 		BEC0C88C26B8B45200F1146C /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
 		BEC1E48D2698E9EA00BC3F62 /* RiotAPITesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RiotAPITesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEC1E4902698E9EA00BC3F62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -391,6 +394,7 @@
 		BED12FC726A8C71B007D367D /* Taric.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Taric.json; sourceTree = "<group>"; };
 		BED12FC826A8C71B007D367D /* Cassiopeia.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Cassiopeia.json; sourceTree = "<group>"; };
 		BED25B4226B3433500B2FC71 /* StatRankings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatRankings.swift; sourceTree = "<group>"; };
+		BEE6DCA12899EEC500AD4EBC /* TimeInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInterval.swift; sourceTree = "<group>"; };
 		BEEA302426A7C20F009E3C78 /* RiotAPITesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiotAPITesting.swift; sourceTree = "<group>"; };
 		BEEA302726A7D93D009E3C78 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		BEEA302826A7D93D009E3C78 /* UITextViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewExtension.swift; sourceTree = "<group>"; };
@@ -404,7 +408,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE2877F226B8F9E0005B119E /* LeagueAPI.framework in Frameworks */,
+				BE20297128DD53FF00263339 /* LeagueAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +443,7 @@
 				BE6B708B26A8D0790074BEA4 /* ChampionFull.swift */,
 				BE6B709626A8EC2A0074BEA4 /* Champion.swift */,
 				BED25B4226B3433500B2FC71 /* StatRankings.swift */,
+				BEAD338826BF22A700A487B1 /* UsedChampions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -458,6 +463,7 @@
 			children = (
 				BEC1E48F2698E9EA00BC3F62 /* RiotAPITesting */,
 				BEC1E48E2698E9EA00BC3F62 /* Products */,
+				BED191BF272291CF00159E12 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -476,13 +482,12 @@
 				BE1B794526A3836800AB3A46 /* Model */,
 				BE1B794226A37BB500AB3A46 /* Views */,
 				BE1B793F26A3707900AB3A46 /* View Controllers */,
-				BEEA302626A7D93D009E3C78 /* UIElements */,
+				BEEA302626A7D93D009E3C78 /* Extensions */,
 				BEC1E4942698E9EA00BC3F62 /* ViewController.swift */,
 				BEC1E4962698E9EA00BC3F62 /* Main.storyboard */,
 				BEC1E4992698E9EB00BC3F62 /* Assets.xcassets */,
 				BEC1E49B2698E9EB00BC3F62 /* LaunchScreen.storyboard */,
 				BEC1E49E2698E9EB00BC3F62 /* Info.plist */,
-				BE2877F126B8F9E0005B119E /* LeagueAPI.framework */,
 				BE711C0E269E883F00CA57CE /* Player.swift */,
 				BE711C0C269E878A00CA57CE /* File.swift */,
 				BEC1E4902698E9EA00BC3F62 /* AppDelegate.swift */,
@@ -665,15 +670,24 @@
 			path = champion;
 			sourceTree = "<group>";
 		};
-		BEEA302626A7D93D009E3C78 /* UIElements */ = {
+		BED191BF272291CF00159E12 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE20296F28DD53F500263339 /* LeagueAPI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BEEA302626A7D93D009E3C78 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				BEEA302726A7D93D009E3C78 /* UIImageViewExtension.swift */,
 				BEEA302826A7D93D009E3C78 /* UITextViewExtension.swift */,
 				BEEA302926A7D93D009E3C78 /* UILabelExtension.swift */,
 				BEEA303626A7D93D009E3C78 /* UITableViewExtension.swift */,
+				BEE6DCA12899EEC500AD4EBC /* TimeInterval.swift */,
 			);
-			path = UIElements;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -683,10 +697,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BEC1E4A12698E9EB00BC3F62 /* Build configuration list for PBXNativeTarget "RiotAPITesting" */;
 			buildPhases = (
-				BEC1E4892698E9EA00BC3F62 /* Sources */,
 				BEC1E48A2698E9EA00BC3F62 /* Frameworks */,
+				BEC1E4892698E9EA00BC3F62 /* Sources */,
 				BEC1E48B2698E9EA00BC3F62 /* Resources */,
-				BEC1E4AB2698F35600BC3F62 /* Embed Frameworks */,
+				BEF38F8B28D82872004BBC3F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -705,6 +719,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
+				ORGANIZATIONNAME = "Bryan Heath";
 				TargetAttributes = {
 					BEC1E48C2698E9EA00BC3F62 = {
 						CreatedOnToolsVersion = 12.4;
@@ -712,7 +727,7 @@
 				};
 			};
 			buildConfigurationList = BEC1E4882698E9EA00BC3F62 /* Build configuration list for PBXProject "RiotAPITesting" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -906,12 +921,14 @@
 				BE949E8726B8C0E200E23670 /* GameTableViewCell.swift in Sources */,
 				BE949E8826B8C0E200E23670 /* TeamTableViewCell.swift in Sources */,
 				BE949E8926B8C0E200E23670 /* PlayerTableViewCell.swift in Sources */,
+				BEAD338926BF22A700A487B1 /* UsedChampions.swift in Sources */,
 				BE6B709726A8EC2A0074BEA4 /* Champion.swift in Sources */,
 				BEEA302526A7C20F009E3C78 /* RiotAPITesting.swift in Sources */,
 				BE1B794726A383C100AB3A46 /* MatchDataList.swift in Sources */,
 				BE6B709326A8DAA90074BEA4 /* JSONAny.swift in Sources */,
 				BED25B4326B3433500B2FC71 /* StatRankings.swift in Sources */,
 				BEEA303826A7D93D009E3C78 /* UITextViewExtension.swift in Sources */,
+				BEE6DCA22899EEC500AD4EBC /* TimeInterval.swift in Sources */,
 				BEEA304526A7D93D009E3C78 /* UITableViewExtension.swift in Sources */,
 				BEC1E4952698E9EA00BC3F62 /* ViewController.swift in Sources */,
 				BE6B708F26A8DA720074BEA4 /* JSONNull.swift in Sources */,
@@ -957,6 +974,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -987,6 +1005,8 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEBUG_ACTIVITY_MODE = "";
+				"DEBUG_ACTIVITY_MODE[sdk=iphonesimulator*]" = disable;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -1004,7 +1024,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1018,6 +1038,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1048,6 +1069,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEBUG_ACTIVITY_MODE = "";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1059,9 +1081,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -1074,17 +1097,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZE994RWSUV;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RiotAPITesting",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = RiotAPITesting/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_CODE_SIGN_FLAGS = "--generate-entitlement-der";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sunrai.RiotAPITesting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1098,17 +1125,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZE994RWSUV;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RiotAPITesting",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = RiotAPITesting/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_CODE_SIGN_FLAGS = "--generate-entitlement-der";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sunrai.RiotAPITesting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

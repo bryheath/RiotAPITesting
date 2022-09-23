@@ -11,12 +11,14 @@ class GameListTableViewController: UITableViewController {
     var yourPlayer: Summoner?
     var players:[Player] = []
     private var summoner: Summoner?
+    private var matches: [LOLMatchId] = []
+    private var matchDetails: [LOLMatchId : Match] = [:]
     var currentGame: MatchData?
 
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     //var matchDataList:[MatchData] = []
-    var matchDataList: [Int: MatchData] = [:]
+    //var matchDataList: [Int: Match] = [:]
     
 
     override func viewDidLoad() {
@@ -27,98 +29,19 @@ class GameListTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    func setupMatchCell(match: MatchReference, index:IndexPath) -> GameTableViewCell {
-        let gameCell: GameTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "gameCell") as! GameTableViewCell
-//        if let found = matchDataList.first(where:{$0.gameID == match.gameId}) {
-//            gameCell.scoreLabel.setText("\(found.kills)/\(found.deaths)/\(found.assists)")
-//
-//            gameCell.kdaLabel.setText("\(found.KDA):1 KDA")
-//            gameCell.matchTypeLabel.setText(found.queueMode)
-//            gameCell.durationLabel.setText("\(found.gameDurationMinutes) m \(found.gameDurationSeconds) s")
-//            if found.victory {
-//                gameCell.backgroundColor = UIColor.green
-//            } else {
-//                gameCell.backgroundColor = UIColor.red
-//            }
-//
-//
-//            gameCell.rune1ImageView.image = found.primaryRuneImage
-//            gameCell.rune2ImageView.image = found.secondaryRuneImage
-//            gameCell.dSpellImageView.image = found.dSpellImage
-//            gameCell.fSpellImageView.image = found.fSpellImage
-//            gameCell.championImageView.image = found.championImage
-//            gameCell.match = found
-//
-//
-//
-//
-//
-//        } else {
-            self.getYourDataFromMatch(gameID: match.gameId) { game in
-                
-                self.currentGame = game
-                gameCell.scoreLabel.setText("\(game.kills)/\(game.deaths)/\(game.assists)")
-                gameCell.kdaLabel.setText("\(game.KDA):1 KDA")
-                gameCell.matchTypeLabel.setText(game.queueMode)
-                gameCell.durationLabel.setText("\(game.gameDurationMinutes) m \(game.gameDurationSeconds) s")
-
-                if let summonerWon = game.match.teamsInfo.filter({ team in
-                    return team.teamId == game.player.teamId
-                }).first?.win {
-                    DispatchQueue.main.async {
-                        gameCell.backgroundColorIsSet = true
-                        game.victory = summonerWon
-                        gameCell.backgroundColor = game.victory ? UIColor.green : UIColor.red
-                    }
-                }
-                getSummonerSpells(participant: game.player) { (dSpellImage, fSpellImage) in
-                    game.dSpellImage = dSpellImage
-                    game.fSpellImage = fSpellImage
-                    gameCell.dSpellImageView.setImage(dSpellImage)
-                    gameCell.fSpellImageView.setImage(fSpellImage)
-                }
-                getRunePathImage(runePathId: game.player.stats.primaryRunePath!) { image in
-                    game.primaryRuneImage = image
-                    gameCell.rune1ImageView.setImage(image)
-                }
-                getRunePathImage(runePathId: game.player.stats.secondaryRunePath!) { image in
-                    game.secondaryRuneImage = image
-                    gameCell.rune2ImageView.setImage(image)
-                }
-                getChampionImage(championId: match.championId) { image in
-                    game.championImage = image
-                    gameCell.championImageView.setImage(image)
-                }
-//                self.matchDataList.append(game)
-//                self.matchDataList = self.matchDataList.sorted(by: {$0.match.gameId.value > $1.match.gameId.value})
-                self.matchDataList[index.row] = game
-                print("index: \(index.row) - gameID: \(game.match.gameId)")
-            }
-        //}
-        
-        
-
-        return gameCell
-    }
-    
-    
-
     func getMatchList(for summonerName: String) {
         league.lolAPI.getSummoner(byName: summonerName, on: preferredRegion) { (summoner, errorMsg) in
             if let summoner = summoner {
                 self.summoner = summoner
-                league.lolAPI.getMatchList(by: summoner.accountId, on: preferredRegion, endIndex: 20) { (matchList, errorMsg) in
+                print(summoner.puuid)
+                league.lolAPI.getMatchList(by: summoner.puuid, on: preferredRegion, count: 30) { (matchList, errorMsg) in
                     if let matchList = matchList {
-                        matches = matchList.matches
                         
-                        DispatchQueue.main.async {
-                            self.tableView.reloadData()
-                        }
-
+                        self.matches = matchList
+                        self.tableView.reload()
                     } else {
                         print("getMatchList Request failed cause: \(errorMsg ?? "No error description")")
                     }
-
                 }
             } else {
                 print("getMatchListSummoner Request failed cause: \(errorMsg ?? "No Error Description")")
@@ -129,33 +52,17 @@ class GameListTableViewController: UITableViewController {
     }
     
     
-    func getYourDataFromMatch(gameID: GameId, completion: @escaping (MatchData) -> Void) {
-        league.lolAPI.getMatch(by: gameID, on: preferredRegion) { [self] (game, errorMsg) in
-            if let game = game {
-                for participant in 0..<game.participants.count {
-                    if self.summoner?.name == game.participants[participant].player.summonerName {
-                        let matchData = MatchData(match: game, participant: participant)
-//
-//                        let player = match.participantsInfo[participant]
-//                        let championID = match.participantsInfo[participant].championId.value
-//                        let champion = self.appDelegate.championNamesDictionary[championID]!
-//
-//                        let stats = player.stats
-//                        let timeline = player.timeline
-//                        let kills = stats.kills
-//                        let deaths = stats.deaths
-//                        let assists = stats.assists
-//
-//                        let lane = timeline.lane
-//                        let role = timeline.role
-//                        let level = stats.champLevel
-//                        let matchData = MatchData(player: player, championID: championID, championName: champion, stats: stats, timeline: timeline, kills: kills, deaths: deaths, assists: assists, lane: lane, role: role, level: level)
-//                        self.matchDataList.append(matchData)
-                        completion(matchData)
-                    }
+    func getMatchDetails(matchId: LOLMatchId, completion: @escaping (Match) -> Void) {
+        if let localGameDetails = self.matchDetails[matchId] {
+            completion(localGameDetails)
+        } else {
+            league.lolAPI.getMatch(by: matchId, on: preferredRegion) { [self] (match, errorMsg) in
+                if let match = match {
+                    self.matchDetails[matchId] = match
+                    completion(match)
+                } else {
+                    print("GLTVC - getYourDataFromMatch Request failed cause: \(errorMsg ?? "No error description")")
                 }
-            } else {
-                print("getYourDataFromMatch Request failed cause: \(errorMsg ?? "No error description")")
             }
         }
     }
@@ -182,40 +89,124 @@ class GameListTableViewController: UITableViewController {
         players = players.sorted()
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationVC = segue.destination as? GameDetailsViewController {
+                    print(type(of: sender))
+                    //print(sender)
+            self.setupGameDetailsVC(destinationVC, sender: sender)
+        }
+//        print(type(of: sender))
+//        print(sender)
+//        if segue.identifier == "toGameDetails" {
+//            if let gameDetailsViewController = segue.destination as? GameDetailsViewController {
+//                //gameDetailsViewController.match =
+//                if let index = self.tableView.indexPathForSelectedRow?.row {
+////                    print("Selected Index: \(index) - GameID: \(matchDataList[index].match.gameId)")
+//
+//                    print("Selected Index: \(index) - GameID: \(self.matchDataList[index]!.info.gameId)")
+//                    gameDetailsViewController.matchData = matchDataList[index]
+//                } else {
+//                    print("Error")
+//                }
+//
+//            }
+//        }
+    }
+    
+    func setupGameDetailsVC(_ gameDetailsVC: GameDetailsViewController, sender: Any?) {
+        guard let matchDetails = sender as? Match else { return }
+        gameDetailsVC.matchData = matchDetails
+    }
+    
+    func setupMatchCell(matchId: LOLMatchId) -> GameTableViewCell {
+        let gameCell: GameTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "gameCell") as! GameTableViewCell
+        guard let summoner = self.summoner else { return gameCell }
+        
+        
+        self.getMatchDetails(matchId: matchId) { match in
+            
+            if let player = match.info.participants.first(where: { $0.summonerId == summoner.id}) {
+                DispatchQueue.main.async {
+                   gameCell.backgroundColor = player.win ? #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1) : #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+                }
+                let kda = (player.kills + player.assists) / player.deaths
+                gameCell.scoreLabel.setText("\(player.kills)/\(player.deaths)/\(player.assists)")
+                gameCell.kdaLabel.setText("\(kda):1 KDA")
+                let queue = QueueMode(Long(match.info.queueId))
+                gameCell.matchTypeLabel.setText(queue.mode.description)
+                let duration:TimeInterval = Double(match.info.gameDuration)
+                gameCell.durationLabel.setText(duration.minuteSecond)
+                gameCell.backgroundColorIsSet = true
+                getSummonerSpells(participant: player) { (dSpellImage, fSpellImage) in
+                    gameCell.dSpellImageView.setImage(dSpellImage)
+                    gameCell.fSpellImageView.setImage(fSpellImage)
+                }
+                getRunePathImage(runePathId: player.perks.styles[0].style) { image in
+                gameCell.rune1ImageView.setImage(image)
+                }
+                getRunePathImage(runePathId: player.perks.styles[1].style) { image in
+                gameCell.rune2ImageView.setImage(image)
+                }
+                gameCell.match = match
+            }
+//            if let summonerParticipant = match.info.participants.filter({ participant in
+//                return participant.summonerId == summoner.id
+//            }).first?.participantId {
+//                if let summonerWon = match.info.filter({ team in
+//                    return team.teamId == summonerParticipant.
+//                }).first? {
+//
+//                }
+//
+//            }
+//
+//            let kda = (you.kills + you.assists) / you.deaths
+//                gameCell.scoreLabel.setText("\(you.kills)/\(you.deaths)/\(you.assists)")
+//                gameCell.kdaLabel.setText("\(kda):1 KDA")
+//            let queue = QueueMode(Long(game.info.queueId))
+//            gameCell.matchTypeLabel.setText(queue.mode.description)
+//            gameCell.indexLabel.setText(String(index.row))
+//            let duration:TimeInterval = Double(game.info.gameDuration)
+//
+//            gameCell.durationLabel.setText(duration.minuteSecond)
+//            DispatchQueue.main.async {
+//                gameCell.backgroundColorIsSet = true
+//                gameCell.backgroundColor = you.win ? UIColor.green : UIColor.red
+//            }
+//            getSummonerSpells(participant: you) { (dSpellImage, fSpellImage) in
+//                gameCell.dSpellImageView.setImage(dSpellImage)
+//                gameCell.fSpellImageView.setImage(fSpellImage)
+//            }
+//            getRunePathImage(runePathId: you.perks.styles[0].style) { image in
+//                gameCell.rune1ImageView.setImage(image)
+//            }
+//            getRunePathImage(runePathId: you.perks.styles[1].style) { image in
+//                gameCell.rune2ImageView.setImage(image)
+//            }
+//                getChampionImage(championId: match.championId) { image in
+//                    game.championImage = image
+//                    gameCell.championImageView.setImage(image)
+//                }
+//                self.matchDataList.append(game)
+//                self.matchDataList = self.matchDataList.sorted(by: {$0.match.gameId.value > $1.match.gameId.value})
+//                self.matchDataList[index.row] = game
+        }
+        return gameCell
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return matches.count
+        return self.matches.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let matchAtIndex: MatchReference = matches[indexPath.row]
-        
-        return self.setupMatchCell(match: matchAtIndex, index: indexPath)
+        return self.setupMatchCell(matchId: self.matches[indexPath.row])
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "toGameDetails", sender: self)
+        tableView.deselectRow(at: indexPath, animated: false)
+        let matchId = self.matches[indexPath.row]
+        guard let match: Match = self.matchDetails[matchId] else { return }
+        self.performSegue(withIdentifier: "toGameDetails", sender: match)
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        print(type(of: sender))
-//        print(sender)
-        if segue.identifier == "toGameDetails" {
-            if let gameDetailsViewController = segue.destination as? GameDetailsViewController {
-                //gameDetailsViewController.match =
-                if let index = self.tableView.indexPathForSelectedRow?.row {
-//                    print("Selected Index: \(index) - GameID: \(matchDataList[index].match.gameId)")
-
-                    print("Selected Index: \(index) - GameID: \(self.matchDataList[index]!.match.gameId)")
-                    gameDetailsViewController.matchData = matchDataList[index]
-                } else {
-                    print("Error")
-                }
-                
-            }
-        }
-    }
-    
-    
 }
-
 
