@@ -19,8 +19,8 @@ class UsedChampions {
     
     init(championID: ChampionId) {
         self.championID = championID
-        if championNamesDictionary[championID.value] != nil {
-            self.championName = championNamesDictionary[self.championID.value]!
+        if let champ = championsDictionary[championID.value] {
+            self.championName = champ.name
         } else {
             self.championName = "Unknown"
         }

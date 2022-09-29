@@ -9,10 +9,172 @@
 /* Begin PBXBuildFile section */
 		BE153B2C26B74F5E0019447E /* GameDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE153B2B26B74F5E0019447E /* GameDetailsViewController.swift */; };
 		BE1B794126A3709E00AB3A46 /* GameListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1B794026A3709E00AB3A46 /* GameListTableViewController.swift */; };
-		BE1B794726A383C100AB3A46 /* MatchDataList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1B794626A383C100AB3A46 /* MatchDataList.swift */; };
 		BE1B794926A3843A00AB3A46 /* MatchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1B794826A3843A00AB3A46 /* MatchData.swift */; };
 		BE20297128DD53FF00263339 /* LeagueAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE20296F28DD53F500263339 /* LeagueAPI.framework */; };
 		BE20297228DD53FF00263339 /* LeagueAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE20296F28DD53F500263339 /* LeagueAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BE385D3628E4EBCC00ABD85F /* Alistar.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385C9528E4EBC200ABD85F /* Alistar.json */; };
+		BE385D3728E4EBCC00ABD85F /* Ivern.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385C9628E4EBC200ABD85F /* Ivern.json */; };
+		BE385D3828E4EBCC00ABD85F /* Ornn.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385C9728E4EBC200ABD85F /* Ornn.json */; };
+		BE385D3928E4EBCC00ABD85F /* Aphelios.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385C9828E4EBC200ABD85F /* Aphelios.json */; };
+		BE385D3A28E4EBCC00ABD85F /* Darius.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385C9928E4EBC200ABD85F /* Darius.json */; };
+		BE385D3B28E4EBCC00ABD85F /* Lucian.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385C9A28E4EBC200ABD85F /* Lucian.json */; };
+		BE385D3C28E4EBCC00ABD85F /* Hecarim.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385C9B28E4EBC300ABD85F /* Hecarim.json */; };
+		BE385D3D28E4EBCC00ABD85F /* Viego.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385C9C28E4EBC300ABD85F /* Viego.json */; };
+		BE385D3E28E4EBCC00ABD85F /* Anivia.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385C9D28E4EBC300ABD85F /* Anivia.json */; };
+		BE385D3F28E4EBCC00ABD85F /* RekSai.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385C9E28E4EBC300ABD85F /* RekSai.json */; };
+		BE385D4028E4EBCC00ABD85F /* Xerath.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385C9F28E4EBC300ABD85F /* Xerath.json */; };
+		BE385D4128E4EBCC00ABD85F /* Lux.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CA028E4EBC300ABD85F /* Lux.json */; };
+		BE385D4228E4EBCC00ABD85F /* MonkeyKing.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CA128E4EBC300ABD85F /* MonkeyKing.json */; };
+		BE385D4328E4EBCC00ABD85F /* Sett.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CA228E4EBC300ABD85F /* Sett.json */; };
+		BE385D4428E4EBCC00ABD85F /* Zilean.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CA328E4EBC300ABD85F /* Zilean.json */; };
+		BE385D4528E4EBCC00ABD85F /* Zac.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CA428E4EBC300ABD85F /* Zac.json */; };
+		BE385D4628E4EBCC00ABD85F /* Zyra.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CA528E4EBC300ABD85F /* Zyra.json */; };
+		BE385D4728E4EBCC00ABD85F /* Nocturne.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CA628E4EBC300ABD85F /* Nocturne.json */; };
+		BE385D4828E4EBCC00ABD85F /* Shyvana.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CA728E4EBC300ABD85F /* Shyvana.json */; };
+		BE385D4928E4EBCC00ABD85F /* Fizz.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CA828E4EBC300ABD85F /* Fizz.json */; };
+		BE385D4A28E4EBCC00ABD85F /* Gragas.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CA928E4EBC300ABD85F /* Gragas.json */; };
+		BE385D4B28E4EBCC00ABD85F /* Neeko.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CAA28E4EBC300ABD85F /* Neeko.json */; };
+		BE385D4C28E4EBCC00ABD85F /* TahmKench.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CAB28E4EBC400ABD85F /* TahmKench.json */; };
+		BE385D4D28E4EBCC00ABD85F /* Warwick.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CAC28E4EBC400ABD85F /* Warwick.json */; };
+		BE385D4E28E4EBCC00ABD85F /* Volibear.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CAD28E4EBC400ABD85F /* Volibear.json */; };
+		BE385D4F28E4EBCC00ABD85F /* Cassiopeia.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CAE28E4EBC400ABD85F /* Cassiopeia.json */; };
+		BE385D5028E4EBCC00ABD85F /* Graves.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CAF28E4EBC400ABD85F /* Graves.json */; };
+		BE385D5128E4EBCC00ABD85F /* Vi.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CB028E4EBC400ABD85F /* Vi.json */; };
+		BE385D5228E4EBCC00ABD85F /* Shen.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CB128E4EBC400ABD85F /* Shen.json */; };
+		BE385D5328E4EBCC00ABD85F /* Ekko.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CB228E4EBC400ABD85F /* Ekko.json */; };
+		BE385D5428E4EBCC00ABD85F /* Sona.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CB328E4EBC400ABD85F /* Sona.json */; };
+		BE385D5528E4EBCC00ABD85F /* Gwen.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CB428E4EBC400ABD85F /* Gwen.json */; };
+		BE385D5628E4EBCC00ABD85F /* Soraka.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CB528E4EBC400ABD85F /* Soraka.json */; };
+		BE385D5728E4EBCC00ABD85F /* Urgot.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CB628E4EBC400ABD85F /* Urgot.json */; };
+		BE385D5828E4EBCC00ABD85F /* Varus.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CB728E4EBC400ABD85F /* Varus.json */; };
+		BE385D5928E4EBCC00ABD85F /* Rell.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CB828E4EBC400ABD85F /* Rell.json */; };
+		BE385D5A28E4EBCC00ABD85F /* Ahri.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CB928E4EBC400ABD85F /* Ahri.json */; };
+		BE385D5B28E4EBCC00ABD85F /* Gangplank.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CBA28E4EBC400ABD85F /* Gangplank.json */; };
+		BE385D5C28E4EBCC00ABD85F /* Sejuani.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CBB28E4EBC500ABD85F /* Sejuani.json */; };
+		BE385D5D28E4EBCC00ABD85F /* Leblanc.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CBC28E4EBC500ABD85F /* Leblanc.json */; };
+		BE385D5E28E4EBCC00ABD85F /* Zed.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CBD28E4EBC500ABD85F /* Zed.json */; };
+		BE385D5F28E4EBCC00ABD85F /* Malphite.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CBE28E4EBC500ABD85F /* Malphite.json */; };
+		BE385D6028E4EBCC00ABD85F /* Tristana.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CBF28E4EBC500ABD85F /* Tristana.json */; };
+		BE385D6128E4EBCC00ABD85F /* Singed.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CC028E4EBC500ABD85F /* Singed.json */; };
+		BE385D6228E4EBCC00ABD85F /* Qiyana.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CC128E4EBC500ABD85F /* Qiyana.json */; };
+		BE385D6328E4EBCC00ABD85F /* Irelia.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CC228E4EBC500ABD85F /* Irelia.json */; };
+		BE385D6428E4EBCC00ABD85F /* LeeSin.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CC328E4EBC500ABD85F /* LeeSin.json */; };
+		BE385D6528E4EBCC00ABD85F /* Kayle.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CC428E4EBC500ABD85F /* Kayle.json */; };
+		BE385D6628E4EBCC00ABD85F /* Akshan.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CC528E4EBC500ABD85F /* Akshan.json */; };
+		BE385D6728E4EBCD00ABD85F /* Taric.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CC628E4EBC500ABD85F /* Taric.json */; };
+		BE385D6828E4EBCD00ABD85F /* KogMaw.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CC728E4EBC500ABD85F /* KogMaw.json */; };
+		BE385D6928E4EBCD00ABD85F /* Quinn.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CC828E4EBC500ABD85F /* Quinn.json */; };
+		BE385D6A28E4EBCD00ABD85F /* Kassadin.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CC928E4EBC500ABD85F /* Kassadin.json */; };
+		BE385D6B28E4EBCD00ABD85F /* Thresh.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CCA28E4EBC500ABD85F /* Thresh.json */; };
+		BE385D6C28E4EBCD00ABD85F /* Yone.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CCB28E4EBC500ABD85F /* Yone.json */; };
+		BE385D6D28E4EBCD00ABD85F /* Seraphine.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CCC28E4EBC600ABD85F /* Seraphine.json */; };
+		BE385D6E28E4EBCD00ABD85F /* Fiora.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CCD28E4EBC600ABD85F /* Fiora.json */; };
+		BE385D6F28E4EBCD00ABD85F /* Aatrox.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CCE28E4EBC600ABD85F /* Aatrox.json */; };
+		BE385D7028E4EBCD00ABD85F /* Illaoi.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CCF28E4EBC600ABD85F /* Illaoi.json */; };
+		BE385D7128E4EBCD00ABD85F /* Blitzcrank.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CD028E4EBC600ABD85F /* Blitzcrank.json */; };
+		BE385D7228E4EBCD00ABD85F /* Veigar.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CD128E4EBC600ABD85F /* Veigar.json */; };
+		BE385D7328E4EBCD00ABD85F /* Taliyah.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CD228E4EBC600ABD85F /* Taliyah.json */; };
+		BE385D7428E4EBCD00ABD85F /* Garen.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CD328E4EBC600ABD85F /* Garen.json */; };
+		BE385D7528E4EBCD00ABD85F /* Renata.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CD428E4EBC600ABD85F /* Renata.json */; };
+		BE385D7628E4EBCD00ABD85F /* Draven.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CD528E4EBC600ABD85F /* Draven.json */; };
+		BE385D7728E4EBCD00ABD85F /* Katarina.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CD628E4EBC600ABD85F /* Katarina.json */; };
+		BE385D7828E4EBCD00ABD85F /* Skarner.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CD728E4EBC600ABD85F /* Skarner.json */; };
+		BE385D7928E4EBCD00ABD85F /* MasterYi.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CD828E4EBC600ABD85F /* MasterYi.json */; };
+		BE385D7A28E4EBCD00ABD85F /* Camille.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CD928E4EBC600ABD85F /* Camille.json */; };
+		BE385D7B28E4EBCD00ABD85F /* Nautilus.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CDA28E4EBC600ABD85F /* Nautilus.json */; };
+		BE385D7C28E4EBCD00ABD85F /* Rakan.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CDB28E4EBC600ABD85F /* Rakan.json */; };
+		BE385D7D28E4EBCD00ABD85F /* Rammus.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CDC28E4EBC700ABD85F /* Rammus.json */; };
+		BE385D7E28E4EBCD00ABD85F /* Teemo.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CDD28E4EBC700ABD85F /* Teemo.json */; };
+		BE385D7F28E4EBCD00ABD85F /* AurelionSol.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CDE28E4EBC700ABD85F /* AurelionSol.json */; };
+		BE385D8028E4EBCD00ABD85F /* Brand.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CDF28E4EBC700ABD85F /* Brand.json */; };
+		BE385D8128E4EBCD00ABD85F /* Bard.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CE028E4EBC700ABD85F /* Bard.json */; };
+		BE385D8228E4EBCD00ABD85F /* Diana.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CE128E4EBC700ABD85F /* Diana.json */; };
+		BE385D8328E4EBCD00ABD85F /* Velkoz.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CE228E4EBC700ABD85F /* Velkoz.json */; };
+		BE385D8428E4EBCD00ABD85F /* Viktor.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CE328E4EBC700ABD85F /* Viktor.json */; };
+		BE385D8528E4EBCD00ABD85F /* Kayn.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CE428E4EBC700ABD85F /* Kayn.json */; };
+		BE385D8628E4EBCD00ABD85F /* Xayah.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CE528E4EBC700ABD85F /* Xayah.json */; };
+		BE385D8728E4EBCD00ABD85F /* Yasuo.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CE628E4EBC700ABD85F /* Yasuo.json */; };
+		BE385D8828E4EBCD00ABD85F /* Janna.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CE728E4EBC700ABD85F /* Janna.json */; };
+		BE385D8928E4EBCD00ABD85F /* Zeri.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CE828E4EBC700ABD85F /* Zeri.json */; };
+		BE385D8A28E4EBCD00ABD85F /* Jayce.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CE928E4EBC700ABD85F /* Jayce.json */; };
+		BE385D8B28E4EBCD00ABD85F /* Rengar.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CEA28E4EBC700ABD85F /* Rengar.json */; };
+		BE385D8C28E4EBCD00ABD85F /* Kalista.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CEB28E4EBC700ABD85F /* Kalista.json */; };
+		BE385D8D28E4EBCD00ABD85F /* Amumu.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CEC28E4EBC800ABD85F /* Amumu.json */; };
+		BE385D8E28E4EBCD00ABD85F /* Zoe.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CED28E4EBC800ABD85F /* Zoe.json */; };
+		BE385D8F28E4EBCD00ABD85F /* Karthus.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CEE28E4EBC800ABD85F /* Karthus.json */; };
+		BE385D9028E4EBCD00ABD85F /* Leona.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CEF28E4EBC800ABD85F /* Leona.json */; };
+		BE385D9128E4EBCD00ABD85F /* Chogath.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CF028E4EBC800ABD85F /* Chogath.json */; };
+		BE385D9228E4EBCD00ABD85F /* Khazix.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CF128E4EBC800ABD85F /* Khazix.json */; };
+		BE385D9328E4EBCD00ABD85F /* Olaf.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CF228E4EBC800ABD85F /* Olaf.json */; };
+		BE385D9428E4EBCD00ABD85F /* Fiddlesticks.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CF328E4EBC800ABD85F /* Fiddlesticks.json */; };
+		BE385D9528E4EBCD00ABD85F /* Syndra.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CF428E4EBC800ABD85F /* Syndra.json */; };
+		BE385D9628E4EBCD00ABD85F /* Mordekaiser.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CF528E4EBC800ABD85F /* Mordekaiser.json */; };
+		BE385D9728E4EBCD00ABD85F /* Talon.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CF628E4EBC800ABD85F /* Talon.json */; };
+		BE385D9828E4EBCD00ABD85F /* Nidalee.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CF728E4EBC800ABD85F /* Nidalee.json */; };
+		BE385D9928E4EBCD00ABD85F /* Samira.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CF828E4EBC800ABD85F /* Samira.json */; };
+		BE385D9A28E4EBCD00ABD85F /* Nami.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CF928E4EBC800ABD85F /* Nami.json */; };
+		BE385D9B28E4EBCD00ABD85F /* Annie.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CFA28E4EBC800ABD85F /* Annie.json */; };
+		BE385D9C28E4EBCD00ABD85F /* Evelynn.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CFB28E4EBC800ABD85F /* Evelynn.json */; };
+		BE385D9D28E4EBCD00ABD85F /* Caitlyn.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CFC28E4EBC900ABD85F /* Caitlyn.json */; };
+		BE385D9E28E4EBCD00ABD85F /* Heimerdinger.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CFD28E4EBC900ABD85F /* Heimerdinger.json */; };
+		BE385D9F28E4EBCD00ABD85F /* Lissandra.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CFE28E4EBC900ABD85F /* Lissandra.json */; };
+		BE385DA028E4EBCD00ABD85F /* Poppy.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385CFF28E4EBC900ABD85F /* Poppy.json */; };
+		BE385DA128E4EBCD00ABD85F /* Orianna.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D0028E4EBC900ABD85F /* Orianna.json */; };
+		BE385DA228E4EBCD00ABD85F /* JarvanIV.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D0128E4EBC900ABD85F /* JarvanIV.json */; };
+		BE385DA328E4EBCD00ABD85F /* Corki.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D0228E4EBC900ABD85F /* Corki.json */; };
+		BE385DA428E4EBCD00ABD85F /* Shaco.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D0328E4EBC900ABD85F /* Shaco.json */; };
+		BE385DA528E4EBCD00ABD85F /* Trundle.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D0428E4EBC900ABD85F /* Trundle.json */; };
+		BE385DA628E4EBCD00ABD85F /* Akali.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D0528E4EBC900ABD85F /* Akali.json */; };
+		BE385DA728E4EBCD00ABD85F /* Morgana.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D0628E4EBC900ABD85F /* Morgana.json */; };
+		BE385DA828E4EBCD00ABD85F /* Yorick.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D0728E4EBC900ABD85F /* Yorick.json */; };
+		BE385DA928E4EBCD00ABD85F /* Sivir.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D0828E4EBC900ABD85F /* Sivir.json */; };
+		BE385DAA28E4EBCD00ABD85F /* Karma.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D0928E4EBC900ABD85F /* Karma.json */; };
+		BE385DAB28E4EBCD00ABD85F /* Jinx.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D0A28E4EBC900ABD85F /* Jinx.json */; };
+		BE385DAC28E4EBCD00ABD85F /* Belveth.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D0B28E4EBC900ABD85F /* Belveth.json */; };
+		BE385DAD28E4EBCD00ABD85F /* Galio.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D0C28E4EBCA00ABD85F /* Galio.json */; };
+		BE385DAE28E4EBCD00ABD85F /* Maokai.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D0D28E4EBCA00ABD85F /* Maokai.json */; };
+		BE385DAF28E4EBCD00ABD85F /* Lillia.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D0E28E4EBCA00ABD85F /* Lillia.json */; };
+		BE385DB028E4EBCD00ABD85F /* Nasus.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D0F28E4EBCA00ABD85F /* Nasus.json */; };
+		BE385DB128E4EBCD00ABD85F /* Riven.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D1028E4EBCA00ABD85F /* Riven.json */; };
+		BE385DB228E4EBCD00ABD85F /* Ryze.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D1128E4EBCA00ABD85F /* Ryze.json */; };
+		BE385DB328E4EBCD00ABD85F /* Twitch.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D1228E4EBCA00ABD85F /* Twitch.json */; };
+		BE385DB428E4EBCD00ABD85F /* Ashe.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D1328E4EBCA00ABD85F /* Ashe.json */; };
+		BE385DB528E4EBCD00ABD85F /* Jax.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D1428E4EBCA00ABD85F /* Jax.json */; };
+		BE385DB628E4EBCD00ABD85F /* TwistedFate.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D1528E4EBCA00ABD85F /* TwistedFate.json */; };
+		BE385DB728E4EBCD00ABD85F /* Nilah.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D1628E4EBCA00ABD85F /* Nilah.json */; };
+		BE385DB828E4EBCD00ABD85F /* Vladimir.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D1728E4EBCA00ABD85F /* Vladimir.json */; };
+		BE385DB928E4EBCD00ABD85F /* Elise.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D1828E4EBCA00ABD85F /* Elise.json */; };
+		BE385DBA28E4EBCD00ABD85F /* Kaisa.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D1928E4EBCA00ABD85F /* Kaisa.json */; };
+		BE385DBB28E4EBCD00ABD85F /* XinZhao.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D1A28E4EBCA00ABD85F /* XinZhao.json */; };
+		BE385DBC28E4EBCD00ABD85F /* Ziggs.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D1B28E4EBCB00ABD85F /* Ziggs.json */; };
+		BE385DBD28E4EBCD00ABD85F /* Kindred.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D1C28E4EBCB00ABD85F /* Kindred.json */; };
+		BE385DBE28E4EBCD00ABD85F /* Rumble.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D1D28E4EBCB00ABD85F /* Rumble.json */; };
+		BE385DBF28E4EBCD00ABD85F /* Renekton.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D1E28E4EBCB00ABD85F /* Renekton.json */; };
+		BE385DC028E4EBCD00ABD85F /* Sylas.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D1F28E4EBCB00ABD85F /* Sylas.json */; };
+		BE385DC128E4EBCD00ABD85F /* Ezreal.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D2028E4EBCB00ABD85F /* Ezreal.json */; };
+		BE385DC228E4EBCD00ABD85F /* Kennen.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D2128E4EBCB00ABD85F /* Kennen.json */; };
+		BE385DC328E4EBCD00ABD85F /* MissFortune.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D2228E4EBCB00ABD85F /* MissFortune.json */; };
+		BE385DC428E4EBCD00ABD85F /* Vayne.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D2328E4EBCB00ABD85F /* Vayne.json */; };
+		BE385DC528E4EBCD00ABD85F /* Gnar.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D2428E4EBCB00ABD85F /* Gnar.json */; };
+		BE385DC628E4EBCD00ABD85F /* Azir.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D2528E4EBCB00ABD85F /* Azir.json */; };
+		BE385DC728E4EBCD00ABD85F /* Swain.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D2628E4EBCB00ABD85F /* Swain.json */; };
+		BE385DC828E4EBCD00ABD85F /* Pantheon.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D2728E4EBCB00ABD85F /* Pantheon.json */; };
+		BE385DC928E4EBCD00ABD85F /* Senna.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D2828E4EBCB00ABD85F /* Senna.json */; };
+		BE385DCA28E4EBCD00ABD85F /* Braum.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D2928E4EBCB00ABD85F /* Braum.json */; };
+		BE385DCB28E4EBCD00ABD85F /* Jhin.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D2A28E4EBCB00ABD85F /* Jhin.json */; };
+		BE385DCC28E4EBCD00ABD85F /* Pyke.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D2B28E4EBCC00ABD85F /* Pyke.json */; };
+		BE385DCD28E4EBCD00ABD85F /* Kled.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D2C28E4EBCC00ABD85F /* Kled.json */; };
+		BE385DCE28E4EBCD00ABD85F /* Nunu.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D2D28E4EBCC00ABD85F /* Nunu.json */; };
+		BE385DCF28E4EBCD00ABD85F /* Lulu.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D2E28E4EBCC00ABD85F /* Lulu.json */; };
+		BE385DD028E4EBCD00ABD85F /* Malzahar.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D2F28E4EBCC00ABD85F /* Malzahar.json */; };
+		BE385DD128E4EBCD00ABD85F /* Sion.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D3028E4EBCC00ABD85F /* Sion.json */; };
+		BE385DD228E4EBCD00ABD85F /* Tryndamere.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D3128E4EBCC00ABD85F /* Tryndamere.json */; };
+		BE385DD328E4EBCD00ABD85F /* Udyr.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D3228E4EBCC00ABD85F /* Udyr.json */; };
+		BE385DD428E4EBCD00ABD85F /* Yuumi.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D3328E4EBCC00ABD85F /* Yuumi.json */; };
+		BE385DD528E4EBCD00ABD85F /* DrMundo.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D3428E4EBCC00ABD85F /* DrMundo.json */; };
+		BE385DD628E4EBCD00ABD85F /* Vex.json in Resources */ = {isa = PBXBuildFile; fileRef = BE385D3528E4EBCC00ABD85F /* Vex.json */; };
+		BE385DE128E5021500ABD85F /* JSONSchemaSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE385DE028E5021500ABD85F /* JSONSchemaSupport.swift */; };
+		BE385DE328E5035800ABD85F /* ChampionJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE385DE228E5035800ABD85F /* ChampionJSON.swift */; };
 		BE6B708A26A8CE3B0074BEA4 /* OfflineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6B708926A8CE3B0074BEA4 /* OfflineData.swift */; };
 		BE6B708C26A8D0790074BEA4 /* ChampionFull.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6B708B26A8D0790074BEA4 /* ChampionFull.swift */; };
 		BE6B708F26A8DA720074BEA4 /* JSONNull.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6B708E26A8DA720074BEA4 /* JSONNull.swift */; };
@@ -21,7 +183,6 @@
 		BE6B709726A8EC2A0074BEA4 /* Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6B709626A8EC2A0074BEA4 /* Champion.swift */; };
 		BE711C0D269E878A00CA57CE /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE711C0C269E878A00CA57CE /* File.swift */; };
 		BE711C0F269E883F00CA57CE /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE711C0E269E883F00CA57CE /* Player.swift */; };
-		BE76437726B498D70032F479 /* Akshan.json in Resources */ = {isa = PBXBuildFile; fileRef = BE76437626B498D70032F479 /* Akshan.json */; };
 		BE949E8726B8C0E200E23670 /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1B794326A37BD300AB3A46 /* GameTableViewCell.swift */; };
 		BE949E8826B8C0E200E23670 /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE949E8526B8C03000E23670 /* TeamTableViewCell.swift */; };
 		BE949E8926B8C0E200E23670 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC0C88C26B8B45200F1146C /* PlayerTableViewCell.swift */; };
@@ -32,161 +193,7 @@
 		BEC1E4982698E9EA00BC3F62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC1E4962698E9EA00BC3F62 /* Main.storyboard */; };
 		BEC1E49A2698E9EB00BC3F62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEC1E4992698E9EB00BC3F62 /* Assets.xcassets */; };
 		BEC1E49D2698E9EB00BC3F62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC1E49B2698E9EB00BC3F62 /* LaunchScreen.storyboard */; };
-		BED12FD326A8C71B007D367D /* JarvanIV.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F2E26A8C71A007D367D /* JarvanIV.json */; };
-		BED12FD426A8C71B007D367D /* AurelionSol.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F2F26A8C71A007D367D /* AurelionSol.json */; };
-		BED12FD526A8C71B007D367D /* Riven.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F3026A8C71A007D367D /* Riven.json */; };
-		BED12FD626A8C71B007D367D /* Shyvana.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F3126A8C71A007D367D /* Shyvana.json */; };
-		BED12FD726A8C71B007D367D /* Yuumi.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F3226A8C71A007D367D /* Yuumi.json */; };
-		BED12FD826A8C71B007D367D /* KogMaw.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F3326A8C71A007D367D /* KogMaw.json */; };
-		BED12FD926A8C71B007D367D /* Velkoz.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F3426A8C71A007D367D /* Velkoz.json */; };
-		BED12FDA26A8C71B007D367D /* Ekko.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F3526A8C71A007D367D /* Ekko.json */; };
-		BED12FDB26A8C71B007D367D /* Hecarim.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F3626A8C71A007D367D /* Hecarim.json */; };
-		BED12FDC26A8C71B007D367D /* Malphite.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F3726A8C71A007D367D /* Malphite.json */; };
-		BED12FDD26A8C71B007D367D /* Kalista.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F3826A8C71A007D367D /* Kalista.json */; };
-		BED12FDE26A8C71B007D367D /* Zac.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F3926A8C71A007D367D /* Zac.json */; };
-		BED12FDF26A8C71B007D367D /* Nocturne.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F3A26A8C71A007D367D /* Nocturne.json */; };
-		BED12FE026A8C71B007D367D /* Janna.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F3B26A8C71A007D367D /* Janna.json */; };
-		BED12FE126A8C71B007D367D /* Darius.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F3C26A8C71A007D367D /* Darius.json */; };
-		BED12FE226A8C71B007D367D /* Vladimir.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F3D26A8C71A007D367D /* Vladimir.json */; };
-		BED12FE326A8C71B007D367D /* Pyke.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F3E26A8C71A007D367D /* Pyke.json */; };
-		BED12FE426A8C71B007D367D /* Brand.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F3F26A8C71A007D367D /* Brand.json */; };
-		BED12FE526A8C71B007D367D /* Urgot.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F4026A8C71A007D367D /* Urgot.json */; };
-		BED12FE626A8C71B007D367D /* Ahri.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F4126A8C71A007D367D /* Ahri.json */; };
-		BED12FE726A8C71B007D367D /* Skarner.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F4226A8C71A007D367D /* Skarner.json */; };
-		BED12FE826A8C71B007D367D /* Leblanc.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F4326A8C71A007D367D /* Leblanc.json */; };
-		BED12FE926A8C71B007D367D /* Jinx.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F4426A8C71A007D367D /* Jinx.json */; };
-		BED12FEA26A8C71B007D367D /* Leona.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F4526A8C71A007D367D /* Leona.json */; };
-		BED12FEB26A8C71B007D367D /* Swain.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F4626A8C71A007D367D /* Swain.json */; };
-		BED12FEC26A8C71B007D367D /* Shen.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F4726A8C71A007D367D /* Shen.json */; };
-		BED12FED26A8C71B007D367D /* Trundle.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F4826A8C71A007D367D /* Trundle.json */; };
-		BED12FEE26A8C71B007D367D /* Karma.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F4926A8C71A007D367D /* Karma.json */; };
-		BED12FEF26A8C71B007D367D /* Camille.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F4A26A8C71A007D367D /* Camille.json */; };
-		BED12FF026A8C71B007D367D /* Soraka.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F4B26A8C71A007D367D /* Soraka.json */; };
-		BED12FF126A8C71B007D367D /* Lucian.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F4C26A8C71A007D367D /* Lucian.json */; };
-		BED12FF226A8C71B007D367D /* Amumu.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F4D26A8C71A007D367D /* Amumu.json */; };
-		BED12FF326A8C71B007D367D /* Kayle.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F4E26A8C71A007D367D /* Kayle.json */; };
-		BED12FF426A8C71B007D367D /* Draven.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F4F26A8C71A007D367D /* Draven.json */; };
-		BED12FF526A8C71B007D367D /* Viego.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F5026A8C71A007D367D /* Viego.json */; };
-		BED12FF626A8C71B007D367D /* Jhin.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F5126A8C71A007D367D /* Jhin.json */; };
-		BED12FF726A8C71B007D367D /* MonkeyKing.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F5226A8C71A007D367D /* MonkeyKing.json */; };
-		BED12FF826A8C71B007D367D /* Sivir.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F5326A8C71A007D367D /* Sivir.json */; };
-		BED12FF926A8C71B007D367D /* Zed.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F5426A8C71A007D367D /* Zed.json */; };
-		BED12FFA26A8C71B007D367D /* Chogath.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F5526A8C71A007D367D /* Chogath.json */; };
-		BED12FFB26A8C71B007D367D /* Blitzcrank.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F5626A8C71A007D367D /* Blitzcrank.json */; };
-		BED12FFC26A8C71B007D367D /* Ezreal.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F5726A8C71A007D367D /* Ezreal.json */; };
-		BED12FFD26A8C71B007D367D /* Lux.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F5826A8C71A007D367D /* Lux.json */; };
-		BED12FFE26A8C71B007D367D /* Khazix.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F5926A8C71A007D367D /* Khazix.json */; };
-		BED12FFF26A8C71B007D367D /* Udyr.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F5A26A8C71A007D367D /* Udyr.json */; };
-		BED1300026A8C71B007D367D /* Volibear.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F5B26A8C71A007D367D /* Volibear.json */; };
-		BED1300126A8C71B007D367D /* Nasus.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F5C26A8C71A007D367D /* Nasus.json */; };
-		BED1300226A8C71B007D367D /* Nami.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F5D26A8C71A007D367D /* Nami.json */; };
-		BED1300326A8C71B007D367D /* Diana.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F5E26A8C71A007D367D /* Diana.json */; };
-		BED1300426A8C71B007D367D /* Singed.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F5F26A8C71A007D367D /* Singed.json */; };
-		BED1300526A8C71B007D367D /* Kassadin.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F6026A8C71A007D367D /* Kassadin.json */; };
-		BED1300626A8C71B007D367D /* Caitlyn.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F6126A8C71A007D367D /* Caitlyn.json */; };
-		BED1300726A8C71B007D367D /* Yone.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F6226A8C71A007D367D /* Yone.json */; };
-		BED1300826A8C71B007D367D /* Annie.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F6326A8C71A007D367D /* Annie.json */; };
-		BED1300926A8C71B007D367D /* TahmKench.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F6426A8C71A007D367D /* TahmKench.json */; };
-		BED1300A26A8C71B007D367D /* Syndra.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F6526A8C71A007D367D /* Syndra.json */; };
-		BED1300B26A8C71B007D367D /* Poppy.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F6626A8C71A007D367D /* Poppy.json */; };
-		BED1300C26A8C71B007D367D /* Garen.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F6726A8C71A007D367D /* Garen.json */; };
-		BED1300D26A8C71B007D367D /* XinZhao.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F6826A8C71A007D367D /* XinZhao.json */; };
-		BED1300E26A8C71B007D367D /* Twitch.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F6926A8C71A007D367D /* Twitch.json */; };
-		BED1300F26A8C71B007D367D /* Alistar.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F6A26A8C71A007D367D /* Alistar.json */; };
-		BED1301026A8C71B007D367D /* Anivia.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F6B26A8C71A007D367D /* Anivia.json */; };
-		BED1301126A8C71B007D367D /* Sion.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F6C26A8C71A007D367D /* Sion.json */; };
-		BED1301226A8C71B007D367D /* Seraphine.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F6D26A8C71A007D367D /* Seraphine.json */; };
-		BED1301326A8C71B007D367D /* MasterYi.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F6E26A8C71A007D367D /* MasterYi.json */; };
-		BED1301426A8C71B007D367D /* Graves.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F6F26A8C71A007D367D /* Graves.json */; };
-		BED1301526A8C71B007D367D /* Yasuo.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F7026A8C71A007D367D /* Yasuo.json */; };
-		BED1301626A8C71B007D367D /* Kayn.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F7126A8C71A007D367D /* Kayn.json */; };
-		BED1301726A8C71B007D367D /* Akali.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F7226A8C71A007D367D /* Akali.json */; };
-		BED1301826A8C71B007D367D /* Neeko.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F7326A8C71A007D367D /* Neeko.json */; };
-		BED1301926A8C71B007D367D /* Kindred.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F7426A8C71A007D367D /* Kindred.json */; };
-		BED1301A26A8C71B007D367D /* Elise.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F7526A8C71A007D367D /* Elise.json */; };
-		BED1301B26A8C71B007D367D /* Sylas.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F7626A8C71A007D367D /* Sylas.json */; };
-		BED1301C26A8C71B007D367D /* Karthus.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F7726A8C71A007D367D /* Karthus.json */; };
-		BED1301D26A8C71B007D367D /* Sejuani.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F7826A8C71A007D367D /* Sejuani.json */; };
-		BED1301E26A8C71B007D367D /* Sett.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F7926A8C71A007D367D /* Sett.json */; };
-		BED1301F26A8C71B007D367D /* Warwick.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F7A26A8C71A007D367D /* Warwick.json */; };
-		BED1302026A8C71B007D367D /* Heimerdinger.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F7B26A8C71A007D367D /* Heimerdinger.json */; };
-		BED1302126A8C71B007D367D /* Sona.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F7C26A8C71A007D367D /* Sona.json */; };
-		BED1302226A8C71B007D367D /* TwistedFate.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F7D26A8C71A007D367D /* TwistedFate.json */; };
-		BED1302326A8C71B007D367D /* RekSai.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F7E26A8C71A007D367D /* RekSai.json */; };
-		BED1302426A8C71B007D367D /* Senna.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F7F26A8C71A007D367D /* Senna.json */; };
-		BED1302526A8C71B007D367D /* Shaco.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F8026A8C71A007D367D /* Shaco.json */; };
-		BED1302626A8C71B007D367D /* Jayce.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F8126A8C71A007D367D /* Jayce.json */; };
-		BED1302726A8C71B007D367D /* Ornn.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F8226A8C71A007D367D /* Ornn.json */; };
-		BED1302826A8C71B007D367D /* Kennen.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F8326A8C71A007D367D /* Kennen.json */; };
-		BED1302926A8C71B007D367D /* Varus.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F8426A8C71A007D367D /* Varus.json */; };
-		BED1302A26A8C71B007D367D /* Nautilus.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F8526A8C71A007D367D /* Nautilus.json */; };
-		BED1302B26A8C71B007D367D /* Rumble.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F8626A8C71A007D367D /* Rumble.json */; };
-		BED1302C26A8C71B007D367D /* Mordekaiser.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F8726A8C71A007D367D /* Mordekaiser.json */; };
-		BED1302D26A8C71B007D367D /* LeeSin.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F8826A8C71A007D367D /* LeeSin.json */; };
-		BED1302E26A8C71B007D367D /* Veigar.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F8926A8C71A007D367D /* Veigar.json */; };
-		BED1302F26A8C71B007D367D /* Tryndamere.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F8A26A8C71A007D367D /* Tryndamere.json */; };
-		BED1303026A8C71B007D367D /* Ivern.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F8B26A8C71A007D367D /* Ivern.json */; };
-		BED1303126A8C71B007D367D /* Xerath.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F8C26A8C71A007D367D /* Xerath.json */; };
-		BED1303226A8C71B007D367D /* Thresh.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F8D26A8C71A007D367D /* Thresh.json */; };
-		BED1303326A8C71B007D367D /* Talon.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F8E26A8C71A007D367D /* Talon.json */; };
-		BED1303426A8C71B007D367D /* Ryze.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F8F26A8C71A007D367D /* Ryze.json */; };
-		BED1303526A8C71B007D367D /* Viktor.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F9026A8C71A007D367D /* Viktor.json */; };
-		BED1303626A8C71B007D367D /* Fiora.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F9126A8C71A007D367D /* Fiora.json */; };
-		BED1303726A8C71B007D367D /* Azir.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F9226A8C71A007D367D /* Azir.json */; };
-		BED1303826A8C71B007D367D /* Zoe.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F9326A8C71A007D367D /* Zoe.json */; };
-		BED1303926A8C71B007D367D /* Jax.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F9426A8C71B007D367D /* Jax.json */; };
-		BED1303A26A8C71B007D367D /* Rengar.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F9526A8C71B007D367D /* Rengar.json */; };
-		BED1303B26A8C71B007D367D /* Taliyah.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F9626A8C71B007D367D /* Taliyah.json */; };
-		BED1303C26A8C71B007D367D /* Vayne.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F9726A8C71B007D367D /* Vayne.json */; };
-		BED1303D26A8C71B007D367D /* Yorick.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F9826A8C71B007D367D /* Yorick.json */; };
-		BED1303E26A8C71B007D367D /* Bard.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F9926A8C71B007D367D /* Bard.json */; };
-		BED1303F26A8C71B007D367D /* Braum.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F9A26A8C71B007D367D /* Braum.json */; };
-		BED1304026A8C71B007D367D /* Nunu.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F9B26A8C71B007D367D /* Nunu.json */; };
-		BED1304126A8C71B007D367D /* Gangplank.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F9C26A8C71B007D367D /* Gangplank.json */; };
-		BED1304226A8C71B007D367D /* Tristana.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F9D26A8C71B007D367D /* Tristana.json */; };
-		BED1304326A8C71B007D367D /* Corki.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F9E26A8C71B007D367D /* Corki.json */; };
-		BED1304426A8C71B007D367D /* Malzahar.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12F9F26A8C71B007D367D /* Malzahar.json */; };
-		BED1304526A8C71B007D367D /* Gragas.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FA026A8C71B007D367D /* Gragas.json */; };
-		BED1304626A8C71B007D367D /* Teemo.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FA126A8C71B007D367D /* Teemo.json */; };
-		BED1304726A8C71B007D367D /* Lissandra.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FA226A8C71B007D367D /* Lissandra.json */; };
-		BED1304826A8C71B007D367D /* Fizz.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FA326A8C71B007D367D /* Fizz.json */; };
-		BED1304926A8C71B007D367D /* Morgana.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FA426A8C71B007D367D /* Morgana.json */; };
-		BED1304A26A8C71B007D367D /* Evelynn.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FA526A8C71B007D367D /* Evelynn.json */; };
-		BED1304B26A8C71B007D367D /* Aphelios.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FA626A8C71B007D367D /* Aphelios.json */; };
-		BED1304C26A8C71B007D367D /* Gnar.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FA726A8C71B007D367D /* Gnar.json */; };
-		BED1304D26A8C71B007D367D /* Ziggs.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FA826A8C71B007D367D /* Ziggs.json */; };
-		BED1304E26A8C71B007D367D /* Vi.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FA926A8C71B007D367D /* Vi.json */; };
-		BED1304F26A8C71B007D367D /* Irelia.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FAA26A8C71B007D367D /* Irelia.json */; };
-		BED1305026A8C71B007D367D /* Ashe.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FAB26A8C71B007D367D /* Ashe.json */; };
-		BED1305126A8C71B007D367D /* Nidalee.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FAC26A8C71B007D367D /* Nidalee.json */; };
-		BED1305226A8C71B007D367D /* DrMundo.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FAD26A8C71B007D367D /* DrMundo.json */; };
-		BED1305326A8C71B007D367D /* Zilean.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FAE26A8C71B007D367D /* Zilean.json */; };
-		BED1305426A8C71B007D367D /* Qiyana.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FAF26A8C71B007D367D /* Qiyana.json */; };
-		BED1305526A8C71B007D367D /* Samira.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FB026A8C71B007D367D /* Samira.json */; };
-		BED1305626A8C71B007D367D /* Gwen.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FB126A8C71B007D367D /* Gwen.json */; };
-		BED1305726A8C71B007D367D /* Lulu.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FB226A8C71B007D367D /* Lulu.json */; };
-		BED1305826A8C71B007D367D /* Katarina.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FB326A8C71B007D367D /* Katarina.json */; };
-		BED1305926A8C71B007D367D /* Illaoi.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FB426A8C71B007D367D /* Illaoi.json */; };
-		BED1305A26A8C71B007D367D /* Rell.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FB526A8C71B007D367D /* Rell.json */; };
-		BED1305B26A8C71B007D367D /* Aatrox.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FB626A8C71B007D367D /* Aatrox.json */; };
-		BED1305C26A8C71B007D367D /* Lillia.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FB726A8C71B007D367D /* Lillia.json */; };
-		BED1305D26A8C71B007D367D /* Zyra.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FB826A8C71B007D367D /* Zyra.json */; };
-		BED1305E26A8C71B007D367D /* Kled.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FB926A8C71B007D367D /* Kled.json */; };
-		BED1305F26A8C71B007D367D /* Renekton.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FBA26A8C71B007D367D /* Renekton.json */; };
-		BED1306026A8C71B007D367D /* Pantheon.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FBB26A8C71B007D367D /* Pantheon.json */; };
-		BED1306126A8C71B007D367D /* Fiddlesticks.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FBC26A8C71B007D367D /* Fiddlesticks.json */; };
-		BED1306226A8C71B007D367D /* Olaf.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FBD26A8C71B007D367D /* Olaf.json */; };
-		BED1306326A8C71B007D367D /* Rakan.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FBE26A8C71B007D367D /* Rakan.json */; };
-		BED1306426A8C71B007D367D /* Quinn.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FBF26A8C71B007D367D /* Quinn.json */; };
-		BED1306526A8C71B007D367D /* Orianna.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FC026A8C71B007D367D /* Orianna.json */; };
-		BED1306626A8C71B007D367D /* Maokai.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FC126A8C71B007D367D /* Maokai.json */; };
-		BED1306726A8C71B007D367D /* Xayah.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FC226A8C71B007D367D /* Xayah.json */; };
-		BED1306826A8C71B007D367D /* Rammus.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FC326A8C71B007D367D /* Rammus.json */; };
-		BED1306926A8C71B007D367D /* Galio.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FC426A8C71B007D367D /* Galio.json */; };
-		BED1306A26A8C71B007D367D /* MissFortune.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FC526A8C71B007D367D /* MissFortune.json */; };
-		BED1306B26A8C71B007D367D /* Kaisa.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FC626A8C71B007D367D /* Kaisa.json */; };
-		BED1306C26A8C71B007D367D /* Taric.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FC726A8C71B007D367D /* Taric.json */; };
-		BED1306D26A8C71B007D367D /* Cassiopeia.json in Resources */ = {isa = PBXBuildFile; fileRef = BED12FC826A8C71B007D367D /* Cassiopeia.json */; };
+		BECF0B7828E51D510047983E /* champion.json in Resources */ = {isa = PBXBuildFile; fileRef = BECF0B7728E51D510047983E /* champion.json */; };
 		BED25B4326B3433500B2FC71 /* StatRankings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED25B4226B3433500B2FC71 /* StatRankings.swift */; };
 		BEE6DCA22899EEC500AD4EBC /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE6DCA12899EEC500AD4EBC /* TimeInterval.swift */; };
 		BEEA302526A7C20F009E3C78 /* RiotAPITesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEA302426A7C20F009E3C78 /* RiotAPITesting.swift */; };
@@ -215,9 +222,171 @@
 		BE153B2B26B74F5E0019447E /* GameDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsViewController.swift; sourceTree = "<group>"; };
 		BE1B794026A3709E00AB3A46 /* GameListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListTableViewController.swift; sourceTree = "<group>"; };
 		BE1B794326A37BD300AB3A46 /* GameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
-		BE1B794626A383C100AB3A46 /* MatchDataList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDataList.swift; sourceTree = "<group>"; };
 		BE1B794826A3843A00AB3A46 /* MatchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchData.swift; sourceTree = "<group>"; };
 		BE20296F28DD53F500263339 /* LeagueAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LeagueAPI.framework; sourceTree = "<group>"; };
+		BE385C9528E4EBC200ABD85F /* Alistar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Alistar.json; path = champion/Alistar.json; sourceTree = "<group>"; };
+		BE385C9628E4EBC200ABD85F /* Ivern.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Ivern.json; path = champion/Ivern.json; sourceTree = "<group>"; };
+		BE385C9728E4EBC200ABD85F /* Ornn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Ornn.json; path = champion/Ornn.json; sourceTree = "<group>"; };
+		BE385C9828E4EBC200ABD85F /* Aphelios.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Aphelios.json; path = champion/Aphelios.json; sourceTree = "<group>"; };
+		BE385C9928E4EBC200ABD85F /* Darius.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Darius.json; path = champion/Darius.json; sourceTree = "<group>"; };
+		BE385C9A28E4EBC200ABD85F /* Lucian.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Lucian.json; path = champion/Lucian.json; sourceTree = "<group>"; };
+		BE385C9B28E4EBC300ABD85F /* Hecarim.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Hecarim.json; path = champion/Hecarim.json; sourceTree = "<group>"; };
+		BE385C9C28E4EBC300ABD85F /* Viego.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Viego.json; path = champion/Viego.json; sourceTree = "<group>"; };
+		BE385C9D28E4EBC300ABD85F /* Anivia.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Anivia.json; path = champion/Anivia.json; sourceTree = "<group>"; };
+		BE385C9E28E4EBC300ABD85F /* RekSai.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = RekSai.json; path = champion/RekSai.json; sourceTree = "<group>"; };
+		BE385C9F28E4EBC300ABD85F /* Xerath.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Xerath.json; path = champion/Xerath.json; sourceTree = "<group>"; };
+		BE385CA028E4EBC300ABD85F /* Lux.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Lux.json; path = champion/Lux.json; sourceTree = "<group>"; };
+		BE385CA128E4EBC300ABD85F /* MonkeyKing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MonkeyKing.json; path = champion/MonkeyKing.json; sourceTree = "<group>"; };
+		BE385CA228E4EBC300ABD85F /* Sett.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Sett.json; path = champion/Sett.json; sourceTree = "<group>"; };
+		BE385CA328E4EBC300ABD85F /* Zilean.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Zilean.json; path = champion/Zilean.json; sourceTree = "<group>"; };
+		BE385CA428E4EBC300ABD85F /* Zac.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Zac.json; path = champion/Zac.json; sourceTree = "<group>"; };
+		BE385CA528E4EBC300ABD85F /* Zyra.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Zyra.json; path = champion/Zyra.json; sourceTree = "<group>"; };
+		BE385CA628E4EBC300ABD85F /* Nocturne.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Nocturne.json; path = champion/Nocturne.json; sourceTree = "<group>"; };
+		BE385CA728E4EBC300ABD85F /* Shyvana.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Shyvana.json; path = champion/Shyvana.json; sourceTree = "<group>"; };
+		BE385CA828E4EBC300ABD85F /* Fizz.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Fizz.json; path = champion/Fizz.json; sourceTree = "<group>"; };
+		BE385CA928E4EBC300ABD85F /* Gragas.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Gragas.json; path = champion/Gragas.json; sourceTree = "<group>"; };
+		BE385CAA28E4EBC300ABD85F /* Neeko.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Neeko.json; path = champion/Neeko.json; sourceTree = "<group>"; };
+		BE385CAB28E4EBC400ABD85F /* TahmKench.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TahmKench.json; path = champion/TahmKench.json; sourceTree = "<group>"; };
+		BE385CAC28E4EBC400ABD85F /* Warwick.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Warwick.json; path = champion/Warwick.json; sourceTree = "<group>"; };
+		BE385CAD28E4EBC400ABD85F /* Volibear.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Volibear.json; path = champion/Volibear.json; sourceTree = "<group>"; };
+		BE385CAE28E4EBC400ABD85F /* Cassiopeia.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Cassiopeia.json; path = champion/Cassiopeia.json; sourceTree = "<group>"; };
+		BE385CAF28E4EBC400ABD85F /* Graves.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Graves.json; path = champion/Graves.json; sourceTree = "<group>"; };
+		BE385CB028E4EBC400ABD85F /* Vi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Vi.json; path = champion/Vi.json; sourceTree = "<group>"; };
+		BE385CB128E4EBC400ABD85F /* Shen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Shen.json; path = champion/Shen.json; sourceTree = "<group>"; };
+		BE385CB228E4EBC400ABD85F /* Ekko.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Ekko.json; path = champion/Ekko.json; sourceTree = "<group>"; };
+		BE385CB328E4EBC400ABD85F /* Sona.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Sona.json; path = champion/Sona.json; sourceTree = "<group>"; };
+		BE385CB428E4EBC400ABD85F /* Gwen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Gwen.json; path = champion/Gwen.json; sourceTree = "<group>"; };
+		BE385CB528E4EBC400ABD85F /* Soraka.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Soraka.json; path = champion/Soraka.json; sourceTree = "<group>"; };
+		BE385CB628E4EBC400ABD85F /* Urgot.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Urgot.json; path = champion/Urgot.json; sourceTree = "<group>"; };
+		BE385CB728E4EBC400ABD85F /* Varus.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Varus.json; path = champion/Varus.json; sourceTree = "<group>"; };
+		BE385CB828E4EBC400ABD85F /* Rell.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Rell.json; path = champion/Rell.json; sourceTree = "<group>"; };
+		BE385CB928E4EBC400ABD85F /* Ahri.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Ahri.json; path = champion/Ahri.json; sourceTree = "<group>"; };
+		BE385CBA28E4EBC400ABD85F /* Gangplank.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Gangplank.json; path = champion/Gangplank.json; sourceTree = "<group>"; };
+		BE385CBB28E4EBC500ABD85F /* Sejuani.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Sejuani.json; path = champion/Sejuani.json; sourceTree = "<group>"; };
+		BE385CBC28E4EBC500ABD85F /* Leblanc.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Leblanc.json; path = champion/Leblanc.json; sourceTree = "<group>"; };
+		BE385CBD28E4EBC500ABD85F /* Zed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Zed.json; path = champion/Zed.json; sourceTree = "<group>"; };
+		BE385CBE28E4EBC500ABD85F /* Malphite.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Malphite.json; path = champion/Malphite.json; sourceTree = "<group>"; };
+		BE385CBF28E4EBC500ABD85F /* Tristana.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Tristana.json; path = champion/Tristana.json; sourceTree = "<group>"; };
+		BE385CC028E4EBC500ABD85F /* Singed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Singed.json; path = champion/Singed.json; sourceTree = "<group>"; };
+		BE385CC128E4EBC500ABD85F /* Qiyana.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Qiyana.json; path = champion/Qiyana.json; sourceTree = "<group>"; };
+		BE385CC228E4EBC500ABD85F /* Irelia.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Irelia.json; path = champion/Irelia.json; sourceTree = "<group>"; };
+		BE385CC328E4EBC500ABD85F /* LeeSin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = LeeSin.json; path = champion/LeeSin.json; sourceTree = "<group>"; };
+		BE385CC428E4EBC500ABD85F /* Kayle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Kayle.json; path = champion/Kayle.json; sourceTree = "<group>"; };
+		BE385CC528E4EBC500ABD85F /* Akshan.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Akshan.json; path = champion/Akshan.json; sourceTree = "<group>"; };
+		BE385CC628E4EBC500ABD85F /* Taric.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Taric.json; path = champion/Taric.json; sourceTree = "<group>"; };
+		BE385CC728E4EBC500ABD85F /* KogMaw.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = KogMaw.json; path = champion/KogMaw.json; sourceTree = "<group>"; };
+		BE385CC828E4EBC500ABD85F /* Quinn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Quinn.json; path = champion/Quinn.json; sourceTree = "<group>"; };
+		BE385CC928E4EBC500ABD85F /* Kassadin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Kassadin.json; path = champion/Kassadin.json; sourceTree = "<group>"; };
+		BE385CCA28E4EBC500ABD85F /* Thresh.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Thresh.json; path = champion/Thresh.json; sourceTree = "<group>"; };
+		BE385CCB28E4EBC500ABD85F /* Yone.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Yone.json; path = champion/Yone.json; sourceTree = "<group>"; };
+		BE385CCC28E4EBC600ABD85F /* Seraphine.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Seraphine.json; path = champion/Seraphine.json; sourceTree = "<group>"; };
+		BE385CCD28E4EBC600ABD85F /* Fiora.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Fiora.json; path = champion/Fiora.json; sourceTree = "<group>"; };
+		BE385CCE28E4EBC600ABD85F /* Aatrox.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Aatrox.json; path = champion/Aatrox.json; sourceTree = "<group>"; };
+		BE385CCF28E4EBC600ABD85F /* Illaoi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Illaoi.json; path = champion/Illaoi.json; sourceTree = "<group>"; };
+		BE385CD028E4EBC600ABD85F /* Blitzcrank.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Blitzcrank.json; path = champion/Blitzcrank.json; sourceTree = "<group>"; };
+		BE385CD128E4EBC600ABD85F /* Veigar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Veigar.json; path = champion/Veigar.json; sourceTree = "<group>"; };
+		BE385CD228E4EBC600ABD85F /* Taliyah.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Taliyah.json; path = champion/Taliyah.json; sourceTree = "<group>"; };
+		BE385CD328E4EBC600ABD85F /* Garen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Garen.json; path = champion/Garen.json; sourceTree = "<group>"; };
+		BE385CD428E4EBC600ABD85F /* Renata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Renata.json; path = champion/Renata.json; sourceTree = "<group>"; };
+		BE385CD528E4EBC600ABD85F /* Draven.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Draven.json; path = champion/Draven.json; sourceTree = "<group>"; };
+		BE385CD628E4EBC600ABD85F /* Katarina.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Katarina.json; path = champion/Katarina.json; sourceTree = "<group>"; };
+		BE385CD728E4EBC600ABD85F /* Skarner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Skarner.json; path = champion/Skarner.json; sourceTree = "<group>"; };
+		BE385CD828E4EBC600ABD85F /* MasterYi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MasterYi.json; path = champion/MasterYi.json; sourceTree = "<group>"; };
+		BE385CD928E4EBC600ABD85F /* Camille.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Camille.json; path = champion/Camille.json; sourceTree = "<group>"; };
+		BE385CDA28E4EBC600ABD85F /* Nautilus.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Nautilus.json; path = champion/Nautilus.json; sourceTree = "<group>"; };
+		BE385CDB28E4EBC600ABD85F /* Rakan.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Rakan.json; path = champion/Rakan.json; sourceTree = "<group>"; };
+		BE385CDC28E4EBC700ABD85F /* Rammus.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Rammus.json; path = champion/Rammus.json; sourceTree = "<group>"; };
+		BE385CDD28E4EBC700ABD85F /* Teemo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Teemo.json; path = champion/Teemo.json; sourceTree = "<group>"; };
+		BE385CDE28E4EBC700ABD85F /* AurelionSol.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = AurelionSol.json; path = champion/AurelionSol.json; sourceTree = "<group>"; };
+		BE385CDF28E4EBC700ABD85F /* Brand.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Brand.json; path = champion/Brand.json; sourceTree = "<group>"; };
+		BE385CE028E4EBC700ABD85F /* Bard.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Bard.json; path = champion/Bard.json; sourceTree = "<group>"; };
+		BE385CE128E4EBC700ABD85F /* Diana.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Diana.json; path = champion/Diana.json; sourceTree = "<group>"; };
+		BE385CE228E4EBC700ABD85F /* Velkoz.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Velkoz.json; path = champion/Velkoz.json; sourceTree = "<group>"; };
+		BE385CE328E4EBC700ABD85F /* Viktor.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Viktor.json; path = champion/Viktor.json; sourceTree = "<group>"; };
+		BE385CE428E4EBC700ABD85F /* Kayn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Kayn.json; path = champion/Kayn.json; sourceTree = "<group>"; };
+		BE385CE528E4EBC700ABD85F /* Xayah.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Xayah.json; path = champion/Xayah.json; sourceTree = "<group>"; };
+		BE385CE628E4EBC700ABD85F /* Yasuo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Yasuo.json; path = champion/Yasuo.json; sourceTree = "<group>"; };
+		BE385CE728E4EBC700ABD85F /* Janna.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Janna.json; path = champion/Janna.json; sourceTree = "<group>"; };
+		BE385CE828E4EBC700ABD85F /* Zeri.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Zeri.json; path = champion/Zeri.json; sourceTree = "<group>"; };
+		BE385CE928E4EBC700ABD85F /* Jayce.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Jayce.json; path = champion/Jayce.json; sourceTree = "<group>"; };
+		BE385CEA28E4EBC700ABD85F /* Rengar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Rengar.json; path = champion/Rengar.json; sourceTree = "<group>"; };
+		BE385CEB28E4EBC700ABD85F /* Kalista.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Kalista.json; path = champion/Kalista.json; sourceTree = "<group>"; };
+		BE385CEC28E4EBC800ABD85F /* Amumu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Amumu.json; path = champion/Amumu.json; sourceTree = "<group>"; };
+		BE385CED28E4EBC800ABD85F /* Zoe.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Zoe.json; path = champion/Zoe.json; sourceTree = "<group>"; };
+		BE385CEE28E4EBC800ABD85F /* Karthus.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Karthus.json; path = champion/Karthus.json; sourceTree = "<group>"; };
+		BE385CEF28E4EBC800ABD85F /* Leona.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Leona.json; path = champion/Leona.json; sourceTree = "<group>"; };
+		BE385CF028E4EBC800ABD85F /* Chogath.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Chogath.json; path = champion/Chogath.json; sourceTree = "<group>"; };
+		BE385CF128E4EBC800ABD85F /* Khazix.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Khazix.json; path = champion/Khazix.json; sourceTree = "<group>"; };
+		BE385CF228E4EBC800ABD85F /* Olaf.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Olaf.json; path = champion/Olaf.json; sourceTree = "<group>"; };
+		BE385CF328E4EBC800ABD85F /* Fiddlesticks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Fiddlesticks.json; path = champion/Fiddlesticks.json; sourceTree = "<group>"; };
+		BE385CF428E4EBC800ABD85F /* Syndra.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Syndra.json; path = champion/Syndra.json; sourceTree = "<group>"; };
+		BE385CF528E4EBC800ABD85F /* Mordekaiser.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Mordekaiser.json; path = champion/Mordekaiser.json; sourceTree = "<group>"; };
+		BE385CF628E4EBC800ABD85F /* Talon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Talon.json; path = champion/Talon.json; sourceTree = "<group>"; };
+		BE385CF728E4EBC800ABD85F /* Nidalee.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Nidalee.json; path = champion/Nidalee.json; sourceTree = "<group>"; };
+		BE385CF828E4EBC800ABD85F /* Samira.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Samira.json; path = champion/Samira.json; sourceTree = "<group>"; };
+		BE385CF928E4EBC800ABD85F /* Nami.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Nami.json; path = champion/Nami.json; sourceTree = "<group>"; };
+		BE385CFA28E4EBC800ABD85F /* Annie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Annie.json; path = champion/Annie.json; sourceTree = "<group>"; };
+		BE385CFB28E4EBC800ABD85F /* Evelynn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Evelynn.json; path = champion/Evelynn.json; sourceTree = "<group>"; };
+		BE385CFC28E4EBC900ABD85F /* Caitlyn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Caitlyn.json; path = champion/Caitlyn.json; sourceTree = "<group>"; };
+		BE385CFD28E4EBC900ABD85F /* Heimerdinger.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Heimerdinger.json; path = champion/Heimerdinger.json; sourceTree = "<group>"; };
+		BE385CFE28E4EBC900ABD85F /* Lissandra.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Lissandra.json; path = champion/Lissandra.json; sourceTree = "<group>"; };
+		BE385CFF28E4EBC900ABD85F /* Poppy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Poppy.json; path = champion/Poppy.json; sourceTree = "<group>"; };
+		BE385D0028E4EBC900ABD85F /* Orianna.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Orianna.json; path = champion/Orianna.json; sourceTree = "<group>"; };
+		BE385D0128E4EBC900ABD85F /* JarvanIV.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = JarvanIV.json; path = champion/JarvanIV.json; sourceTree = "<group>"; };
+		BE385D0228E4EBC900ABD85F /* Corki.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Corki.json; path = champion/Corki.json; sourceTree = "<group>"; };
+		BE385D0328E4EBC900ABD85F /* Shaco.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Shaco.json; path = champion/Shaco.json; sourceTree = "<group>"; };
+		BE385D0428E4EBC900ABD85F /* Trundle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Trundle.json; path = champion/Trundle.json; sourceTree = "<group>"; };
+		BE385D0528E4EBC900ABD85F /* Akali.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Akali.json; path = champion/Akali.json; sourceTree = "<group>"; };
+		BE385D0628E4EBC900ABD85F /* Morgana.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Morgana.json; path = champion/Morgana.json; sourceTree = "<group>"; };
+		BE385D0728E4EBC900ABD85F /* Yorick.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Yorick.json; path = champion/Yorick.json; sourceTree = "<group>"; };
+		BE385D0828E4EBC900ABD85F /* Sivir.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Sivir.json; path = champion/Sivir.json; sourceTree = "<group>"; };
+		BE385D0928E4EBC900ABD85F /* Karma.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Karma.json; path = champion/Karma.json; sourceTree = "<group>"; };
+		BE385D0A28E4EBC900ABD85F /* Jinx.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Jinx.json; path = champion/Jinx.json; sourceTree = "<group>"; };
+		BE385D0B28E4EBC900ABD85F /* Belveth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Belveth.json; path = champion/Belveth.json; sourceTree = "<group>"; };
+		BE385D0C28E4EBCA00ABD85F /* Galio.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Galio.json; path = champion/Galio.json; sourceTree = "<group>"; };
+		BE385D0D28E4EBCA00ABD85F /* Maokai.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Maokai.json; path = champion/Maokai.json; sourceTree = "<group>"; };
+		BE385D0E28E4EBCA00ABD85F /* Lillia.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Lillia.json; path = champion/Lillia.json; sourceTree = "<group>"; };
+		BE385D0F28E4EBCA00ABD85F /* Nasus.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Nasus.json; path = champion/Nasus.json; sourceTree = "<group>"; };
+		BE385D1028E4EBCA00ABD85F /* Riven.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Riven.json; path = champion/Riven.json; sourceTree = "<group>"; };
+		BE385D1128E4EBCA00ABD85F /* Ryze.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Ryze.json; path = champion/Ryze.json; sourceTree = "<group>"; };
+		BE385D1228E4EBCA00ABD85F /* Twitch.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Twitch.json; path = champion/Twitch.json; sourceTree = "<group>"; };
+		BE385D1328E4EBCA00ABD85F /* Ashe.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Ashe.json; path = champion/Ashe.json; sourceTree = "<group>"; };
+		BE385D1428E4EBCA00ABD85F /* Jax.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Jax.json; path = champion/Jax.json; sourceTree = "<group>"; };
+		BE385D1528E4EBCA00ABD85F /* TwistedFate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TwistedFate.json; path = champion/TwistedFate.json; sourceTree = "<group>"; };
+		BE385D1628E4EBCA00ABD85F /* Nilah.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Nilah.json; path = champion/Nilah.json; sourceTree = "<group>"; };
+		BE385D1728E4EBCA00ABD85F /* Vladimir.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Vladimir.json; path = champion/Vladimir.json; sourceTree = "<group>"; };
+		BE385D1828E4EBCA00ABD85F /* Elise.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Elise.json; path = champion/Elise.json; sourceTree = "<group>"; };
+		BE385D1928E4EBCA00ABD85F /* Kaisa.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Kaisa.json; path = champion/Kaisa.json; sourceTree = "<group>"; };
+		BE385D1A28E4EBCA00ABD85F /* XinZhao.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = XinZhao.json; path = champion/XinZhao.json; sourceTree = "<group>"; };
+		BE385D1B28E4EBCB00ABD85F /* Ziggs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Ziggs.json; path = champion/Ziggs.json; sourceTree = "<group>"; };
+		BE385D1C28E4EBCB00ABD85F /* Kindred.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Kindred.json; path = champion/Kindred.json; sourceTree = "<group>"; };
+		BE385D1D28E4EBCB00ABD85F /* Rumble.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Rumble.json; path = champion/Rumble.json; sourceTree = "<group>"; };
+		BE385D1E28E4EBCB00ABD85F /* Renekton.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Renekton.json; path = champion/Renekton.json; sourceTree = "<group>"; };
+		BE385D1F28E4EBCB00ABD85F /* Sylas.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Sylas.json; path = champion/Sylas.json; sourceTree = "<group>"; };
+		BE385D2028E4EBCB00ABD85F /* Ezreal.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Ezreal.json; path = champion/Ezreal.json; sourceTree = "<group>"; };
+		BE385D2128E4EBCB00ABD85F /* Kennen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Kennen.json; path = champion/Kennen.json; sourceTree = "<group>"; };
+		BE385D2228E4EBCB00ABD85F /* MissFortune.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MissFortune.json; path = champion/MissFortune.json; sourceTree = "<group>"; };
+		BE385D2328E4EBCB00ABD85F /* Vayne.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Vayne.json; path = champion/Vayne.json; sourceTree = "<group>"; };
+		BE385D2428E4EBCB00ABD85F /* Gnar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Gnar.json; path = champion/Gnar.json; sourceTree = "<group>"; };
+		BE385D2528E4EBCB00ABD85F /* Azir.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Azir.json; path = champion/Azir.json; sourceTree = "<group>"; };
+		BE385D2628E4EBCB00ABD85F /* Swain.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Swain.json; path = champion/Swain.json; sourceTree = "<group>"; };
+		BE385D2728E4EBCB00ABD85F /* Pantheon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Pantheon.json; path = champion/Pantheon.json; sourceTree = "<group>"; };
+		BE385D2828E4EBCB00ABD85F /* Senna.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Senna.json; path = champion/Senna.json; sourceTree = "<group>"; };
+		BE385D2928E4EBCB00ABD85F /* Braum.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Braum.json; path = champion/Braum.json; sourceTree = "<group>"; };
+		BE385D2A28E4EBCB00ABD85F /* Jhin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Jhin.json; path = champion/Jhin.json; sourceTree = "<group>"; };
+		BE385D2B28E4EBCC00ABD85F /* Pyke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Pyke.json; path = champion/Pyke.json; sourceTree = "<group>"; };
+		BE385D2C28E4EBCC00ABD85F /* Kled.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Kled.json; path = champion/Kled.json; sourceTree = "<group>"; };
+		BE385D2D28E4EBCC00ABD85F /* Nunu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Nunu.json; path = champion/Nunu.json; sourceTree = "<group>"; };
+		BE385D2E28E4EBCC00ABD85F /* Lulu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Lulu.json; path = champion/Lulu.json; sourceTree = "<group>"; };
+		BE385D2F28E4EBCC00ABD85F /* Malzahar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Malzahar.json; path = champion/Malzahar.json; sourceTree = "<group>"; };
+		BE385D3028E4EBCC00ABD85F /* Sion.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Sion.json; path = champion/Sion.json; sourceTree = "<group>"; };
+		BE385D3128E4EBCC00ABD85F /* Tryndamere.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Tryndamere.json; path = champion/Tryndamere.json; sourceTree = "<group>"; };
+		BE385D3228E4EBCC00ABD85F /* Udyr.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Udyr.json; path = champion/Udyr.json; sourceTree = "<group>"; };
+		BE385D3328E4EBCC00ABD85F /* Yuumi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Yuumi.json; path = champion/Yuumi.json; sourceTree = "<group>"; };
+		BE385D3428E4EBCC00ABD85F /* DrMundo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = DrMundo.json; path = champion/DrMundo.json; sourceTree = "<group>"; };
+		BE385D3528E4EBCC00ABD85F /* Vex.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Vex.json; path = champion/Vex.json; sourceTree = "<group>"; };
+		BE385DE028E5021500ABD85F /* JSONSchemaSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONSchemaSupport.swift; sourceTree = "<group>"; };
+		BE385DE228E5035800ABD85F /* ChampionJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionJSON.swift; sourceTree = "<group>"; };
 		BE6B708926A8CE3B0074BEA4 /* OfflineData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineData.swift; sourceTree = "<group>"; };
 		BE6B708B26A8D0790074BEA4 /* ChampionFull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionFull.swift; sourceTree = "<group>"; };
 		BE6B708E26A8DA720074BEA4 /* JSONNull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONNull.swift; sourceTree = "<group>"; };
@@ -226,7 +395,6 @@
 		BE6B709626A8EC2A0074BEA4 /* Champion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Champion.swift; sourceTree = "<group>"; };
 		BE711C0C269E878A00CA57CE /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		BE711C0E269E883F00CA57CE /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
-		BE76437626B498D70032F479 /* Akshan.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Akshan.json; sourceTree = "<group>"; };
 		BE949E8526B8C03000E23670 /* TeamTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
 		BEAD338826BF22A700A487B1 /* UsedChampions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsedChampions.swift; sourceTree = "<group>"; };
 		BEC0C88C26B8B45200F1146C /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
@@ -238,161 +406,7 @@
 		BEC1E4992698E9EB00BC3F62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEC1E49C2698E9EB00BC3F62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEC1E49E2698E9EB00BC3F62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BED12F2E26A8C71A007D367D /* JarvanIV.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JarvanIV.json; sourceTree = "<group>"; };
-		BED12F2F26A8C71A007D367D /* AurelionSol.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AurelionSol.json; sourceTree = "<group>"; };
-		BED12F3026A8C71A007D367D /* Riven.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Riven.json; sourceTree = "<group>"; };
-		BED12F3126A8C71A007D367D /* Shyvana.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Shyvana.json; sourceTree = "<group>"; };
-		BED12F3226A8C71A007D367D /* Yuumi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Yuumi.json; sourceTree = "<group>"; };
-		BED12F3326A8C71A007D367D /* KogMaw.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = KogMaw.json; sourceTree = "<group>"; };
-		BED12F3426A8C71A007D367D /* Velkoz.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Velkoz.json; sourceTree = "<group>"; };
-		BED12F3526A8C71A007D367D /* Ekko.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Ekko.json; sourceTree = "<group>"; };
-		BED12F3626A8C71A007D367D /* Hecarim.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Hecarim.json; sourceTree = "<group>"; };
-		BED12F3726A8C71A007D367D /* Malphite.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Malphite.json; sourceTree = "<group>"; };
-		BED12F3826A8C71A007D367D /* Kalista.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Kalista.json; sourceTree = "<group>"; };
-		BED12F3926A8C71A007D367D /* Zac.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Zac.json; sourceTree = "<group>"; };
-		BED12F3A26A8C71A007D367D /* Nocturne.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Nocturne.json; sourceTree = "<group>"; };
-		BED12F3B26A8C71A007D367D /* Janna.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Janna.json; sourceTree = "<group>"; };
-		BED12F3C26A8C71A007D367D /* Darius.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Darius.json; sourceTree = "<group>"; };
-		BED12F3D26A8C71A007D367D /* Vladimir.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Vladimir.json; sourceTree = "<group>"; };
-		BED12F3E26A8C71A007D367D /* Pyke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Pyke.json; sourceTree = "<group>"; };
-		BED12F3F26A8C71A007D367D /* Brand.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Brand.json; sourceTree = "<group>"; };
-		BED12F4026A8C71A007D367D /* Urgot.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Urgot.json; sourceTree = "<group>"; };
-		BED12F4126A8C71A007D367D /* Ahri.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Ahri.json; sourceTree = "<group>"; };
-		BED12F4226A8C71A007D367D /* Skarner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Skarner.json; sourceTree = "<group>"; };
-		BED12F4326A8C71A007D367D /* Leblanc.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Leblanc.json; sourceTree = "<group>"; };
-		BED12F4426A8C71A007D367D /* Jinx.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Jinx.json; sourceTree = "<group>"; };
-		BED12F4526A8C71A007D367D /* Leona.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Leona.json; sourceTree = "<group>"; };
-		BED12F4626A8C71A007D367D /* Swain.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Swain.json; sourceTree = "<group>"; };
-		BED12F4726A8C71A007D367D /* Shen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Shen.json; sourceTree = "<group>"; };
-		BED12F4826A8C71A007D367D /* Trundle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Trundle.json; sourceTree = "<group>"; };
-		BED12F4926A8C71A007D367D /* Karma.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Karma.json; sourceTree = "<group>"; };
-		BED12F4A26A8C71A007D367D /* Camille.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Camille.json; sourceTree = "<group>"; };
-		BED12F4B26A8C71A007D367D /* Soraka.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Soraka.json; sourceTree = "<group>"; };
-		BED12F4C26A8C71A007D367D /* Lucian.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Lucian.json; sourceTree = "<group>"; };
-		BED12F4D26A8C71A007D367D /* Amumu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Amumu.json; sourceTree = "<group>"; };
-		BED12F4E26A8C71A007D367D /* Kayle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Kayle.json; sourceTree = "<group>"; };
-		BED12F4F26A8C71A007D367D /* Draven.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Draven.json; sourceTree = "<group>"; };
-		BED12F5026A8C71A007D367D /* Viego.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Viego.json; sourceTree = "<group>"; };
-		BED12F5126A8C71A007D367D /* Jhin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Jhin.json; sourceTree = "<group>"; };
-		BED12F5226A8C71A007D367D /* MonkeyKing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MonkeyKing.json; sourceTree = "<group>"; };
-		BED12F5326A8C71A007D367D /* Sivir.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Sivir.json; sourceTree = "<group>"; };
-		BED12F5426A8C71A007D367D /* Zed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Zed.json; sourceTree = "<group>"; };
-		BED12F5526A8C71A007D367D /* Chogath.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Chogath.json; sourceTree = "<group>"; };
-		BED12F5626A8C71A007D367D /* Blitzcrank.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Blitzcrank.json; sourceTree = "<group>"; };
-		BED12F5726A8C71A007D367D /* Ezreal.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Ezreal.json; sourceTree = "<group>"; };
-		BED12F5826A8C71A007D367D /* Lux.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Lux.json; sourceTree = "<group>"; };
-		BED12F5926A8C71A007D367D /* Khazix.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Khazix.json; sourceTree = "<group>"; };
-		BED12F5A26A8C71A007D367D /* Udyr.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Udyr.json; sourceTree = "<group>"; };
-		BED12F5B26A8C71A007D367D /* Volibear.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Volibear.json; sourceTree = "<group>"; };
-		BED12F5C26A8C71A007D367D /* Nasus.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Nasus.json; sourceTree = "<group>"; };
-		BED12F5D26A8C71A007D367D /* Nami.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Nami.json; sourceTree = "<group>"; };
-		BED12F5E26A8C71A007D367D /* Diana.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Diana.json; sourceTree = "<group>"; };
-		BED12F5F26A8C71A007D367D /* Singed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Singed.json; sourceTree = "<group>"; };
-		BED12F6026A8C71A007D367D /* Kassadin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Kassadin.json; sourceTree = "<group>"; };
-		BED12F6126A8C71A007D367D /* Caitlyn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Caitlyn.json; sourceTree = "<group>"; };
-		BED12F6226A8C71A007D367D /* Yone.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Yone.json; sourceTree = "<group>"; };
-		BED12F6326A8C71A007D367D /* Annie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Annie.json; sourceTree = "<group>"; };
-		BED12F6426A8C71A007D367D /* TahmKench.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TahmKench.json; sourceTree = "<group>"; };
-		BED12F6526A8C71A007D367D /* Syndra.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Syndra.json; sourceTree = "<group>"; };
-		BED12F6626A8C71A007D367D /* Poppy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Poppy.json; sourceTree = "<group>"; };
-		BED12F6726A8C71A007D367D /* Garen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Garen.json; sourceTree = "<group>"; };
-		BED12F6826A8C71A007D367D /* XinZhao.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = XinZhao.json; sourceTree = "<group>"; };
-		BED12F6926A8C71A007D367D /* Twitch.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Twitch.json; sourceTree = "<group>"; };
-		BED12F6A26A8C71A007D367D /* Alistar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Alistar.json; sourceTree = "<group>"; };
-		BED12F6B26A8C71A007D367D /* Anivia.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Anivia.json; sourceTree = "<group>"; };
-		BED12F6C26A8C71A007D367D /* Sion.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Sion.json; sourceTree = "<group>"; };
-		BED12F6D26A8C71A007D367D /* Seraphine.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Seraphine.json; sourceTree = "<group>"; };
-		BED12F6E26A8C71A007D367D /* MasterYi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MasterYi.json; sourceTree = "<group>"; };
-		BED12F6F26A8C71A007D367D /* Graves.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Graves.json; sourceTree = "<group>"; };
-		BED12F7026A8C71A007D367D /* Yasuo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Yasuo.json; sourceTree = "<group>"; };
-		BED12F7126A8C71A007D367D /* Kayn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Kayn.json; sourceTree = "<group>"; };
-		BED12F7226A8C71A007D367D /* Akali.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Akali.json; sourceTree = "<group>"; };
-		BED12F7326A8C71A007D367D /* Neeko.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Neeko.json; sourceTree = "<group>"; };
-		BED12F7426A8C71A007D367D /* Kindred.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Kindred.json; sourceTree = "<group>"; };
-		BED12F7526A8C71A007D367D /* Elise.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Elise.json; sourceTree = "<group>"; };
-		BED12F7626A8C71A007D367D /* Sylas.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Sylas.json; sourceTree = "<group>"; };
-		BED12F7726A8C71A007D367D /* Karthus.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Karthus.json; sourceTree = "<group>"; };
-		BED12F7826A8C71A007D367D /* Sejuani.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Sejuani.json; sourceTree = "<group>"; };
-		BED12F7926A8C71A007D367D /* Sett.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Sett.json; sourceTree = "<group>"; };
-		BED12F7A26A8C71A007D367D /* Warwick.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Warwick.json; sourceTree = "<group>"; };
-		BED12F7B26A8C71A007D367D /* Heimerdinger.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Heimerdinger.json; sourceTree = "<group>"; };
-		BED12F7C26A8C71A007D367D /* Sona.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Sona.json; sourceTree = "<group>"; };
-		BED12F7D26A8C71A007D367D /* TwistedFate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TwistedFate.json; sourceTree = "<group>"; };
-		BED12F7E26A8C71A007D367D /* RekSai.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RekSai.json; sourceTree = "<group>"; };
-		BED12F7F26A8C71A007D367D /* Senna.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Senna.json; sourceTree = "<group>"; };
-		BED12F8026A8C71A007D367D /* Shaco.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Shaco.json; sourceTree = "<group>"; };
-		BED12F8126A8C71A007D367D /* Jayce.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Jayce.json; sourceTree = "<group>"; };
-		BED12F8226A8C71A007D367D /* Ornn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Ornn.json; sourceTree = "<group>"; };
-		BED12F8326A8C71A007D367D /* Kennen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Kennen.json; sourceTree = "<group>"; };
-		BED12F8426A8C71A007D367D /* Varus.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Varus.json; sourceTree = "<group>"; };
-		BED12F8526A8C71A007D367D /* Nautilus.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Nautilus.json; sourceTree = "<group>"; };
-		BED12F8626A8C71A007D367D /* Rumble.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Rumble.json; sourceTree = "<group>"; };
-		BED12F8726A8C71A007D367D /* Mordekaiser.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Mordekaiser.json; sourceTree = "<group>"; };
-		BED12F8826A8C71A007D367D /* LeeSin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LeeSin.json; sourceTree = "<group>"; };
-		BED12F8926A8C71A007D367D /* Veigar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Veigar.json; sourceTree = "<group>"; };
-		BED12F8A26A8C71A007D367D /* Tryndamere.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Tryndamere.json; sourceTree = "<group>"; };
-		BED12F8B26A8C71A007D367D /* Ivern.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Ivern.json; sourceTree = "<group>"; };
-		BED12F8C26A8C71A007D367D /* Xerath.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Xerath.json; sourceTree = "<group>"; };
-		BED12F8D26A8C71A007D367D /* Thresh.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Thresh.json; sourceTree = "<group>"; };
-		BED12F8E26A8C71A007D367D /* Talon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Talon.json; sourceTree = "<group>"; };
-		BED12F8F26A8C71A007D367D /* Ryze.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Ryze.json; sourceTree = "<group>"; };
-		BED12F9026A8C71A007D367D /* Viktor.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Viktor.json; sourceTree = "<group>"; };
-		BED12F9126A8C71A007D367D /* Fiora.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Fiora.json; sourceTree = "<group>"; };
-		BED12F9226A8C71A007D367D /* Azir.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Azir.json; sourceTree = "<group>"; };
-		BED12F9326A8C71A007D367D /* Zoe.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Zoe.json; sourceTree = "<group>"; };
-		BED12F9426A8C71B007D367D /* Jax.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Jax.json; sourceTree = "<group>"; };
-		BED12F9526A8C71B007D367D /* Rengar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Rengar.json; sourceTree = "<group>"; };
-		BED12F9626A8C71B007D367D /* Taliyah.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Taliyah.json; sourceTree = "<group>"; };
-		BED12F9726A8C71B007D367D /* Vayne.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Vayne.json; sourceTree = "<group>"; };
-		BED12F9826A8C71B007D367D /* Yorick.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Yorick.json; sourceTree = "<group>"; };
-		BED12F9926A8C71B007D367D /* Bard.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Bard.json; sourceTree = "<group>"; };
-		BED12F9A26A8C71B007D367D /* Braum.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Braum.json; sourceTree = "<group>"; };
-		BED12F9B26A8C71B007D367D /* Nunu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Nunu.json; sourceTree = "<group>"; };
-		BED12F9C26A8C71B007D367D /* Gangplank.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Gangplank.json; sourceTree = "<group>"; };
-		BED12F9D26A8C71B007D367D /* Tristana.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Tristana.json; sourceTree = "<group>"; };
-		BED12F9E26A8C71B007D367D /* Corki.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Corki.json; sourceTree = "<group>"; };
-		BED12F9F26A8C71B007D367D /* Malzahar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Malzahar.json; sourceTree = "<group>"; };
-		BED12FA026A8C71B007D367D /* Gragas.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Gragas.json; sourceTree = "<group>"; };
-		BED12FA126A8C71B007D367D /* Teemo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Teemo.json; sourceTree = "<group>"; };
-		BED12FA226A8C71B007D367D /* Lissandra.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Lissandra.json; sourceTree = "<group>"; };
-		BED12FA326A8C71B007D367D /* Fizz.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Fizz.json; sourceTree = "<group>"; };
-		BED12FA426A8C71B007D367D /* Morgana.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Morgana.json; sourceTree = "<group>"; };
-		BED12FA526A8C71B007D367D /* Evelynn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Evelynn.json; sourceTree = "<group>"; };
-		BED12FA626A8C71B007D367D /* Aphelios.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Aphelios.json; sourceTree = "<group>"; };
-		BED12FA726A8C71B007D367D /* Gnar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Gnar.json; sourceTree = "<group>"; };
-		BED12FA826A8C71B007D367D /* Ziggs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Ziggs.json; sourceTree = "<group>"; };
-		BED12FA926A8C71B007D367D /* Vi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Vi.json; sourceTree = "<group>"; };
-		BED12FAA26A8C71B007D367D /* Irelia.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Irelia.json; sourceTree = "<group>"; };
-		BED12FAB26A8C71B007D367D /* Ashe.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Ashe.json; sourceTree = "<group>"; };
-		BED12FAC26A8C71B007D367D /* Nidalee.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Nidalee.json; sourceTree = "<group>"; };
-		BED12FAD26A8C71B007D367D /* DrMundo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DrMundo.json; sourceTree = "<group>"; };
-		BED12FAE26A8C71B007D367D /* Zilean.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Zilean.json; sourceTree = "<group>"; };
-		BED12FAF26A8C71B007D367D /* Qiyana.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Qiyana.json; sourceTree = "<group>"; };
-		BED12FB026A8C71B007D367D /* Samira.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Samira.json; sourceTree = "<group>"; };
-		BED12FB126A8C71B007D367D /* Gwen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Gwen.json; sourceTree = "<group>"; };
-		BED12FB226A8C71B007D367D /* Lulu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Lulu.json; sourceTree = "<group>"; };
-		BED12FB326A8C71B007D367D /* Katarina.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Katarina.json; sourceTree = "<group>"; };
-		BED12FB426A8C71B007D367D /* Illaoi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Illaoi.json; sourceTree = "<group>"; };
-		BED12FB526A8C71B007D367D /* Rell.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Rell.json; sourceTree = "<group>"; };
-		BED12FB626A8C71B007D367D /* Aatrox.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Aatrox.json; sourceTree = "<group>"; };
-		BED12FB726A8C71B007D367D /* Lillia.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Lillia.json; sourceTree = "<group>"; };
-		BED12FB826A8C71B007D367D /* Zyra.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Zyra.json; sourceTree = "<group>"; };
-		BED12FB926A8C71B007D367D /* Kled.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Kled.json; sourceTree = "<group>"; };
-		BED12FBA26A8C71B007D367D /* Renekton.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Renekton.json; sourceTree = "<group>"; };
-		BED12FBB26A8C71B007D367D /* Pantheon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Pantheon.json; sourceTree = "<group>"; };
-		BED12FBC26A8C71B007D367D /* Fiddlesticks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Fiddlesticks.json; sourceTree = "<group>"; };
-		BED12FBD26A8C71B007D367D /* Olaf.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Olaf.json; sourceTree = "<group>"; };
-		BED12FBE26A8C71B007D367D /* Rakan.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Rakan.json; sourceTree = "<group>"; };
-		BED12FBF26A8C71B007D367D /* Quinn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Quinn.json; sourceTree = "<group>"; };
-		BED12FC026A8C71B007D367D /* Orianna.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Orianna.json; sourceTree = "<group>"; };
-		BED12FC126A8C71B007D367D /* Maokai.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Maokai.json; sourceTree = "<group>"; };
-		BED12FC226A8C71B007D367D /* Xayah.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Xayah.json; sourceTree = "<group>"; };
-		BED12FC326A8C71B007D367D /* Rammus.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Rammus.json; sourceTree = "<group>"; };
-		BED12FC426A8C71B007D367D /* Galio.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Galio.json; sourceTree = "<group>"; };
-		BED12FC526A8C71B007D367D /* MissFortune.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MissFortune.json; sourceTree = "<group>"; };
-		BED12FC626A8C71B007D367D /* Kaisa.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Kaisa.json; sourceTree = "<group>"; };
-		BED12FC726A8C71B007D367D /* Taric.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Taric.json; sourceTree = "<group>"; };
-		BED12FC826A8C71B007D367D /* Cassiopeia.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Cassiopeia.json; sourceTree = "<group>"; };
+		BECF0B7728E51D510047983E /* champion.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = champion.json; sourceTree = "<group>"; };
 		BED25B4226B3433500B2FC71 /* StatRankings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatRankings.swift; sourceTree = "<group>"; };
 		BEE6DCA12899EEC500AD4EBC /* TimeInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInterval.swift; sourceTree = "<group>"; };
 		BEEA302426A7C20F009E3C78 /* RiotAPITesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiotAPITesting.swift; sourceTree = "<group>"; };
@@ -437,11 +451,10 @@
 		BE1B794526A3836800AB3A46 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BE1B794626A383C100AB3A46 /* MatchDataList.swift */,
+				BECF0B7928E5254D0047983E /* Depreciated */,
 				BE1B794826A3843A00AB3A46 /* MatchData.swift */,
 				BE6B708926A8CE3B0074BEA4 /* OfflineData.swift */,
-				BE6B708B26A8D0790074BEA4 /* ChampionFull.swift */,
-				BE6B709626A8EC2A0074BEA4 /* Champion.swift */,
+				BE385DE228E5035800ABD85F /* ChampionJSON.swift */,
 				BED25B4226B3433500B2FC71 /* StatRankings.swift */,
 				BEAD338826BF22A700A487B1 /* UsedChampions.swift */,
 			);
@@ -454,6 +467,7 @@
 				BE6B708E26A8DA720074BEA4 /* JSONNull.swift */,
 				BE6B709026A8DA8A0074BEA4 /* JSONCodingKey.swift */,
 				BE6B709226A8DAA90074BEA4 /* JSONAny.swift */,
+				BE385DE028E5021500ABD85F /* JSONSchemaSupport.swift */,
 			);
 			path = "JSON Helpers";
 			sourceTree = "<group>";
@@ -499,175 +513,182 @@
 			path = RiotAPITesting;
 			sourceTree = "<group>";
 		};
+		BECF0B7928E5254D0047983E /* Depreciated */ = {
+			isa = PBXGroup;
+			children = (
+				BE6B708B26A8D0790074BEA4 /* ChampionFull.swift */,
+				BE6B709626A8EC2A0074BEA4 /* Champion.swift */,
+			);
+			path = Depreciated;
+			sourceTree = "<group>";
+		};
 		BED12F2526A8C71A007D367D /* RiotAPI Assets */ = {
 			isa = PBXGroup;
 			children = (
-				BED12F2D26A8C71A007D367D /* champion */,
+				BECF0B7728E51D510047983E /* champion.json */,
+				BE385CCE28E4EBC600ABD85F /* Aatrox.json */,
+				BE385CB928E4EBC400ABD85F /* Ahri.json */,
+				BE385D0528E4EBC900ABD85F /* Akali.json */,
+				BE385CC528E4EBC500ABD85F /* Akshan.json */,
+				BE385C9528E4EBC200ABD85F /* Alistar.json */,
+				BE385CEC28E4EBC800ABD85F /* Amumu.json */,
+				BE385C9D28E4EBC300ABD85F /* Anivia.json */,
+				BE385CFA28E4EBC800ABD85F /* Annie.json */,
+				BE385C9828E4EBC200ABD85F /* Aphelios.json */,
+				BE385D1328E4EBCA00ABD85F /* Ashe.json */,
+				BE385CDE28E4EBC700ABD85F /* AurelionSol.json */,
+				BE385D2528E4EBCB00ABD85F /* Azir.json */,
+				BE385CE028E4EBC700ABD85F /* Bard.json */,
+				BE385D0B28E4EBC900ABD85F /* Belveth.json */,
+				BE385CD028E4EBC600ABD85F /* Blitzcrank.json */,
+				BE385CDF28E4EBC700ABD85F /* Brand.json */,
+				BE385D2928E4EBCB00ABD85F /* Braum.json */,
+				BE385CFC28E4EBC900ABD85F /* Caitlyn.json */,
+				BE385CD928E4EBC600ABD85F /* Camille.json */,
+				BE385CAE28E4EBC400ABD85F /* Cassiopeia.json */,
+				BE385CF028E4EBC800ABD85F /* Chogath.json */,
+				BE385D0228E4EBC900ABD85F /* Corki.json */,
+				BE385C9928E4EBC200ABD85F /* Darius.json */,
+				BE385CE128E4EBC700ABD85F /* Diana.json */,
+				BE385CD528E4EBC600ABD85F /* Draven.json */,
+				BE385D3428E4EBCC00ABD85F /* DrMundo.json */,
+				BE385CB228E4EBC400ABD85F /* Ekko.json */,
+				BE385D1828E4EBCA00ABD85F /* Elise.json */,
+				BE385CFB28E4EBC800ABD85F /* Evelynn.json */,
+				BE385D2028E4EBCB00ABD85F /* Ezreal.json */,
+				BE385CF328E4EBC800ABD85F /* Fiddlesticks.json */,
+				BE385CCD28E4EBC600ABD85F /* Fiora.json */,
+				BE385CA828E4EBC300ABD85F /* Fizz.json */,
+				BE385D0C28E4EBCA00ABD85F /* Galio.json */,
+				BE385CBA28E4EBC400ABD85F /* Gangplank.json */,
+				BE385CD328E4EBC600ABD85F /* Garen.json */,
+				BE385D2428E4EBCB00ABD85F /* Gnar.json */,
+				BE385CA928E4EBC300ABD85F /* Gragas.json */,
+				BE385CAF28E4EBC400ABD85F /* Graves.json */,
+				BE385CB428E4EBC400ABD85F /* Gwen.json */,
+				BE385C9B28E4EBC300ABD85F /* Hecarim.json */,
+				BE385CFD28E4EBC900ABD85F /* Heimerdinger.json */,
+				BE385CCF28E4EBC600ABD85F /* Illaoi.json */,
+				BE385CC228E4EBC500ABD85F /* Irelia.json */,
+				BE385C9628E4EBC200ABD85F /* Ivern.json */,
+				BE385CE728E4EBC700ABD85F /* Janna.json */,
+				BE385D0128E4EBC900ABD85F /* JarvanIV.json */,
+				BE385D1428E4EBCA00ABD85F /* Jax.json */,
+				BE385CE928E4EBC700ABD85F /* Jayce.json */,
+				BE385D2A28E4EBCB00ABD85F /* Jhin.json */,
+				BE385D0A28E4EBC900ABD85F /* Jinx.json */,
+				BE385D1928E4EBCA00ABD85F /* Kaisa.json */,
+				BE385CEB28E4EBC700ABD85F /* Kalista.json */,
+				BE385D0928E4EBC900ABD85F /* Karma.json */,
+				BE385CEE28E4EBC800ABD85F /* Karthus.json */,
+				BE385CC928E4EBC500ABD85F /* Kassadin.json */,
+				BE385CD628E4EBC600ABD85F /* Katarina.json */,
+				BE385CC428E4EBC500ABD85F /* Kayle.json */,
+				BE385CE428E4EBC700ABD85F /* Kayn.json */,
+				BE385D2128E4EBCB00ABD85F /* Kennen.json */,
+				BE385CF128E4EBC800ABD85F /* Khazix.json */,
+				BE385D1C28E4EBCB00ABD85F /* Kindred.json */,
+				BE385D2C28E4EBCC00ABD85F /* Kled.json */,
+				BE385CC728E4EBC500ABD85F /* KogMaw.json */,
+				BE385CBC28E4EBC500ABD85F /* Leblanc.json */,
+				BE385CC328E4EBC500ABD85F /* LeeSin.json */,
+				BE385CEF28E4EBC800ABD85F /* Leona.json */,
+				BE385D0E28E4EBCA00ABD85F /* Lillia.json */,
+				BE385CFE28E4EBC900ABD85F /* Lissandra.json */,
+				BE385C9A28E4EBC200ABD85F /* Lucian.json */,
+				BE385D2E28E4EBCC00ABD85F /* Lulu.json */,
+				BE385CA028E4EBC300ABD85F /* Lux.json */,
+				BE385CBE28E4EBC500ABD85F /* Malphite.json */,
+				BE385D2F28E4EBCC00ABD85F /* Malzahar.json */,
+				BE385D0D28E4EBCA00ABD85F /* Maokai.json */,
+				BE385CD828E4EBC600ABD85F /* MasterYi.json */,
+				BE385D2228E4EBCB00ABD85F /* MissFortune.json */,
+				BE385CA128E4EBC300ABD85F /* MonkeyKing.json */,
+				BE385CF528E4EBC800ABD85F /* Mordekaiser.json */,
+				BE385D0628E4EBC900ABD85F /* Morgana.json */,
+				BE385CF928E4EBC800ABD85F /* Nami.json */,
+				BE385D0F28E4EBCA00ABD85F /* Nasus.json */,
+				BE385CDA28E4EBC600ABD85F /* Nautilus.json */,
+				BE385CAA28E4EBC300ABD85F /* Neeko.json */,
+				BE385CF728E4EBC800ABD85F /* Nidalee.json */,
+				BE385D1628E4EBCA00ABD85F /* Nilah.json */,
+				BE385CA628E4EBC300ABD85F /* Nocturne.json */,
+				BE385D2D28E4EBCC00ABD85F /* Nunu.json */,
+				BE385CF228E4EBC800ABD85F /* Olaf.json */,
+				BE385D0028E4EBC900ABD85F /* Orianna.json */,
+				BE385C9728E4EBC200ABD85F /* Ornn.json */,
+				BE385D2728E4EBCB00ABD85F /* Pantheon.json */,
+				BE385CFF28E4EBC900ABD85F /* Poppy.json */,
+				BE385D2B28E4EBCC00ABD85F /* Pyke.json */,
+				BE385CC128E4EBC500ABD85F /* Qiyana.json */,
+				BE385CC828E4EBC500ABD85F /* Quinn.json */,
+				BE385CDB28E4EBC600ABD85F /* Rakan.json */,
+				BE385CDC28E4EBC700ABD85F /* Rammus.json */,
+				BE385C9E28E4EBC300ABD85F /* RekSai.json */,
+				BE385CB828E4EBC400ABD85F /* Rell.json */,
+				BE385CD428E4EBC600ABD85F /* Renata.json */,
+				BE385D1E28E4EBCB00ABD85F /* Renekton.json */,
+				BE385CEA28E4EBC700ABD85F /* Rengar.json */,
+				BE385D1028E4EBCA00ABD85F /* Riven.json */,
+				BE385D1D28E4EBCB00ABD85F /* Rumble.json */,
+				BE385D1128E4EBCA00ABD85F /* Ryze.json */,
+				BE385CF828E4EBC800ABD85F /* Samira.json */,
+				BE385CBB28E4EBC500ABD85F /* Sejuani.json */,
+				BE385D2828E4EBCB00ABD85F /* Senna.json */,
+				BE385CCC28E4EBC600ABD85F /* Seraphine.json */,
+				BE385CA228E4EBC300ABD85F /* Sett.json */,
+				BE385D0328E4EBC900ABD85F /* Shaco.json */,
+				BE385CB128E4EBC400ABD85F /* Shen.json */,
+				BE385CA728E4EBC300ABD85F /* Shyvana.json */,
+				BE385CC028E4EBC500ABD85F /* Singed.json */,
+				BE385D3028E4EBCC00ABD85F /* Sion.json */,
+				BE385D0828E4EBC900ABD85F /* Sivir.json */,
+				BE385CD728E4EBC600ABD85F /* Skarner.json */,
+				BE385CB328E4EBC400ABD85F /* Sona.json */,
+				BE385CB528E4EBC400ABD85F /* Soraka.json */,
+				BE385D2628E4EBCB00ABD85F /* Swain.json */,
+				BE385D1F28E4EBCB00ABD85F /* Sylas.json */,
+				BE385CF428E4EBC800ABD85F /* Syndra.json */,
+				BE385CAB28E4EBC400ABD85F /* TahmKench.json */,
+				BE385CD228E4EBC600ABD85F /* Taliyah.json */,
+				BE385CF628E4EBC800ABD85F /* Talon.json */,
+				BE385CC628E4EBC500ABD85F /* Taric.json */,
+				BE385CDD28E4EBC700ABD85F /* Teemo.json */,
+				BE385CCA28E4EBC500ABD85F /* Thresh.json */,
+				BE385CBF28E4EBC500ABD85F /* Tristana.json */,
+				BE385D0428E4EBC900ABD85F /* Trundle.json */,
+				BE385D3128E4EBCC00ABD85F /* Tryndamere.json */,
+				BE385D1528E4EBCA00ABD85F /* TwistedFate.json */,
+				BE385D1228E4EBCA00ABD85F /* Twitch.json */,
+				BE385D3228E4EBCC00ABD85F /* Udyr.json */,
+				BE385CB628E4EBC400ABD85F /* Urgot.json */,
+				BE385CB728E4EBC400ABD85F /* Varus.json */,
+				BE385D2328E4EBCB00ABD85F /* Vayne.json */,
+				BE385CD128E4EBC600ABD85F /* Veigar.json */,
+				BE385CE228E4EBC700ABD85F /* Velkoz.json */,
+				BE385D3528E4EBCC00ABD85F /* Vex.json */,
+				BE385CB028E4EBC400ABD85F /* Vi.json */,
+				BE385C9C28E4EBC300ABD85F /* Viego.json */,
+				BE385CE328E4EBC700ABD85F /* Viktor.json */,
+				BE385D1728E4EBCA00ABD85F /* Vladimir.json */,
+				BE385CAD28E4EBC400ABD85F /* Volibear.json */,
+				BE385CAC28E4EBC400ABD85F /* Warwick.json */,
+				BE385CE528E4EBC700ABD85F /* Xayah.json */,
+				BE385C9F28E4EBC300ABD85F /* Xerath.json */,
+				BE385D1A28E4EBCA00ABD85F /* XinZhao.json */,
+				BE385CE628E4EBC700ABD85F /* Yasuo.json */,
+				BE385CCB28E4EBC500ABD85F /* Yone.json */,
+				BE385D0728E4EBC900ABD85F /* Yorick.json */,
+				BE385D3328E4EBCC00ABD85F /* Yuumi.json */,
+				BE385CA428E4EBC300ABD85F /* Zac.json */,
+				BE385CBD28E4EBC500ABD85F /* Zed.json */,
+				BE385CE828E4EBC700ABD85F /* Zeri.json */,
+				BE385D1B28E4EBCB00ABD85F /* Ziggs.json */,
+				BE385CA328E4EBC300ABD85F /* Zilean.json */,
+				BE385CED28E4EBC800ABD85F /* Zoe.json */,
+				BE385CA528E4EBC300ABD85F /* Zyra.json */,
 			);
 			path = "RiotAPI Assets";
-			sourceTree = "<group>";
-		};
-		BED12F2D26A8C71A007D367D /* champion */ = {
-			isa = PBXGroup;
-			children = (
-				BED12FB626A8C71B007D367D /* Aatrox.json */,
-				BED12F4126A8C71A007D367D /* Ahri.json */,
-				BED12F7226A8C71A007D367D /* Akali.json */,
-				BE76437626B498D70032F479 /* Akshan.json */,
-				BED12F6A26A8C71A007D367D /* Alistar.json */,
-				BED12F4D26A8C71A007D367D /* Amumu.json */,
-				BED12F6B26A8C71A007D367D /* Anivia.json */,
-				BED12F6326A8C71A007D367D /* Annie.json */,
-				BED12FA626A8C71B007D367D /* Aphelios.json */,
-				BED12FAB26A8C71B007D367D /* Ashe.json */,
-				BED12F2F26A8C71A007D367D /* AurelionSol.json */,
-				BED12F9226A8C71A007D367D /* Azir.json */,
-				BED12F9926A8C71B007D367D /* Bard.json */,
-				BED12F5626A8C71A007D367D /* Blitzcrank.json */,
-				BED12F3F26A8C71A007D367D /* Brand.json */,
-				BED12F9A26A8C71B007D367D /* Braum.json */,
-				BED12F6126A8C71A007D367D /* Caitlyn.json */,
-				BED12F4A26A8C71A007D367D /* Camille.json */,
-				BED12FC826A8C71B007D367D /* Cassiopeia.json */,
-				BED12F5526A8C71A007D367D /* Chogath.json */,
-				BED12F9E26A8C71B007D367D /* Corki.json */,
-				BED12F3C26A8C71A007D367D /* Darius.json */,
-				BED12F5E26A8C71A007D367D /* Diana.json */,
-				BED12F4F26A8C71A007D367D /* Draven.json */,
-				BED12FAD26A8C71B007D367D /* DrMundo.json */,
-				BED12F3526A8C71A007D367D /* Ekko.json */,
-				BED12F7526A8C71A007D367D /* Elise.json */,
-				BED12FA526A8C71B007D367D /* Evelynn.json */,
-				BED12F5726A8C71A007D367D /* Ezreal.json */,
-				BED12FBC26A8C71B007D367D /* Fiddlesticks.json */,
-				BED12F9126A8C71A007D367D /* Fiora.json */,
-				BED12FA326A8C71B007D367D /* Fizz.json */,
-				BED12FC426A8C71B007D367D /* Galio.json */,
-				BED12F9C26A8C71B007D367D /* Gangplank.json */,
-				BED12F6726A8C71A007D367D /* Garen.json */,
-				BED12FA726A8C71B007D367D /* Gnar.json */,
-				BED12FA026A8C71B007D367D /* Gragas.json */,
-				BED12F6F26A8C71A007D367D /* Graves.json */,
-				BED12FB126A8C71B007D367D /* Gwen.json */,
-				BED12F3626A8C71A007D367D /* Hecarim.json */,
-				BED12F7B26A8C71A007D367D /* Heimerdinger.json */,
-				BED12FB426A8C71B007D367D /* Illaoi.json */,
-				BED12FAA26A8C71B007D367D /* Irelia.json */,
-				BED12F8B26A8C71A007D367D /* Ivern.json */,
-				BED12F3B26A8C71A007D367D /* Janna.json */,
-				BED12F2E26A8C71A007D367D /* JarvanIV.json */,
-				BED12F9426A8C71B007D367D /* Jax.json */,
-				BED12F8126A8C71A007D367D /* Jayce.json */,
-				BED12F5126A8C71A007D367D /* Jhin.json */,
-				BED12F4426A8C71A007D367D /* Jinx.json */,
-				BED12FC626A8C71B007D367D /* Kaisa.json */,
-				BED12F3826A8C71A007D367D /* Kalista.json */,
-				BED12F4926A8C71A007D367D /* Karma.json */,
-				BED12F7726A8C71A007D367D /* Karthus.json */,
-				BED12F6026A8C71A007D367D /* Kassadin.json */,
-				BED12FB326A8C71B007D367D /* Katarina.json */,
-				BED12F4E26A8C71A007D367D /* Kayle.json */,
-				BED12F7126A8C71A007D367D /* Kayn.json */,
-				BED12F8326A8C71A007D367D /* Kennen.json */,
-				BED12F5926A8C71A007D367D /* Khazix.json */,
-				BED12F7426A8C71A007D367D /* Kindred.json */,
-				BED12FB926A8C71B007D367D /* Kled.json */,
-				BED12F3326A8C71A007D367D /* KogMaw.json */,
-				BED12F4326A8C71A007D367D /* Leblanc.json */,
-				BED12F8826A8C71A007D367D /* LeeSin.json */,
-				BED12F4526A8C71A007D367D /* Leona.json */,
-				BED12FB726A8C71B007D367D /* Lillia.json */,
-				BED12FA226A8C71B007D367D /* Lissandra.json */,
-				BED12F4C26A8C71A007D367D /* Lucian.json */,
-				BED12FB226A8C71B007D367D /* Lulu.json */,
-				BED12F5826A8C71A007D367D /* Lux.json */,
-				BED12F3726A8C71A007D367D /* Malphite.json */,
-				BED12F9F26A8C71B007D367D /* Malzahar.json */,
-				BED12FC126A8C71B007D367D /* Maokai.json */,
-				BED12F6E26A8C71A007D367D /* MasterYi.json */,
-				BED12FC526A8C71B007D367D /* MissFortune.json */,
-				BED12F5226A8C71A007D367D /* MonkeyKing.json */,
-				BED12F8726A8C71A007D367D /* Mordekaiser.json */,
-				BED12FA426A8C71B007D367D /* Morgana.json */,
-				BED12F5D26A8C71A007D367D /* Nami.json */,
-				BED12F5C26A8C71A007D367D /* Nasus.json */,
-				BED12F8526A8C71A007D367D /* Nautilus.json */,
-				BED12F7326A8C71A007D367D /* Neeko.json */,
-				BED12FAC26A8C71B007D367D /* Nidalee.json */,
-				BED12F3A26A8C71A007D367D /* Nocturne.json */,
-				BED12F9B26A8C71B007D367D /* Nunu.json */,
-				BED12FBD26A8C71B007D367D /* Olaf.json */,
-				BED12FC026A8C71B007D367D /* Orianna.json */,
-				BED12F8226A8C71A007D367D /* Ornn.json */,
-				BED12FBB26A8C71B007D367D /* Pantheon.json */,
-				BED12F6626A8C71A007D367D /* Poppy.json */,
-				BED12F3E26A8C71A007D367D /* Pyke.json */,
-				BED12FAF26A8C71B007D367D /* Qiyana.json */,
-				BED12FBF26A8C71B007D367D /* Quinn.json */,
-				BED12FBE26A8C71B007D367D /* Rakan.json */,
-				BED12FC326A8C71B007D367D /* Rammus.json */,
-				BED12F7E26A8C71A007D367D /* RekSai.json */,
-				BED12FB526A8C71B007D367D /* Rell.json */,
-				BED12FBA26A8C71B007D367D /* Renekton.json */,
-				BED12F9526A8C71B007D367D /* Rengar.json */,
-				BED12F3026A8C71A007D367D /* Riven.json */,
-				BED12F8626A8C71A007D367D /* Rumble.json */,
-				BED12F8F26A8C71A007D367D /* Ryze.json */,
-				BED12FB026A8C71B007D367D /* Samira.json */,
-				BED12F7826A8C71A007D367D /* Sejuani.json */,
-				BED12F7F26A8C71A007D367D /* Senna.json */,
-				BED12F6D26A8C71A007D367D /* Seraphine.json */,
-				BED12F7926A8C71A007D367D /* Sett.json */,
-				BED12F8026A8C71A007D367D /* Shaco.json */,
-				BED12F4726A8C71A007D367D /* Shen.json */,
-				BED12F3126A8C71A007D367D /* Shyvana.json */,
-				BED12F5F26A8C71A007D367D /* Singed.json */,
-				BED12F6C26A8C71A007D367D /* Sion.json */,
-				BED12F5326A8C71A007D367D /* Sivir.json */,
-				BED12F4226A8C71A007D367D /* Skarner.json */,
-				BED12F7C26A8C71A007D367D /* Sona.json */,
-				BED12F4B26A8C71A007D367D /* Soraka.json */,
-				BED12F4626A8C71A007D367D /* Swain.json */,
-				BED12F7626A8C71A007D367D /* Sylas.json */,
-				BED12F6526A8C71A007D367D /* Syndra.json */,
-				BED12F6426A8C71A007D367D /* TahmKench.json */,
-				BED12F9626A8C71B007D367D /* Taliyah.json */,
-				BED12F8E26A8C71A007D367D /* Talon.json */,
-				BED12FC726A8C71B007D367D /* Taric.json */,
-				BED12FA126A8C71B007D367D /* Teemo.json */,
-				BED12F8D26A8C71A007D367D /* Thresh.json */,
-				BED12F9D26A8C71B007D367D /* Tristana.json */,
-				BED12F4826A8C71A007D367D /* Trundle.json */,
-				BED12F8A26A8C71A007D367D /* Tryndamere.json */,
-				BED12F7D26A8C71A007D367D /* TwistedFate.json */,
-				BED12F6926A8C71A007D367D /* Twitch.json */,
-				BED12F5A26A8C71A007D367D /* Udyr.json */,
-				BED12F4026A8C71A007D367D /* Urgot.json */,
-				BED12F8426A8C71A007D367D /* Varus.json */,
-				BED12F9726A8C71B007D367D /* Vayne.json */,
-				BED12F8926A8C71A007D367D /* Veigar.json */,
-				BED12F3426A8C71A007D367D /* Velkoz.json */,
-				BED12FA926A8C71B007D367D /* Vi.json */,
-				BED12F5026A8C71A007D367D /* Viego.json */,
-				BED12F9026A8C71A007D367D /* Viktor.json */,
-				BED12F3D26A8C71A007D367D /* Vladimir.json */,
-				BED12F5B26A8C71A007D367D /* Volibear.json */,
-				BED12F7A26A8C71A007D367D /* Warwick.json */,
-				BED12FC226A8C71B007D367D /* Xayah.json */,
-				BED12F8C26A8C71A007D367D /* Xerath.json */,
-				BED12F6826A8C71A007D367D /* XinZhao.json */,
-				BED12F7026A8C71A007D367D /* Yasuo.json */,
-				BED12F6226A8C71A007D367D /* Yone.json */,
-				BED12F9826A8C71B007D367D /* Yorick.json */,
-				BED12F3226A8C71A007D367D /* Yuumi.json */,
-				BED12F3926A8C71A007D367D /* Zac.json */,
-				BED12F5426A8C71A007D367D /* Zed.json */,
-				BED12FA826A8C71B007D367D /* Ziggs.json */,
-				BED12FAE26A8C71B007D367D /* Zilean.json */,
-				BED12F9326A8C71A007D367D /* Zoe.json */,
-				BED12FB826A8C71B007D367D /* Zyra.json */,
-			);
-			path = champion;
 			sourceTree = "<group>";
 		};
 		BED191BF272291CF00159E12 /* Frameworks */ = {
@@ -749,165 +770,171 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BED1300926A8C71B007D367D /* TahmKench.json in Resources */,
-				BED1300D26A8C71B007D367D /* XinZhao.json in Resources */,
-				BED1305126A8C71B007D367D /* Nidalee.json in Resources */,
-				BED1303F26A8C71B007D367D /* Braum.json in Resources */,
-				BED1301E26A8C71B007D367D /* Sett.json in Resources */,
-				BED1301026A8C71B007D367D /* Anivia.json in Resources */,
-				BED1302726A8C71B007D367D /* Ornn.json in Resources */,
-				BED1301826A8C71B007D367D /* Neeko.json in Resources */,
-				BED12FD426A8C71B007D367D /* AurelionSol.json in Resources */,
-				BED1305726A8C71B007D367D /* Lulu.json in Resources */,
-				BED1300B26A8C71B007D367D /* Poppy.json in Resources */,
-				BED1301926A8C71B007D367D /* Kindred.json in Resources */,
-				BED12FF526A8C71B007D367D /* Viego.json in Resources */,
-				BED1301426A8C71B007D367D /* Graves.json in Resources */,
-				BED1301626A8C71B007D367D /* Kayn.json in Resources */,
-				BED12FD626A8C71B007D367D /* Shyvana.json in Resources */,
-				BED12FE526A8C71B007D367D /* Urgot.json in Resources */,
-				BED1302D26A8C71B007D367D /* LeeSin.json in Resources */,
-				BED1302926A8C71B007D367D /* Varus.json in Resources */,
-				BED12FEF26A8C71B007D367D /* Camille.json in Resources */,
-				BED12FDA26A8C71B007D367D /* Ekko.json in Resources */,
-				BED1304826A8C71B007D367D /* Fizz.json in Resources */,
-				BED1305E26A8C71B007D367D /* Kled.json in Resources */,
-				BED1303426A8C71B007D367D /* Ryze.json in Resources */,
-				BED12FF726A8C71B007D367D /* MonkeyKing.json in Resources */,
-				BED1302826A8C71B007D367D /* Kennen.json in Resources */,
-				BED1300326A8C71B007D367D /* Diana.json in Resources */,
-				BED1303026A8C71B007D367D /* Ivern.json in Resources */,
-				BED12FE826A8C71B007D367D /* Leblanc.json in Resources */,
-				BED1300626A8C71B007D367D /* Caitlyn.json in Resources */,
-				BED1300026A8C71B007D367D /* Volibear.json in Resources */,
-				BED1301A26A8C71B007D367D /* Elise.json in Resources */,
-				BED1306226A8C71B007D367D /* Olaf.json in Resources */,
-				BED1302526A8C71B007D367D /* Shaco.json in Resources */,
-				BED12FF226A8C71B007D367D /* Amumu.json in Resources */,
-				BED12FFC26A8C71B007D367D /* Ezreal.json in Resources */,
-				BED12FE226A8C71B007D367D /* Vladimir.json in Resources */,
-				BED1303126A8C71B007D367D /* Xerath.json in Resources */,
-				BE76437726B498D70032F479 /* Akshan.json in Resources */,
-				BED12FFB26A8C71B007D367D /* Blitzcrank.json in Resources */,
-				BED1306A26A8C71B007D367D /* MissFortune.json in Resources */,
-				BED1305426A8C71B007D367D /* Qiyana.json in Resources */,
-				BED1301C26A8C71B007D367D /* Karthus.json in Resources */,
-				BED1302026A8C71B007D367D /* Heimerdinger.json in Resources */,
-				BED1306126A8C71B007D367D /* Fiddlesticks.json in Resources */,
-				BED1304926A8C71B007D367D /* Morgana.json in Resources */,
-				BED1304D26A8C71B007D367D /* Ziggs.json in Resources */,
-				BED1300F26A8C71B007D367D /* Alistar.json in Resources */,
-				BED12FD526A8C71B007D367D /* Riven.json in Resources */,
-				BED1301226A8C71B007D367D /* Seraphine.json in Resources */,
-				BED12FF926A8C71B007D367D /* Zed.json in Resources */,
-				BED12FFD26A8C71B007D367D /* Lux.json in Resources */,
-				BED1304126A8C71B007D367D /* Gangplank.json in Resources */,
-				BED12FF326A8C71B007D367D /* Kayle.json in Resources */,
-				BED1302B26A8C71B007D367D /* Rumble.json in Resources */,
-				BED1301526A8C71B007D367D /* Yasuo.json in Resources */,
-				BED1304B26A8C71B007D367D /* Aphelios.json in Resources */,
-				BED1306326A8C71B007D367D /* Rakan.json in Resources */,
-				BED1303826A8C71B007D367D /* Zoe.json in Resources */,
-				BED1303226A8C71B007D367D /* Thresh.json in Resources */,
-				BED1306426A8C71B007D367D /* Quinn.json in Resources */,
-				BED1304526A8C71B007D367D /* Gragas.json in Resources */,
-				BED12FDD26A8C71B007D367D /* Kalista.json in Resources */,
-				BED1303326A8C71B007D367D /* Talon.json in Resources */,
-				BED1301126A8C71B007D367D /* Sion.json in Resources */,
-				BED1306D26A8C71B007D367D /* Cassiopeia.json in Resources */,
-				BED1304326A8C71B007D367D /* Corki.json in Resources */,
-				BED1300C26A8C71B007D367D /* Garen.json in Resources */,
-				BED12FED26A8C71B007D367D /* Trundle.json in Resources */,
-				BED1302426A8C71B007D367D /* Senna.json in Resources */,
-				BED1304626A8C71B007D367D /* Teemo.json in Resources */,
-				BED1303626A8C71B007D367D /* Fiora.json in Resources */,
-				BED1305226A8C71B007D367D /* DrMundo.json in Resources */,
-				BED12FF626A8C71B007D367D /* Jhin.json in Resources */,
-				BED12FE926A8C71B007D367D /* Jinx.json in Resources */,
-				BED1302A26A8C71B007D367D /* Nautilus.json in Resources */,
-				BED1304F26A8C71B007D367D /* Irelia.json in Resources */,
-				BED12FE026A8C71B007D367D /* Janna.json in Resources */,
-				BED1305626A8C71B007D367D /* Gwen.json in Resources */,
-				BED1300826A8C71B007D367D /* Annie.json in Resources */,
-				BED12FFE26A8C71B007D367D /* Khazix.json in Resources */,
-				BED1300A26A8C71B007D367D /* Syndra.json in Resources */,
-				BED1305926A8C71B007D367D /* Illaoi.json in Resources */,
-				BED1305026A8C71B007D367D /* Ashe.json in Resources */,
-				BED1306026A8C71B007D367D /* Pantheon.json in Resources */,
-				BED1303D26A8C71B007D367D /* Yorick.json in Resources */,
-				BED1303A26A8C71B007D367D /* Rengar.json in Resources */,
-				BED1306626A8C71B007D367D /* Maokai.json in Resources */,
+				BE385DC028E4EBCD00ABD85F /* Sylas.json in Resources */,
+				BE385D4428E4EBCC00ABD85F /* Zilean.json in Resources */,
+				BE385D6828E4EBCD00ABD85F /* KogMaw.json in Resources */,
+				BE385D9228E4EBCD00ABD85F /* Khazix.json in Resources */,
+				BE385D6128E4EBCC00ABD85F /* Singed.json in Resources */,
+				BE385D7028E4EBCD00ABD85F /* Illaoi.json in Resources */,
+				BE385D7D28E4EBCD00ABD85F /* Rammus.json in Resources */,
+				BE385DD628E4EBCD00ABD85F /* Vex.json in Resources */,
+				BE385DB128E4EBCD00ABD85F /* Riven.json in Resources */,
+				BE385DB528E4EBCD00ABD85F /* Jax.json in Resources */,
+				BE385D5728E4EBCC00ABD85F /* Urgot.json in Resources */,
+				BE385D7928E4EBCD00ABD85F /* MasterYi.json in Resources */,
+				BE385D3B28E4EBCC00ABD85F /* Lucian.json in Resources */,
+				BE385DC828E4EBCD00ABD85F /* Pantheon.json in Resources */,
+				BE385D4F28E4EBCC00ABD85F /* Cassiopeia.json in Resources */,
+				BE385D4328E4EBCC00ABD85F /* Sett.json in Resources */,
+				BE385D8428E4EBCD00ABD85F /* Viktor.json in Resources */,
+				BE385D6028E4EBCC00ABD85F /* Tristana.json in Resources */,
+				BE385D5A28E4EBCC00ABD85F /* Ahri.json in Resources */,
+				BE385D4D28E4EBCC00ABD85F /* Warwick.json in Resources */,
+				BE385DB928E4EBCD00ABD85F /* Elise.json in Resources */,
+				BE385D8D28E4EBCD00ABD85F /* Amumu.json in Resources */,
+				BE385DAD28E4EBCD00ABD85F /* Galio.json in Resources */,
+				BE385D5528E4EBCC00ABD85F /* Gwen.json in Resources */,
+				BE385D3C28E4EBCC00ABD85F /* Hecarim.json in Resources */,
+				BE385DD528E4EBCD00ABD85F /* DrMundo.json in Resources */,
+				BE385DC428E4EBCD00ABD85F /* Vayne.json in Resources */,
+				BE385D6528E4EBCC00ABD85F /* Kayle.json in Resources */,
+				BE385DD128E4EBCD00ABD85F /* Sion.json in Resources */,
+				BE385D8E28E4EBCD00ABD85F /* Zoe.json in Resources */,
+				BE385D9B28E4EBCD00ABD85F /* Annie.json in Resources */,
+				BE385D9028E4EBCD00ABD85F /* Leona.json in Resources */,
+				BE385DBC28E4EBCD00ABD85F /* Ziggs.json in Resources */,
+				BE385D5C28E4EBCC00ABD85F /* Sejuani.json in Resources */,
+				BE385D9A28E4EBCD00ABD85F /* Nami.json in Resources */,
+				BE385DA828E4EBCD00ABD85F /* Yorick.json in Resources */,
+				BE385DB228E4EBCD00ABD85F /* Ryze.json in Resources */,
+				BE385D7628E4EBCD00ABD85F /* Draven.json in Resources */,
+				BE385D3628E4EBCC00ABD85F /* Alistar.json in Resources */,
+				BE385D4228E4EBCC00ABD85F /* MonkeyKing.json in Resources */,
+				BE385DBF28E4EBCD00ABD85F /* Renekton.json in Resources */,
+				BE385DC128E4EBCD00ABD85F /* Ezreal.json in Resources */,
+				BE385D7228E4EBCD00ABD85F /* Veigar.json in Resources */,
+				BE385DAF28E4EBCD00ABD85F /* Lillia.json in Resources */,
+				BE385D9D28E4EBCD00ABD85F /* Caitlyn.json in Resources */,
+				BE385D6328E4EBCC00ABD85F /* Irelia.json in Resources */,
+				BE385D6728E4EBCD00ABD85F /* Taric.json in Resources */,
+				BE385DB728E4EBCD00ABD85F /* Nilah.json in Resources */,
+				BE385DC728E4EBCD00ABD85F /* Swain.json in Resources */,
+				BE385D4528E4EBCC00ABD85F /* Zac.json in Resources */,
+				BE385D5F28E4EBCC00ABD85F /* Malphite.json in Resources */,
+				BE385D7128E4EBCD00ABD85F /* Blitzcrank.json in Resources */,
+				BE385D6428E4EBCC00ABD85F /* LeeSin.json in Resources */,
+				BE385D9828E4EBCD00ABD85F /* Nidalee.json in Resources */,
+				BE385D3E28E4EBCC00ABD85F /* Anivia.json in Resources */,
+				BE385D8328E4EBCD00ABD85F /* Velkoz.json in Resources */,
+				BE385DA228E4EBCD00ABD85F /* JarvanIV.json in Resources */,
+				BE385DD428E4EBCD00ABD85F /* Yuumi.json in Resources */,
+				BE385D7F28E4EBCD00ABD85F /* AurelionSol.json in Resources */,
+				BE385DA628E4EBCD00ABD85F /* Akali.json in Resources */,
+				BE385DAC28E4EBCD00ABD85F /* Belveth.json in Resources */,
+				BE385DBD28E4EBCD00ABD85F /* Kindred.json in Resources */,
+				BE385D6F28E4EBCD00ABD85F /* Aatrox.json in Resources */,
+				BE385D4E28E4EBCC00ABD85F /* Volibear.json in Resources */,
+				BE385D8628E4EBCD00ABD85F /* Xayah.json in Resources */,
+				BE385DA328E4EBCD00ABD85F /* Corki.json in Resources */,
+				BE385D5828E4EBCC00ABD85F /* Varus.json in Resources */,
+				BE385D7328E4EBCD00ABD85F /* Taliyah.json in Resources */,
 				BEC1E49D2698E9EB00BC3F62 /* LaunchScreen.storyboard in Resources */,
-				BED1303926A8C71B007D367D /* Jax.json in Resources */,
-				BED1304A26A8C71B007D367D /* Evelynn.json in Resources */,
-				BED12FE426A8C71B007D367D /* Brand.json in Resources */,
-				BED12FE626A8C71B007D367D /* Ahri.json in Resources */,
-				BED1305B26A8C71B007D367D /* Aatrox.json in Resources */,
-				BED1306B26A8C71B007D367D /* Kaisa.json in Resources */,
-				BED12FD826A8C71B007D367D /* KogMaw.json in Resources */,
-				BED1301726A8C71B007D367D /* Akali.json in Resources */,
-				BED1302126A8C71B007D367D /* Sona.json in Resources */,
-				BED1300426A8C71B007D367D /* Singed.json in Resources */,
-				BED1303B26A8C71B007D367D /* Taliyah.json in Resources */,
-				BED12FEB26A8C71B007D367D /* Swain.json in Resources */,
-				BED1306726A8C71B007D367D /* Xayah.json in Resources */,
-				BED1305D26A8C71B007D367D /* Zyra.json in Resources */,
-				BED1306826A8C71B007D367D /* Rammus.json in Resources */,
-				BED1303726A8C71B007D367D /* Azir.json in Resources */,
-				BED1305526A8C71B007D367D /* Samira.json in Resources */,
-				BED1300E26A8C71B007D367D /* Twitch.json in Resources */,
-				BED1305C26A8C71B007D367D /* Lillia.json in Resources */,
-				BED1302226A8C71B007D367D /* TwistedFate.json in Resources */,
-				BED1306526A8C71B007D367D /* Orianna.json in Resources */,
-				BED12FE326A8C71B007D367D /* Pyke.json in Resources */,
-				BED1303E26A8C71B007D367D /* Bard.json in Resources */,
-				BED1305F26A8C71B007D367D /* Renekton.json in Resources */,
+				BE385DC328E4EBCD00ABD85F /* MissFortune.json in Resources */,
+				BE385DB428E4EBCD00ABD85F /* Ashe.json in Resources */,
+				BE385D5428E4EBCC00ABD85F /* Sona.json in Resources */,
+				BE385DCD28E4EBCD00ABD85F /* Kled.json in Resources */,
+				BE385D6B28E4EBCD00ABD85F /* Thresh.json in Resources */,
+				BE385DD328E4EBCD00ABD85F /* Udyr.json in Resources */,
+				BE385D4B28E4EBCC00ABD85F /* Neeko.json in Resources */,
+				BE385D6A28E4EBCD00ABD85F /* Kassadin.json in Resources */,
+				BE385D3F28E4EBCC00ABD85F /* RekSai.json in Resources */,
+				BE385D4928E4EBCC00ABD85F /* Fizz.json in Resources */,
+				BE385DC628E4EBCD00ABD85F /* Azir.json in Resources */,
+				BE385DBE28E4EBCD00ABD85F /* Rumble.json in Resources */,
+				BE385D8528E4EBCD00ABD85F /* Kayn.json in Resources */,
+				BE385D8928E4EBCD00ABD85F /* Zeri.json in Resources */,
+				BE385D5328E4EBCC00ABD85F /* Ekko.json in Resources */,
+				BE385DA028E4EBCD00ABD85F /* Poppy.json in Resources */,
+				BE385D3828E4EBCC00ABD85F /* Ornn.json in Resources */,
+				BE385DCC28E4EBCD00ABD85F /* Pyke.json in Resources */,
+				BE385D8C28E4EBCD00ABD85F /* Kalista.json in Resources */,
+				BE385DA728E4EBCD00ABD85F /* Morgana.json in Resources */,
+				BE385D6928E4EBCD00ABD85F /* Quinn.json in Resources */,
+				BE385D7B28E4EBCD00ABD85F /* Nautilus.json in Resources */,
+				BE385D8128E4EBCD00ABD85F /* Bard.json in Resources */,
+				BE385D9328E4EBCD00ABD85F /* Olaf.json in Resources */,
+				BE385D4C28E4EBCC00ABD85F /* TahmKench.json in Resources */,
+				BE385D8828E4EBCD00ABD85F /* Janna.json in Resources */,
+				BE385D7C28E4EBCD00ABD85F /* Rakan.json in Resources */,
+				BE385D8228E4EBCD00ABD85F /* Diana.json in Resources */,
+				BE385DCF28E4EBCD00ABD85F /* Lulu.json in Resources */,
+				BE385DD028E4EBCD00ABD85F /* Malzahar.json in Resources */,
+				BE385D9E28E4EBCD00ABD85F /* Heimerdinger.json in Resources */,
+				BE385DC928E4EBCD00ABD85F /* Senna.json in Resources */,
+				BE385D6E28E4EBCD00ABD85F /* Fiora.json in Resources */,
+				BE385D4728E4EBCC00ABD85F /* Nocturne.json in Resources */,
+				BE385DCB28E4EBCD00ABD85F /* Jhin.json in Resources */,
+				BE385D5928E4EBCC00ABD85F /* Rell.json in Resources */,
+				BE385DBA28E4EBCD00ABD85F /* Kaisa.json in Resources */,
+				BE385D9928E4EBCD00ABD85F /* Samira.json in Resources */,
+				BE385DAE28E4EBCD00ABD85F /* Maokai.json in Resources */,
+				BE385D6D28E4EBCD00ABD85F /* Seraphine.json in Resources */,
+				BE385D4828E4EBCC00ABD85F /* Shyvana.json in Resources */,
+				BE385D9528E4EBCD00ABD85F /* Syndra.json in Resources */,
+				BE385DB828E4EBCD00ABD85F /* Vladimir.json in Resources */,
+				BE385D6628E4EBCC00ABD85F /* Akshan.json in Resources */,
+				BE385D9F28E4EBCD00ABD85F /* Lissandra.json in Resources */,
+				BE385D7528E4EBCD00ABD85F /* Renata.json in Resources */,
+				BE385D9728E4EBCD00ABD85F /* Talon.json in Resources */,
+				BE385D7828E4EBCD00ABD85F /* Skarner.json in Resources */,
+				BE385D5128E4EBCC00ABD85F /* Vi.json in Resources */,
+				BE385DD228E4EBCD00ABD85F /* Tryndamere.json in Resources */,
+				BE385D7728E4EBCD00ABD85F /* Katarina.json in Resources */,
+				BE385DA428E4EBCD00ABD85F /* Shaco.json in Resources */,
+				BE385D8B28E4EBCD00ABD85F /* Rengar.json in Resources */,
+				BE385D3A28E4EBCC00ABD85F /* Darius.json in Resources */,
+				BE385D9428E4EBCD00ABD85F /* Fiddlesticks.json in Resources */,
+				BE385D3928E4EBCC00ABD85F /* Aphelios.json in Resources */,
+				BE385D4A28E4EBCC00ABD85F /* Gragas.json in Resources */,
+				BE385D4128E4EBCC00ABD85F /* Lux.json in Resources */,
+				BE385DA128E4EBCD00ABD85F /* Orianna.json in Resources */,
+				BE385D7428E4EBCD00ABD85F /* Garen.json in Resources */,
+				BE385D5028E4EBCC00ABD85F /* Graves.json in Resources */,
+				BE385D3728E4EBCC00ABD85F /* Ivern.json in Resources */,
+				BE385DC228E4EBCD00ABD85F /* Kennen.json in Resources */,
+				BE385DA928E4EBCD00ABD85F /* Sivir.json in Resources */,
 				BEC1E49A2698E9EB00BC3F62 /* Assets.xcassets in Resources */,
-				BED1301326A8C71B007D367D /* MasterYi.json in Resources */,
-				BED1302F26A8C71B007D367D /* Tryndamere.json in Resources */,
+				BE385D6228E4EBCC00ABD85F /* Qiyana.json in Resources */,
+				BE385D9628E4EBCD00ABD85F /* Mordekaiser.json in Resources */,
+				BE385D8728E4EBCD00ABD85F /* Yasuo.json in Resources */,
+				BE385D9C28E4EBCD00ABD85F /* Evelynn.json in Resources */,
+				BE385D4028E4EBCC00ABD85F /* Xerath.json in Resources */,
+				BE385D5B28E4EBCC00ABD85F /* Gangplank.json in Resources */,
+				BE385D3D28E4EBCC00ABD85F /* Viego.json in Resources */,
+				BE385D5628E4EBCC00ABD85F /* Soraka.json in Resources */,
+				BE385D5E28E4EBCC00ABD85F /* Zed.json in Resources */,
+				BE385D9128E4EBCD00ABD85F /* Chogath.json in Resources */,
+				BE385DB028E4EBCD00ABD85F /* Nasus.json in Resources */,
+				BE385D5D28E4EBCC00ABD85F /* Leblanc.json in Resources */,
+				BE385D7A28E4EBCD00ABD85F /* Camille.json in Resources */,
+				BE385DBB28E4EBCD00ABD85F /* XinZhao.json in Resources */,
+				BE385DAA28E4EBCD00ABD85F /* Karma.json in Resources */,
+				BE385D6C28E4EBCD00ABD85F /* Yone.json in Resources */,
+				BE385DAB28E4EBCD00ABD85F /* Jinx.json in Resources */,
+				BECF0B7828E51D510047983E /* champion.json in Resources */,
+				BE385DB328E4EBCD00ABD85F /* Twitch.json in Resources */,
+				BE385D8F28E4EBCD00ABD85F /* Karthus.json in Resources */,
+				BE385DB628E4EBCD00ABD85F /* TwistedFate.json in Resources */,
+				BE385D7E28E4EBCD00ABD85F /* Teemo.json in Resources */,
 				BEC1E4982698E9EA00BC3F62 /* Main.storyboard in Resources */,
-				BED1301B26A8C71B007D367D /* Sylas.json in Resources */,
-				BED12FEE26A8C71B007D367D /* Karma.json in Resources */,
-				BED12FF826A8C71B007D367D /* Sivir.json in Resources */,
-				BED1304C26A8C71B007D367D /* Gnar.json in Resources */,
-				BED1300526A8C71B007D367D /* Kassadin.json in Resources */,
-				BED12FDE26A8C71B007D367D /* Zac.json in Resources */,
-				BED12FFA26A8C71B007D367D /* Chogath.json in Resources */,
-				BED12FDC26A8C71B007D367D /* Malphite.json in Resources */,
-				BED1306C26A8C71B007D367D /* Taric.json in Resources */,
-				BED1305826A8C71B007D367D /* Katarina.json in Resources */,
-				BED1303526A8C71B007D367D /* Viktor.json in Resources */,
-				BED1304226A8C71B007D367D /* Tristana.json in Resources */,
-				BED12FF126A8C71B007D367D /* Lucian.json in Resources */,
-				BED1300226A8C71B007D367D /* Nami.json in Resources */,
-				BED1302626A8C71B007D367D /* Jayce.json in Resources */,
-				BED1302C26A8C71B007D367D /* Mordekaiser.json in Resources */,
-				BED12FD726A8C71B007D367D /* Yuumi.json in Resources */,
-				BED1304E26A8C71B007D367D /* Vi.json in Resources */,
-				BED1306926A8C71B007D367D /* Galio.json in Resources */,
-				BED1301F26A8C71B007D367D /* Warwick.json in Resources */,
-				BED12FDF26A8C71B007D367D /* Nocturne.json in Resources */,
-				BED1304026A8C71B007D367D /* Nunu.json in Resources */,
-				BED1300126A8C71B007D367D /* Nasus.json in Resources */,
-				BED1305326A8C71B007D367D /* Zilean.json in Resources */,
-				BED1303C26A8C71B007D367D /* Vayne.json in Resources */,
-				BED12FF426A8C71B007D367D /* Draven.json in Resources */,
-				BED1301D26A8C71B007D367D /* Sejuani.json in Resources */,
-				BED12FFF26A8C71B007D367D /* Udyr.json in Resources */,
-				BED12FE126A8C71B007D367D /* Darius.json in Resources */,
-				BED12FEA26A8C71B007D367D /* Leona.json in Resources */,
-				BED1302326A8C71B007D367D /* RekSai.json in Resources */,
-				BED12FE726A8C71B007D367D /* Skarner.json in Resources */,
-				BED1302E26A8C71B007D367D /* Veigar.json in Resources */,
-				BED12FDB26A8C71B007D367D /* Hecarim.json in Resources */,
-				BED1305A26A8C71B007D367D /* Rell.json in Resources */,
-				BED12FF026A8C71B007D367D /* Soraka.json in Resources */,
-				BED12FD926A8C71B007D367D /* Velkoz.json in Resources */,
-				BED12FD326A8C71B007D367D /* JarvanIV.json in Resources */,
-				BED1304426A8C71B007D367D /* Malzahar.json in Resources */,
-				BED1304726A8C71B007D367D /* Lissandra.json in Resources */,
-				BED1300726A8C71B007D367D /* Yone.json in Resources */,
-				BED12FEC26A8C71B007D367D /* Shen.json in Resources */,
+				BE385DCA28E4EBCD00ABD85F /* Braum.json in Resources */,
+				BE385D8028E4EBCD00ABD85F /* Brand.json in Resources */,
+				BE385DC528E4EBCD00ABD85F /* Gnar.json in Resources */,
+				BE385DCE28E4EBCD00ABD85F /* Nunu.json in Resources */,
+				BE385DA528E4EBCD00ABD85F /* Trundle.json in Resources */,
+				BE385D4628E4EBCC00ABD85F /* Zyra.json in Resources */,
+				BE385D8A28E4EBCD00ABD85F /* Jayce.json in Resources */,
+				BE385D5228E4EBCC00ABD85F /* Shen.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -919,12 +946,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE949E8726B8C0E200E23670 /* GameTableViewCell.swift in Sources */,
+				BE385DE328E5035800ABD85F /* ChampionJSON.swift in Sources */,
 				BE949E8826B8C0E200E23670 /* TeamTableViewCell.swift in Sources */,
 				BE949E8926B8C0E200E23670 /* PlayerTableViewCell.swift in Sources */,
 				BEAD338926BF22A700A487B1 /* UsedChampions.swift in Sources */,
 				BE6B709726A8EC2A0074BEA4 /* Champion.swift in Sources */,
 				BEEA302526A7C20F009E3C78 /* RiotAPITesting.swift in Sources */,
-				BE1B794726A383C100AB3A46 /* MatchDataList.swift in Sources */,
 				BE6B709326A8DAA90074BEA4 /* JSONAny.swift in Sources */,
 				BED25B4326B3433500B2FC71 /* StatRankings.swift in Sources */,
 				BEEA303826A7D93D009E3C78 /* UITextViewExtension.swift in Sources */,
@@ -942,6 +969,7 @@
 				BE6B709126A8DA8A0074BEA4 /* JSONCodingKey.swift in Sources */,
 				BE711C0F269E883F00CA57CE /* Player.swift in Sources */,
 				BEC1E4932698E9EA00BC3F62 /* SceneDelegate.swift in Sources */,
+				BE385DE128E5021500ABD85F /* JSONSchemaSupport.swift in Sources */,
 				BE1B794126A3709E00AB3A46 /* GameListTableViewController.swift in Sources */,
 				BEEA303926A7D93D009E3C78 /* UILabelExtension.swift in Sources */,
 				BEF0C81626B35FF30078245A /* WhatWasIDoingLast.swift in Sources */,

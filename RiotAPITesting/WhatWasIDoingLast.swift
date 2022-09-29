@@ -8,7 +8,10 @@
 import Foundation
 
 /*
-You just finished the match detail basics, you need to fix the font sizes and add some color
- Give the TeamTableViewCells some color
+Fixed Champion Images, made loading of files more consistent
  
+ 
+ 
+ TO DO LIST:
+ Dynamic Creation of Summoner Spells 
  */

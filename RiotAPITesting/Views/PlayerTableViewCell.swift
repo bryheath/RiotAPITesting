@@ -70,7 +70,7 @@ class PlayerTableViewCell: UITableViewCell {
 
     func setCSAndGoldLabel(participant: MatchParticipant, gameDuration: Duration) {
         
-        let cs = participant.totalMinionsKilled
+        let cs = participant.totalMinionsKilled + participant.neutralMinionsKilled
             let decimalGameDuration = Double(gameDuration.minutes) + (Double(gameDuration.seconds) / 60.0)
             let csPerMinute = Double(cs) / decimalGameDuration
             let newCSPerMinute = formatter.string(for: csPerMinute)
@@ -119,11 +119,14 @@ class PlayerTableViewCell: UITableViewCell {
     
     func setChampionImage(participant: MatchParticipant) {
         let championId = participant.championId
-        let championName = championJSONNames[championId.value]!
-        
-        if let image = UIImage(named: championName) {
-            championImageView.image = image
+        if let championName = getChampIdString(championId: championId) {
+            if let image = UIImage(named: championName) {
+                championImageView.image = image
+            }
         }
+        //let championName = championJSONNames[championId.value]!
+        
+        
     }
     
 //    func setup() {

@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        checkCacheVersion(championName: "Diana")
-        createChampionsArray()
+//        checkCacheVersion(championName: "Diana")
+        createChampionsDictionary()
         
 //        printStatisticRankings(statistic: .AS)
 //        printStatisticRankings(statistic: "attackdamage")

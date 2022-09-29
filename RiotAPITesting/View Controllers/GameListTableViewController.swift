@@ -16,10 +16,6 @@ class GameListTableViewController: UITableViewController {
     var currentGame: MatchData?
 
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    
-    //var matchDataList:[MatchData] = []
-    //var matchDataList: [Int: Match] = [:]
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,12 +29,12 @@ class GameListTableViewController: UITableViewController {
         league.lolAPI.getSummoner(byName: summonerName, on: preferredRegion) { (summoner, errorMsg) in
             if let summoner = summoner {
                 self.summoner = summoner
-                print(summoner.puuid)
                 league.lolAPI.getMatchList(by: summoner.puuid, on: preferredRegion, count: 30) { (matchList, errorMsg) in
                     if let matchList = matchList {
-                        
                         self.matches = matchList
-                        self.tableView.reload()
+                        DispatchQueue.main.async {
+                            self.tableView.reloadData()
+                        }
                     } else {
                         print("getMatchList Request failed cause: \(errorMsg ?? "No error description")")
                     }
@@ -46,12 +42,8 @@ class GameListTableViewController: UITableViewController {
             } else {
                 print("getMatchListSummoner Request failed cause: \(errorMsg ?? "No Error Description")")
             }
-            
         }
-        
     }
-    
-    
     func getMatchDetails(matchId: LOLMatchId, completion: @escaping (Match) -> Void) {
         if let localGameDetails = self.matchDetails[matchId] {
             completion(localGameDetails)
@@ -66,7 +58,6 @@ class GameListTableViewController: UITableViewController {
             }
         }
     }
-    
     func getPosition(role: String, lane: String) -> String{
         var position: String
         switch role {
@@ -84,7 +75,6 @@ class GameListTableViewController: UITableViewController {
         }
         return position
     }
-    
     func sortPlayers() {
         players = players.sorted()
     }
@@ -95,48 +85,45 @@ class GameListTableViewController: UITableViewController {
                     //print(sender)
             self.setupGameDetailsVC(destinationVC, sender: sender)
         }
-//        print(type(of: sender))
-//        print(sender)
-//        if segue.identifier == "toGameDetails" {
-//            if let gameDetailsViewController = segue.destination as? GameDetailsViewController {
-//                //gameDetailsViewController.match =
-//                if let index = self.tableView.indexPathForSelectedRow?.row {
-////                    print("Selected Index: \(index) - GameID: \(matchDataList[index].match.gameId)")
-//
-//                    print("Selected Index: \(index) - GameID: \(self.matchDataList[index]!.info.gameId)")
-//                    gameDetailsViewController.matchData = matchDataList[index]
-//                } else {
-//                    print("Error")
-//                }
-//
-//            }
-//        }
     }
     
     func setupGameDetailsVC(_ gameDetailsVC: GameDetailsViewController, sender: Any?) {
         guard let matchDetails = sender as? Match else { return }
         gameDetailsVC.matchData = matchDetails
     }
-    
     func setupMatchCell(matchId: LOLMatchId) -> GameTableViewCell {
         let gameCell: GameTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "gameCell") as! GameTableViewCell
         guard let summoner = self.summoner else { return gameCell }
-        
-        
         self.getMatchDetails(matchId: matchId) { match in
-            
             if let player = match.info.participants.first(where: { $0.summonerId == summoner.id}) {
                 DispatchQueue.main.async {
                    gameCell.backgroundColor = player.win ? #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1) : #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
                 }
                 let kda = (player.kills + player.assists) / player.deaths
-                gameCell.scoreLabel.setText("\(player.kills)/\(player.deaths)/\(player.assists)")
-                gameCell.kdaLabel.setText("\(kda):1 KDA")
+                let cs = player.totalMinionsKilled + player.neutralMinionsKilled
+                let duration:TimeInterval = Double(match.info.gameDuration)
+                gameCell.scoreLabel.setText("\(player.kills)/\(player.deaths)/\(player.assists) -- \(cs) CS")
+                print("duration.minute: \(duration.minute)")
+                print("duration.second: \(duration.second)")
+                let decimalGameDuration = Double(duration.minute) + (Double(duration.second) / 60.0)
+//                    let decimalGameDuration = Double(gameDuration.minutes) + (Double(gameDuration.seconds) / 60.0)
+                let csPerMinute = Double(cs) / decimalGameDuration
+                let formatter = NumberFormatter()
+                formatter.numberStyle = .decimal
+                formatter.maximumSignificantDigits = 3
+                let csPerMinString:String = formatter.string(for: csPerMinute)!
+                print("decimalGameDuration: \(decimalGameDuration) -- cs/m: \(csPerMinute)")
+                    
+                
+                gameCell.kdaLabel.setText("\(kda):1 KDA -- \(csPerMinString) CS/m")
                 let queue = QueueMode(Long(match.info.queueId))
                 gameCell.matchTypeLabel.setText(queue.mode.description)
-                let duration:TimeInterval = Double(match.info.gameDuration)
                 gameCell.durationLabel.setText(duration.minuteSecond)
                 gameCell.backgroundColorIsSet = true
+                getChampionImage(championId: player.championId) { (champImage) in
+                    gameCell.championImageView.setImage(champImage)
+                }
+                
                 getSummonerSpells(participant: player) { (dSpellImage, fSpellImage) in
                     gameCell.dSpellImageView.setImage(dSpellImage)
                     gameCell.fSpellImageView.setImage(fSpellImage)

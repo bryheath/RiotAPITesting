@@ -19,8 +19,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        playerNameTextField.text = "SunraiRW"
-        print("ViewController - viewDidLoad")
+        playerNameTextField.text = "SunraiRW"
         //getMatchList(for: preferredSummoner)
         //print("ViewController - viewDidLoad - after getMatchList")
     }
@@ -58,7 +57,7 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("top of Prepare")
+//        print("top of Prepare")
         
     }
 //    func getMatchList(for summonerName: String) {
