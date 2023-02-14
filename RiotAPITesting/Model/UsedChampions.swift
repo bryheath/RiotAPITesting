@@ -9,11 +9,11 @@ import Foundation
 import LeagueAPI
 
 class UsedChampions {
-    var kills: Int = 0
-    var deaths: Int = 0
-    var assists: Int = 0
-    var howManyGames: Int = 0
-    var wins: Int = 0
+    var kills: Double = 0
+    var deaths: Double = 0
+    var assists: Double = 0
+    var howManyGames: Double = 0
+    var wins: Double = 0
     var championID: ChampionId
     var championName: String
     

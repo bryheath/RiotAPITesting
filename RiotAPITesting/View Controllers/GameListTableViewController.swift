@@ -99,23 +99,18 @@ class GameListTableViewController: UITableViewController {
                 DispatchQueue.main.async {
                    gameCell.backgroundColor = player.win ? #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1) : #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
                 }
-                let kda = (player.kills + player.assists) / player.deaths
+                let kda:Double = (Double(player.kills) + Double(player.assists)) / Double(player.deaths)
                 let cs = player.totalMinionsKilled + player.neutralMinionsKilled
                 let duration:TimeInterval = Double(match.info.gameDuration)
                 gameCell.scoreLabel.setText("\(player.kills)/\(player.deaths)/\(player.assists) -- \(cs) CS")
-                print("duration.minute: \(duration.minute)")
-                print("duration.second: \(duration.second)")
                 let decimalGameDuration = Double(duration.minute) + (Double(duration.second) / 60.0)
-//                    let decimalGameDuration = Double(gameDuration.minutes) + (Double(gameDuration.seconds) / 60.0)
                 let csPerMinute = Double(cs) / decimalGameDuration
                 let formatter = NumberFormatter()
                 formatter.numberStyle = .decimal
                 formatter.maximumSignificantDigits = 3
                 let csPerMinString:String = formatter.string(for: csPerMinute)!
-                print("decimalGameDuration: \(decimalGameDuration) -- cs/m: \(csPerMinute)")
-                    
-                
-                gameCell.kdaLabel.setText("\(kda):1 KDA -- \(csPerMinString) CS/m")
+                let kdaString:String = formatter.string(for: kda)!
+                gameCell.kdaLabel.setText("\(kdaString):1 KDA -- \(csPerMinString) CS/m")
                 let queue = QueueMode(Long(match.info.queueId))
                 gameCell.matchTypeLabel.setText(queue.mode.description)
                 gameCell.durationLabel.setText(duration.minuteSecond)
@@ -136,47 +131,6 @@ class GameListTableViewController: UITableViewController {
                 }
                 gameCell.match = match
             }
-//            if let summonerParticipant = match.info.participants.filter({ participant in
-//                return participant.summonerId == summoner.id
-//            }).first?.participantId {
-//                if let summonerWon = match.info.filter({ team in
-//                    return team.teamId == summonerParticipant.
-//                }).first? {
-//
-//                }
-//
-//            }
-//
-//            let kda = (you.kills + you.assists) / you.deaths
-//                gameCell.scoreLabel.setText("\(you.kills)/\(you.deaths)/\(you.assists)")
-//                gameCell.kdaLabel.setText("\(kda):1 KDA")
-//            let queue = QueueMode(Long(game.info.queueId))
-//            gameCell.matchTypeLabel.setText(queue.mode.description)
-//            gameCell.indexLabel.setText(String(index.row))
-//            let duration:TimeInterval = Double(game.info.gameDuration)
-//
-//            gameCell.durationLabel.setText(duration.minuteSecond)
-//            DispatchQueue.main.async {
-//                gameCell.backgroundColorIsSet = true
-//                gameCell.backgroundColor = you.win ? UIColor.green : UIColor.red
-//            }
-//            getSummonerSpells(participant: you) { (dSpellImage, fSpellImage) in
-//                gameCell.dSpellImageView.setImage(dSpellImage)
-//                gameCell.fSpellImageView.setImage(fSpellImage)
-//            }
-//            getRunePathImage(runePathId: you.perks.styles[0].style) { image in
-//                gameCell.rune1ImageView.setImage(image)
-//            }
-//            getRunePathImage(runePathId: you.perks.styles[1].style) { image in
-//                gameCell.rune2ImageView.setImage(image)
-//            }
-//                getChampionImage(championId: match.championId) { image in
-//                    game.championImage = image
-//                    gameCell.championImageView.setImage(image)
-//                }
-//                self.matchDataList.append(game)
-//                self.matchDataList = self.matchDataList.sorted(by: {$0.match.gameId.value > $1.match.gameId.value})
-//                self.matchDataList[index.row] = game
         }
         return gameCell
     }

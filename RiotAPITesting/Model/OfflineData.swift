@@ -153,3 +153,83 @@ public func getSummonerSpells(participant: MatchParticipant, completion: @escapi
     }
 }
 
+/*
+ Challenge Testing Functions
+ */
+
+public func allChallengesConfig() {
+    league.lolAPI.getAllChallengesConfig(on: preferredRegion) { (allChallenges, errorMsg) in
+        if let allChallenges = allChallenges {
+            var count = 0
+            for challenge in allChallenges {
+                count += 1
+                print("challenge #\(count)")
+                print(challenge)
+            }
+        } else {
+            print("allChallengesConfig failed \(String(describing: errorMsg))")
+        }
+            
+    }
+}
+
+public func allChallengesPercentiles() {
+    league.lolAPI.getAllChallengesPercentiles(on: preferredRegion) { (challengesArray, errorMsg) in
+        if let challengesArray = challengesArray {
+            for challenge in challengesArray {
+                print("\(challenge.key) : \n\(challenge.value)")
+            }
+        } else {
+            print("challengesPercentiles Failed")
+            print(String(describing: errorMsg))
+        }
+    }
+}
+
+public func challengeConfig() {
+    league.lolAPI.getChallengeConfig(by: ChallengeId(103100), on: preferredRegion) { (challenge, errorMsg) in
+        if let challenge = challenge {
+            print(challenge.debugDescription)
+        } else {
+            print("challengeConfig Failed \(String(describing: errorMsg))")
+        }
+    }
+}
+
+public func challengeLeaderboard() {
+    league.lolAPI.getChallengeLeaderboard(by: ChallengeId(203303), for: .master, on: preferredRegion) { (leaderboardArray, errorMsg) in
+        if let leaderboardArray = leaderboardArray {
+            print(String(describing:leaderboardArray))
+        } else {
+            print("challengeLeaderboard Failed \(String(describing: errorMsg))")
+        }
+    }
+}
+
+public func challengePercentiles() {
+    league.lolAPI.getChallengePercentiles(by: ChallengeId(203303), on: preferredRegion) { (thresholds, errorMsg) in
+        if let thresholds = thresholds {
+            print(String(describing: thresholds))
+        } else {
+            print("challengePercentiles Failed: \(String(describing: errorMsg))")
+        }
+    }
+}
+
+public func challengePlayerInfo() {
+    league.lolAPI.getSummoner(byName: preferredSummoner, on: preferredRegion) { (summoner, errorMsg) in
+        if let summoner = summoner {
+            league.lolAPI.getChallengePlayerInfo(by: summoner.puuid, on: preferredRegion) { (player, errorMsg) in
+                if let player = player {
+                    print(player)
+                } else {
+                    print("playerInfo failed: \(String(describing: errorMsg))")
+                }
+            }
+        } else {
+            print("challengePlayerInfo-getSummoner Failed: \(String(describing: errorMsg))")
+        }
+       
+    }
+    
+}
