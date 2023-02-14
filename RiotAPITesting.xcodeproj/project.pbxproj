@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93636270299C347600138BF9 /* WhatWasIDoingLast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363626F299C347600138BF9 /* WhatWasIDoingLast.swift */; };
 		BE153B2C26B74F5E0019447E /* GameDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE153B2B26B74F5E0019447E /* GameDetailsViewController.swift */; };
 		BE1B794126A3709E00AB3A46 /* GameListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1B794026A3709E00AB3A46 /* GameListTableViewController.swift */; };
 		BE1B794926A3843A00AB3A46 /* MatchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1B794826A3843A00AB3A46 /* MatchData.swift */; };
@@ -201,7 +202,6 @@
 		BEEA303826A7D93D009E3C78 /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEA302826A7D93D009E3C78 /* UITextViewExtension.swift */; };
 		BEEA303926A7D93D009E3C78 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEA302926A7D93D009E3C78 /* UILabelExtension.swift */; };
 		BEEA304526A7D93D009E3C78 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEA303626A7D93D009E3C78 /* UITableViewExtension.swift */; };
-		BEF0C81626B35FF30078245A /* WhatWasIDoingLast.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF0C81526B35FF30078245A /* WhatWasIDoingLast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -219,6 +219,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9363626F299C347600138BF9 /* WhatWasIDoingLast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhatWasIDoingLast.swift; sourceTree = "<group>"; };
 		BE153B2B26B74F5E0019447E /* GameDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsViewController.swift; sourceTree = "<group>"; };
 		BE1B794026A3709E00AB3A46 /* GameListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListTableViewController.swift; sourceTree = "<group>"; };
 		BE1B794326A37BD300AB3A46 /* GameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
@@ -414,7 +415,6 @@
 		BEEA302826A7D93D009E3C78 /* UITextViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewExtension.swift; sourceTree = "<group>"; };
 		BEEA302926A7D93D009E3C78 /* UILabelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		BEEA303626A7D93D009E3C78 /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
-		BEF0C81526B35FF30078245A /* WhatWasIDoingLast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatWasIDoingLast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -508,7 +508,7 @@
 				BEC1E4922698E9EA00BC3F62 /* SceneDelegate.swift */,
 				BEEA302426A7C20F009E3C78 /* RiotAPITesting.swift */,
 				BED12F2526A8C71A007D367D /* RiotAPI Assets */,
-				BEF0C81526B35FF30078245A /* WhatWasIDoingLast.swift */,
+				9363626F299C347600138BF9 /* WhatWasIDoingLast.swift */,
 			);
 			path = RiotAPITesting;
 			sourceTree = "<group>";
@@ -949,6 +949,7 @@
 				BE385DE328E5035800ABD85F /* ChampionJSON.swift in Sources */,
 				BE949E8826B8C0E200E23670 /* TeamTableViewCell.swift in Sources */,
 				BE949E8926B8C0E200E23670 /* PlayerTableViewCell.swift in Sources */,
+				93636270299C347600138BF9 /* WhatWasIDoingLast.swift in Sources */,
 				BEAD338926BF22A700A487B1 /* UsedChampions.swift in Sources */,
 				BE6B709726A8EC2A0074BEA4 /* Champion.swift in Sources */,
 				BEEA302526A7C20F009E3C78 /* RiotAPITesting.swift in Sources */,
@@ -972,7 +973,6 @@
 				BE385DE128E5021500ABD85F /* JSONSchemaSupport.swift in Sources */,
 				BE1B794126A3709E00AB3A46 /* GameListTableViewController.swift in Sources */,
 				BEEA303926A7D93D009E3C78 /* UILabelExtension.swift in Sources */,
-				BEF0C81626B35FF30078245A /* WhatWasIDoingLast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
