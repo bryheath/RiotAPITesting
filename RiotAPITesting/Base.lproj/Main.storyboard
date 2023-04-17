@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -380,36 +380,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kpf-kY-tC0">
-                                <rect key="frame" x="0.0" y="56" width="375" height="127"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="92"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Hvb-Vd-AeM">
-                                        <rect key="frame" x="0.0" y="96" width="375" height="32"/>
+                                        <rect key="frame" x="0.0" y="61" width="375" height="32"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <segments>
                                             <segment title="Summary"/>
                                             <segment title="Details"/>
                                             <segment title="Build"/>
                                         </segments>
-                                        <color key="selectedSegmentTintColor" red="0.59999999999999998" green="0.20000000000000001" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQq-ff-91e">
-                                        <rect key="frame" x="8" y="49" width="61" height="39"/>
+                                        <rect key="frame" x="8" y="14" width="61" height="39"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ARAM | 20h ago | 99:59" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cb-RF-zgy">
-                                        <rect key="frame" x="185" y="67" width="182" height="21"/>
+                                        <rect key="frame" x="185" y="32" width="182" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="8cb-RF-zgy" secondAttribute="trailing" constant="8" id="ABg-yO-akB"/>
                                     <constraint firstItem="8cb-RF-zgy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QQq-ff-91e" secondAttribute="trailing" constant="8" symbolic="YES" id="HHX-94-jU3"/>
-                                    <constraint firstAttribute="height" constant="127" id="NaR-Fo-1Y2"/>
+                                    <constraint firstAttribute="height" constant="92" id="NaR-Fo-1Y2"/>
                                     <constraint firstItem="Hvb-Vd-AeM" firstAttribute="leading" secondItem="kpf-kY-tC0" secondAttribute="leading" id="Vnz-Op-U9e"/>
                                     <constraint firstItem="Hvb-Vd-AeM" firstAttribute="top" secondItem="QQq-ff-91e" secondAttribute="bottom" constant="8" symbolic="YES" id="k04-Ze-OxX"/>
                                     <constraint firstAttribute="bottom" secondItem="Hvb-Vd-AeM" secondAttribute="bottom" id="k6K-1s-BkJ"/>
@@ -419,7 +417,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lee-bK-wyr">
-                                <rect key="frame" x="0.0" y="183" width="375" height="464"/>
+                                <rect key="frame" x="0.0" y="148" width="375" height="499"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="teamCell" rowHeight="44" id="hnq-sF-YPI" customClass="TeamTableViewCell" customModule="RiotAPITesting" customModuleProvider="target">
@@ -655,6 +653,7 @@
                     <navigationItem key="navigationItem" id="AW2-x1-vAQ"/>
                     <connections>
                         <outlet property="SDBSegmentedControl" destination="Hvb-Vd-AeM" id="GiM-QS-YaX"/>
+                        <outlet property="headerView" destination="kpf-kY-tC0" id="WRH-ep-1Tq"/>
                         <outlet property="modeTimeDurationLabel" destination="8cb-RF-zgy" id="Mku-sL-Klx"/>
                         <outlet property="tableView" destination="lee-bK-wyr" id="P84-6L-f2k"/>
                         <outlet property="victoryLabel" destination="QQq-ff-91e" id="O0R-bb-jca"/>
@@ -693,9 +692,6 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
