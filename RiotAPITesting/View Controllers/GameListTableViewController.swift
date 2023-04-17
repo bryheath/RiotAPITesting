@@ -89,6 +89,11 @@ class GameListTableViewController: UITableViewController {
     
     func setupGameDetailsVC(_ gameDetailsVC: GameDetailsViewController, sender: Any?) {
         guard let matchDetails = sender as? Match else { return }
+        guard let summoner = self.summoner else { return }
+        if let player = matchDetails.info.participants.first(where: { $0.summonerId == summoner.id}) {
+            gameDetailsVC.winLoss = player.win
+        }
+        
         gameDetailsVC.matchData = matchDetails
     }
     func setupMatchCell(matchId: LOLMatchId) -> GameTableViewCell {
@@ -97,7 +102,7 @@ class GameListTableViewController: UITableViewController {
         self.getMatchDetails(matchId: matchId) { match in
             if let player = match.info.participants.first(where: { $0.summonerId == summoner.id}) {
                 DispatchQueue.main.async {
-                   gameCell.backgroundColor = player.win ? #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1) : #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+                   gameCell.backgroundColor = player.win ? winColor : lossColor
                 }
                 let kda:Double = (Double(player.kills) + Double(player.assists)) / Double(player.deaths)
                 let cs = player.totalMinionsKilled + player.neutralMinionsKilled
@@ -109,10 +114,12 @@ class GameListTableViewController: UITableViewController {
                 formatter.numberStyle = .decimal
                 formatter.maximumSignificantDigits = 3
                 let csPerMinString:String = formatter.string(for: csPerMinute)!
-                let kdaString:String = formatter.string(for: kda)!
+                var kdaString:String = formatter.string(for: kda)!
+                if kdaString == "NaN" { kdaString = "0" }
                 gameCell.kdaLabel.setText("\(kdaString):1 KDA -- \(csPerMinString) CS/m")
                 let queue = QueueMode(Long(match.info.queueId))
-                gameCell.matchTypeLabel.setText(queue.mode.description)
+                let queueFormatted = formatQueue(mode: queue.mode.description)
+                gameCell.matchTypeLabel.setText(queueFormatted)
                 gameCell.durationLabel.setText(duration.minuteSecond)
                 gameCell.backgroundColorIsSet = true
                 getChampionImage(championId: player.championId) { (champImage) in
@@ -149,5 +156,6 @@ class GameListTableViewController: UITableViewController {
         guard let match: Match = self.matchDetails[matchId] else { return }
         self.performSegue(withIdentifier: "toGameDetails", sender: match)
     }
+
 }
 

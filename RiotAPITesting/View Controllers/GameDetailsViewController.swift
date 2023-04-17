@@ -26,6 +26,7 @@ class GameDetailsViewController: UIViewController, UITableViewDelegate, UITableV
     }
 
     
+    @IBOutlet var headerView: UIView!
     var matchData: Match!
     @IBOutlet var victoryLabel: UILabel!
     @IBOutlet var modeTimeDurationLabel: UILabel!
@@ -38,7 +39,7 @@ class GameDetailsViewController: UIViewController, UITableViewDelegate, UITableV
     var redTeamDeaths = 0
     var redTeamAssists = 0
     let formatter = NumberFormatter()
-    
+    var winLoss: Bool = true
     
     func getTeamStats() {
         for participant in 0..<matchData.info.participants.count {
@@ -76,10 +77,10 @@ class GameDetailsViewController: UIViewController, UITableViewDelegate, UITableV
         var winString = ""
         if team.win {
             winString = "Win"
-            teamCell.backgroundColor = UIColor.init(red: 0, green: 0.75, blue: 0, alpha: 1)
+            teamCell.backgroundColor = winColor //CC9900 Opacity 70%
         } else {
             winString = "Loss"
-            teamCell.backgroundColor = UIColor.init(red: 0.75, green: 0, blue: 0, alpha: 1)
+            teamCell.backgroundColor = lossColor //990000 Opacity 70%
         }
         
         
@@ -106,19 +107,21 @@ class GameDetailsViewController: UIViewController, UITableViewDelegate, UITableV
         participantIndex += index.row - 1
         if index.section == 1 {
             participantIndex += 5
+            playerCell.backgroundColor = redTeamColor
+        } else {
+            playerCell.backgroundColor = blueTeamColor
         }
         let matchParticipant = matchData.info.participants[participantIndex]
-
+        
         playerCell.setChampionImage(participant: matchParticipant)
         playerCell.setSummonerSpellsForCell(participant: matchParticipant)
         playerCell.setRunePathImages(participant: matchParticipant)
         playerCell.setPlayerNameLabel(summonerName: matchParticipant.summonerName)
-        //playerCell.playerNameLabel.text = matchParticipant.summonerName
-    
+        
         playerCell.setKDAForCell(participant: matchParticipant)
         let duration = Duration(minutes: Double(matchData.info.gameDuration))
         playerCell.setCSAndGoldLabel(participant: matchParticipant, gameDuration: duration)
-        //playerCell.setItemImages(matchData: matchData, index: participantIndex)
+        playerCell.setItemImages(participant: matchParticipant)
 
         return playerCell
     }
@@ -134,26 +137,33 @@ class GameDetailsViewController: UIViewController, UITableViewDelegate, UITableV
         if let matchData = matchData {
             getTeamStats()
             var sinceGame = ""
-            //victoryLabel.text = matchData.you.win ? "Win" : "Loss"
+            //victoryLabel.setText(matchData.you.win ? "WIN" : "LOSS")
+            victoryLabel.setText(winLoss ? "WIN" : "LOSS")
+            self.view.backgroundColor = winLoss ? winColor : lossColor
                 
             let currentTime = Date()
             //let gameEndTime = TimeInterval(matchData.info.gameCreation + matchData.info.gameDuration)
             let gameEnd = Date(timeIntervalSince1970: TimeInterval(matchData.info.gameEndTimestamp/1000))
             let difference = Calendar.current.dateComponents([.day, .hour, .minute], from: gameEnd, to: currentTime)
             if let days = difference.day {
-                sinceGame += "\(days)d ago"
+                if days >= 1 {
+                    sinceGame += "\(days)d ago"
+                } else {
+                    if let hours = difference.hour {
+                        sinceGame += "\(hours)h "
+                    }
+                    if let minutes = difference.minute {
+                        sinceGame += "\(minutes)m ago"
+                    }
+                }
             } else {
-                
-                if let hours = difference.hour {
-                    sinceGame += "\(hours)h "
-                }
-                if let minutes = difference.minute {
-                    sinceGame += "\(minutes)m ago"
-                }
-                
+                sinceGame = "N/A"
             }
-            let duration = Duration(minutes: Double(matchData.info.gameDuration))
-            modeTimeDurationLabel.text = "\(matchData.info.gameMode.mode.description) | \(sinceGame) | \(duration.minutes):\(duration.seconds)"
+            let duration:TimeInterval = Double(matchData.info.gameDuration)
+            let decimalGameDuration = Double(duration.minute) + (Double(duration.second) / 60.0)
+            let queue = QueueMode(Long(matchData.info.queueId))
+            let queueFormatted = formatQueue(mode: queue.mode.description)
+            modeTimeDurationLabel.text = "\(queueFormatted) | \(sinceGame) | \(duration.minuteSecond)"
         }
         
     }
