@@ -205,3 +205,16 @@ LeagueAPI.framework/.DS_Store
 .DS_Store
 *.png
 *.json
+*.xcuserstate
+*.svg
+RiotAPITesting/LeagueAPI.framework/Headers/LeagueAPI-Swift.h
+RiotAPITesting/LeagueAPI.framework/Headers/LeagueAPI.h
+RiotAPITesting/LeagueAPI.framework/Info.plist
+RiotAPITesting/LeagueAPI.framework/LeagueAPI
+RiotAPITesting/LeagueAPI.framework/Modules/LeagueAPI.swiftmodule/arm64-apple-ios.private.swiftinterface
+RiotAPITesting/LeagueAPI.framework/Modules/LeagueAPI.swiftmodule/arm64-apple-ios.swiftdoc
+RiotAPITesting/LeagueAPI.framework/Modules/LeagueAPI.swiftmodule/arm64-apple-ios.swiftinterface
+RiotAPITesting/LeagueAPI.framework/Modules/LeagueAPI.swiftmodule/arm64-apple-ios.swiftmodule
+RiotAPITesting/LeagueAPI.framework/Modules/LeagueAPI.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo
+RiotAPITesting/LeagueAPI.framework/Modules/module.modulemap
+RiotAPITesting.xcodeproj/project.xcworkspace/xcuserdata/bryan.xcuserdatad/UserInterfaceState.xcuserstate
