@@ -26,37 +26,157 @@ public var summonerSpellFileNames: [Long: String] = [
     1: "SummonerBoost", 3: "SummonerExhaust", 4: "SummonerFlash", 6: "SummonerHaste", 7: "SummonerHeal", 11: "SummonerSmite", 12: "SummonerTeleport", 13: "SummonerMana", 14: "SummonerDot", 21: "SummonerBarrier", 30: "SummonerPoroRecall", 31: "SummonerPoroThrow", 32: "SummonerSnowball", 39: "SummonerSnowURFSnowball_Mark", 54: "Summoner_UltBookPlaceholder", 55: "Summoner_UltBookSmitePlaceholder"]
 
 public func createChampionsDictionary() {
-    do {
-        if let path = Bundle.main.path(forResource: "champion", ofType: "json") {
-            let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-            let jsonResult = try JSONDecoder().decode(ChampionJSON.self, from: data)
-            let results = jsonResult.data
-            
-            for champion in results {
-                let champ = champion.value
-                if let key = Long(champ.key) {
-                    championsDictionary[key] = champ
-                }
-            }
-            
-        }
-    } catch {
-        print("Error in createChampionsDictionary - \(error)")
-    }
+    checkPatchVersion()
 }
 
-func getCurrentPatchVersion() {
+func checkPatchVersion() {
     league.lolAPI.getPatchVersion() { (currentPatchVersion, errorMsg) in
         if let currentPatchVersion = currentPatchVersion {
             currentPatch = currentPatchVersion
+            cachedPatch = UserDefaults.standard.string(forKey: "cachedPatch") ?? "0.0.0"
+            //cachedPatch = "12.18.1"
             print("Current Patch: \(currentPatchVersion), Cached Patch: \(cachedPatch)")
-        }
-    }
-}
+            if cachedPatch != currentPatch {
+                // The URL of the JSON file you want to download and save
+                let jsonFileURL = URL(string: "https://ddragon.leagueoflegends.com/cdn/\(currentPatch)/data/en_US/champion.json")!
+                print(jsonFileURL.description)
+                
+                // Create a URLSession object to handle the network request
+                let session = URLSession.shared
+                
+                // Create a data task to download the JSON file
+                let task = session.dataTask(with: jsonFileURL) { (data, response, error) in
+                    // Handle any errors that occurred during the request
+                    guard error == nil else {
+                        print("Error downloading JSON file: \(error!.localizedDescription)")
+                        return
+                    }
+                    
+                    // Ensure that a valid response was received
+                    guard let httpResponse = response as? HTTPURLResponse,
+                          (200...299).contains(httpResponse.statusCode) else {
+                        print("Invalid response received")
+                        return
+                    }
+                    
+                    // Ensure that the response data is not nil
+                    guard let jsonData = data else {
+                        print("No data received")
+                        return
+                    }
+                    
+                    // Use FileManager to save the JSON file to disk
+                    do {
+                        let documentsDirectory = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+                        let fileURL = documentsDirectory.appendingPathComponent("champion.json")
+                        try jsonData.write(to: fileURL, options: [])
+                        print("File saved to: \(fileURL)")
+                        cachedPatch = currentPatch
+                        
+                        //if let path = Bundle.main.path(forResource: "champion", ofType: "json") {
+                        guard let filePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("champion.json").path else {
+                            // handle the case where the file path is nil
+                            return
+                        }
 
-public func checkCacheVersion(championName: String) {
-    getCurrentPatchVersion()
-    if cachedPatch < currentPatch {
+                        // Check if the file exists
+                        guard FileManager.default.fileExists(atPath: filePath) else {
+                            // handle the case where the file doesn't exist
+                            return
+                        }
+
+                        do {
+                            // Load the file data
+                            print("loading after download")
+                            let fileData = try Data(contentsOf: URL(fileURLWithPath: filePath), options: .mappedIfSafe)
+                            let jsonResult = try JSONDecoder().decode(ChampionJSON.self, from: fileData)
+                            let results = jsonResult.data
+                            
+                            // Parse the JSON data
+                            let jsonObject = try JSONSerialization.jsonObject(with: fileData, options: .mutableContainers)
+                            
+                            // Handle the JSON object, which is now a dictionary or an array depending on your JSON structure
+                            // ...
+                            
+                            for champion in results {
+                                let champ = champion.value
+                                if let key = Long(champ.key) {
+                                    championsDictionary[key] = champ
+                                }
+                                print("\(champion.value.name) - \(champion.value.key)")
+                            }
+                            
+                        } catch {
+                            // Handle the error
+                            print("Error loading JSON file: \(error)")
+                        }
+//                            print(Bundle.main.path(forResource: "champion", ofType: "json")?.description)
+//                            print("Loading champion.json")
+                    } catch {
+                        print("Error saving JSON file: \(error.localizedDescription)")
+                    }
+                }
+                
+                // Start the data task
+                task.resume()
+                UserDefaults.standard.set(currentPatch, forKey: "cachedPatch")
+            } else {
+                guard let filePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("champion.json").path else {
+                    // handle the case where the file path is nil
+                    return
+                }
+
+                // Check if the file exists
+                guard FileManager.default.fileExists(atPath: filePath) else {
+                    // handle the case where the file doesn't exist
+                    return
+                }
+
+                do {
+                    // Load the file data
+                    print("loading from filemanager")
+                    let fileData = try Data(contentsOf: URL(fileURLWithPath: filePath), options: .mappedIfSafe)
+                    let jsonResult = try JSONDecoder().decode(ChampionJSON.self, from: fileData)
+                    let results = jsonResult.data
+                    
+                    // Parse the JSON data
+                    let jsonObject = try JSONSerialization.jsonObject(with: fileData, options: .mutableContainers)
+                    
+                    // Handle the JSON object, which is now a dictionary or an array depending on your JSON structure
+                    // ...
+                    
+                    for champion in results {
+                        let champ = champion.value
+                        if let key = Long(champ.key) {
+                            championsDictionary[key] = champ
+                        }
+                        print("\(champion.value.name) - \(champion.value.key)")
+                    }
+                    
+                } catch {
+                    // Handle the error
+                    print("Error loading JSON file: \(error)")
+                }
+//                do {
+//                    if let path = Bundle.main.path(forResource: "champion", ofType: "json") {
+//                        print("Loading champion.json")
+//                        let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+//                        let jsonResult = try JSONDecoder().decode(ChampionJSON.self, from: data)
+//                        let results = jsonResult.data
+//
+//                        for champion in results {
+//                            let champ = champion.value
+//                            if let key = Long(champ.key) {
+//                                championsDictionary[key] = champ
+//                            }
+//                            print("\(champion.value.name) - \(champion.value.id)")
+//                        }
+//                    }
+//                } catch {
+//                    print("Error in createChampionsDictionary - \(error)")
+//                }
+            }
+        }
     }
 }
 

@@ -72,32 +72,38 @@ class GameDetailsViewController: UIViewController, UITableViewDelegate, UITableV
         let dragon = objectives.dragon
         let tower = objectives.tower
         let inhibitor = objectives.inhibitor
+        let herald = objectives.riftHerald
         
-        var teamColor = ""
         var winString = ""
         if team.win {
-            winString = "Win"
+            winString = "VICTORY"
             teamCell.backgroundColor = winColor //CC9900 Opacity 70%
         } else {
-            winString = "Loss"
+            winString = "LOSS"
             teamCell.backgroundColor = lossColor //990000 Opacity 70%
         }
         
         
         teamCell.frame.size.height = 44
         if team.teamId == 100 {
-            teamColor = "Blue"
-            let kda:Double = Double((blueTeamKills+blueTeamAssists))/Double(blueTeamDeaths)
-            let newKDA = formatter.string(for:kda)
-            teamCell.leftLabel.text = "\(winString) (\(teamColor)) KDA - \(blueTeamKills) / \(blueTeamDeaths) / \(blueTeamAssists) -- \(newKDA!): 1"
-            
+            teamCell.leftLabel.text = "\(winString)"
+            teamCell.rightLabel.text = "\(blueTeamKills)/\(blueTeamDeaths)/\(blueTeamAssists)"
         } else {
-            teamColor = "Red"
-            let kda:Double = Double((redTeamKills+redTeamAssists))/Double(redTeamDeaths)
-            let newKDA = formatter.string(for: kda)
-            teamCell.leftLabel.text = "\(winString) (\(teamColor)) KDA - \(redTeamKills) / \(redTeamDeaths) / \(redTeamAssists) -- \(newKDA!): 1"
+            teamCell.leftLabel.text = "\(winString)"
+            teamCell.rightLabel.text = "\(redTeamKills)/\(redTeamDeaths)/\(redTeamAssists)"
         }
-        teamCell.rightLabel.text = "\(baron.kills)B \(dragon.kills)D \(tower.kills)T \(inhibitor.kills)I"
+        
+        
+        teamCell.dragonsKilled.text = "\(dragon.kills)"
+        print(dragon.kills)
+        teamCell.heraldsKilled.text = "\(herald.kills)"
+        print(herald.kills)
+        teamCell.baronsKilled.text = "\(baron.kills)"
+        print(baron.kills)
+        teamCell.inhibsDestroyed.text = "\(inhibitor.kills)"
+        print(inhibitor.kills)
+        teamCell.towersDestroyed.text = "\(tower.kills)"
+        print(tower.kills)
         return teamCell
     }
    
@@ -138,8 +144,9 @@ class GameDetailsViewController: UIViewController, UITableViewDelegate, UITableV
             getTeamStats()
             var sinceGame = ""
             //victoryLabel.setText(matchData.you.win ? "WIN" : "LOSS")
-            victoryLabel.setText(winLoss ? "WIN" : "LOSS")
+            victoryLabel.setText(winLoss ? "VICTORY" : "LOSS")
             self.view.backgroundColor = winLoss ? winColor : lossColor
+            self.headerView.backgroundColor = winLoss ? winColor : lossColor
                 
             let currentTime = Date()
             //let gameEndTime = TimeInterval(matchData.info.gameCreation + matchData.info.gameDuration)
@@ -160,7 +167,7 @@ class GameDetailsViewController: UIViewController, UITableViewDelegate, UITableV
                 sinceGame = "N/A"
             }
             let duration:TimeInterval = Double(matchData.info.gameDuration)
-            let decimalGameDuration = Double(duration.minute) + (Double(duration.second) / 60.0)
+            //let decimalGameDuration = Double(duration.minute) + (Double(duration.second) / 60.0)
             let queue = QueueMode(Long(matchData.info.queueId))
             let queueFormatted = formatQueue(mode: queue.mode.description)
             modeTimeDurationLabel.text = "\(queueFormatted) | \(sinceGame) | \(duration.minuteSecond)"

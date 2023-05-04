@@ -218,3 +218,4 @@ RiotAPITesting/LeagueAPI.framework/Modules/LeagueAPI.swiftmodule/arm64-apple-ios
 RiotAPITesting/LeagueAPI.framework/Modules/LeagueAPI.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo
 RiotAPITesting/LeagueAPI.framework/Modules/module.modulemap
 RiotAPITesting.xcodeproj/project.xcworkspace/xcuserdata/bryan.xcuserdatad/UserInterfaceState.xcuserstate
+*.xcuserstate

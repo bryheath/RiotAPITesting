@@ -122,19 +122,56 @@ class PlayerTableViewCell: UITableViewCell {
     func setChampionImage(participant: MatchParticipant) {
         let championId = participant.championId
         if let championName = getChampIdString(championId: championId) {
+            print("Cached")
             if let image = UIImage(named: championName) {
                 championImageView.image = image
+            } else {
+                print("downloading")
+                RiotAPITesting.getChampionImage(championId: participant.championId) { image in
+                    self.championImageView.setImage(image)
+                }
             }
+//           league.lolAPI.getChampionDetails(by: championId) { (champion, error) in
+//               if let champion = champion {
+//                   if let first = champion.skins.first {
+//                       if let imageURL = URL(string: first.skinImages.square.url) {
+////                           let task = URLSession.shared.downloadTask(with: imageURL) { (championImage, response, error) in
+////
+////                           }
+////                           task.resume()
+//
+//                           DispatchQueue.global().async {
+//                               let data = try? Data(contentsOf: imageURL) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+//                               DispatchQueue.main.async { [self] in
+//                                   let championImage = UIImage(data: data!)
+//                                   self.championImageView.image = championImage
+//                                   savePng(championImage!, name: champion.name)
+//
+//                               }
+//                           }
+//                       }
+//                   }
+//               }
+//            }
+            
+            
         } else {
-            
-            
-            
+            print("Champion Photo Failed")
         }
         //let championName = championJSONNames[championId.value]!
   
     }
-    
-    
+    func documentDirectoryPath() -> URL? {
+        let path = FileManager.default.urls(for: .documentDirectory,
+                                            in: .userDomainMask)
+        return path.first
+    }
+    func savePng(_ image: UIImage, name: String) {
+        if let pngData = image.pngData(),
+            let path = documentDirectoryPath()?.appendingPathComponent("\(name).png") {
+            try? pngData.write(to: path)
+        }
+    }
     
     func labelColors(color: UIColor) {
         self.playerNameLabel.textColor = color
