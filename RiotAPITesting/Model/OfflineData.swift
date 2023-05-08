@@ -103,7 +103,7 @@ func checkPatchVersion() {
                                 if let key = Long(champ.key) {
                                     championsDictionary[key] = champ
                                 }
-                                print("\(champion.value.name) - \(champion.value.key)")
+                                //print("\(champion.value.name) - \(champion.value.key)")
                             }
                             
                         } catch {
@@ -134,7 +134,7 @@ func checkPatchVersion() {
 
                 do {
                     // Load the file data
-                    print("loading from filemanager")
+                    //print("loading from filemanager")
                     let fileData = try Data(contentsOf: URL(fileURLWithPath: filePath), options: .mappedIfSafe)
                     let jsonResult = try JSONDecoder().decode(ChampionJSON.self, from: fileData)
                     let results = jsonResult.data
@@ -150,7 +150,7 @@ func checkPatchVersion() {
                         if let key = Long(champ.key) {
                             championsDictionary[key] = champ
                         }
-                        print("\(champion.value.name) - \(champion.value.key)")
+                        //print("\(champion.value.name) - \(champion.value.key)")
                     }
                     
                 } catch {

@@ -7,141 +7,31 @@
 
 import Foundation
 import LeagueAPI
-class GameDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
-            return self.setupTeamCell(index: indexPath)
-        } else {
-            return self.setupPlayerCell(index: indexPath)
-        }
-        
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
-    }
+class GameDetailsViewController: UIViewController {
 
     
     @IBOutlet var headerView: UIView!
     var matchData: Match!
     @IBOutlet var victoryLabel: UILabel!
     @IBOutlet var modeTimeDurationLabel: UILabel!
-    @IBOutlet var SDBSegmentedControl: UISegmentedControl!
-    @IBOutlet var tableView: UITableView!
-    var blueTeamKills = 0
-    var blueTeamDeaths = 0
-    var blueTeamAssists = 0
-    var redTeamKills = 0
-    var redTeamDeaths = 0
-    var redTeamAssists = 0
-    let formatter = NumberFormatter()
     var winLoss: Bool = true
-    
-    func getTeamStats() {
-        for participant in 0..<matchData.info.participants.count {
-            
-            //                print("\(game.match.participants[6].player.summonerName)")
-            //                print("\(game.match.participantsInfo[6].teamId)")
-            let players = matchData.info.participants
-            let teamID = players[participant].teamId
-            let stats = players[participant]
-            
-            if teamID == 100 {
-                blueTeamKills += stats.kills
-                blueTeamDeaths += stats.deaths
-                blueTeamAssists += stats.assists
-            } else {
-                redTeamKills += stats.kills
-                redTeamDeaths += stats.deaths
-                redTeamAssists += stats.assists
-            }
-            
-        }
-    }
-    
-    func setupTeamCell(index: IndexPath) -> TeamTableViewCell {
-        let teamCell: TeamTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "teamCell", for: index) as! TeamTableViewCell
-        
-        let team = matchData.info.teams[index.section]
-        let objectives = team.objectives
-        let baron = objectives.baron
-        let dragon = objectives.dragon
-        let tower = objectives.tower
-        let inhibitor = objectives.inhibitor
-        let herald = objectives.riftHerald
-        
-        var winString = ""
-        if team.win {
-            winString = "VICTORY"
-            teamCell.backgroundColor = winColor //CC9900 Opacity 70%
-        } else {
-            winString = "LOSS"
-            teamCell.backgroundColor = lossColor //990000 Opacity 70%
-        }
-        
-        
-        teamCell.frame.size.height = 44
-        if team.teamId == 100 {
-            teamCell.leftLabel.text = "\(winString)"
-            teamCell.rightLabel.text = "\(blueTeamKills)/\(blueTeamDeaths)/\(blueTeamAssists)"
-        } else {
-            teamCell.leftLabel.text = "\(winString)"
-            teamCell.rightLabel.text = "\(redTeamKills)/\(redTeamDeaths)/\(redTeamAssists)"
-        }
-        
-        
-        teamCell.dragonsKilled.text = "\(dragon.kills)"
-        print(dragon.kills)
-        teamCell.heraldsKilled.text = "\(herald.kills)"
-        print(herald.kills)
-        teamCell.baronsKilled.text = "\(baron.kills)"
-        print(baron.kills)
-        teamCell.inhibsDestroyed.text = "\(inhibitor.kills)"
-        print(inhibitor.kills)
-        teamCell.towersDestroyed.text = "\(tower.kills)"
-        print(tower.kills)
-        return teamCell
-    }
-   
-    func setupPlayerCell(index: IndexPath) -> PlayerTableViewCell {
-        let playerCell: PlayerTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "playerCell", for: index) as! PlayerTableViewCell
-        var participantIndex = 0
-        participantIndex += index.row - 1
-        if index.section == 1 {
-            participantIndex += 5
-            playerCell.backgroundColor = redTeamColor
-        } else {
-            playerCell.backgroundColor = blueTeamColor
-        }
-        let matchParticipant = matchData.info.participants[participantIndex]
-        
-        playerCell.setChampionImage(participant: matchParticipant)
-        playerCell.setSummonerSpellsForCell(participant: matchParticipant)
-        playerCell.setRunePathImages(participant: matchParticipant)
-        playerCell.setPlayerNameLabel(summonerName: matchParticipant.summonerName)
-        
-        playerCell.setKDAForCell(participant: matchParticipant)
-        let duration = Duration(minutes: Double(matchData.info.gameDuration))
-        playerCell.setCSAndGoldLabel(participant: matchParticipant, gameDuration: duration)
-        playerCell.setItemImages(participant: matchParticipant)
+    let formatter = NumberFormatter()
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    //@IBOutlet var tableView: UITableView!
+    @IBOutlet weak var containerView: UIView!
 
-        return playerCell
-    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.estimatedRowHeight = 60
-        self.tableView.rowHeight = UITableView.automaticDimension
+        self.setupView()
         
         formatter.numberStyle = .decimal
         formatter.maximumSignificantDigits = 3
 
         if let matchData = matchData {
-            getTeamStats()
+            //getTeamStats()
             var sinceGame = ""
             //victoryLabel.setText(matchData.you.win ? "WIN" : "LOSS")
             victoryLabel.setText(winLoss ? "VICTORY" : "LOSS")
@@ -174,20 +64,126 @@ class GameDetailsViewController: UIViewController, UITableViewDelegate, UITableV
         }
         
     }
+    //----------------------------------------------------------------
+    // MARK:-
+    // MARK:- Abstract Method
+    //----------------------------------------------------------------
     
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        if (indexPath.section == 0 && indexPath.row == 0) || (indexPath.section == 1 && indexPath.row == 0) {
-            return 44
+    static func viewController() -> GameDetailsViewController {
+        return UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GameDetailsViewController") as! GameDetailsViewController
+    }
+
+    //=======
+    // MARK: ViewControllers
+    //=======
+    
+    private lazy var summaryViewController: GameDetailsSummaryViewController = {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        var viewController = storyboard.instantiateViewController(withIdentifier: "GameDetailsSummaryController") as! GameDetailsSummaryViewController
+        viewController.matchData = matchData
+        self.add(asChildViewController: viewController)
+        
+
+        
+        return viewController
+    }()
+    
+    private lazy var statsViewController: GameDetailsStatsViewController = {
+        // Load Storyboard
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        
+        // Instantiate View Controller
+        var viewController = storyboard.instantiateViewController(withIdentifier: "GameDetailsStatsViewController") as! GameDetailsStatsViewController
+        viewController.matchData = matchData
+        // Add View Controller as Child View Controller
+        self.add(asChildViewController: viewController)
+        
+        
+
+        
+        return viewController
+    }()
+    //----------------------------------------------------------------
+    // MARK:-
+    // MARK:- Action Methods
+    //----------------------------------------------------------------
+    
+    @IBAction func segmentValueChanged(_ sender: UISegmentedControl) {
+        updateView()
+    }
+    //----------------------------------------------------------------
+    // MARK:-
+    // MARK:- Custom Methods
+    //----------------------------------------------------------------
+    
+    private func add(asChildViewController viewController: UIViewController) {
+        
+        // Add Child View Controller
+        addChild(viewController)
+        
+        // Add Child View as Subview
+        containerView.addSubview(viewController.view)
+        
+        // Configure Child View
+        viewController.view.frame = containerView.bounds
+        viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        // Notify Child View Controller
+        viewController.didMove(toParent: self)
+    }
+    
+    //----------------------------------------------------------------
+    
+    private func remove(asChildViewController viewController: UIViewController) {
+        // Notify Child View Controller
+        viewController.willMove(toParent: nil)
+        
+        // Remove Child View From Superview
+        viewController.view.removeFromSuperview()
+        
+        // Notify Child View Controller
+        viewController.removeFromParent()
+    }
+    
+    //----------------------------------------------------------------
+    
+    private func updateView() {
+        if segmentedControl.selectedSegmentIndex == 0 {
+            remove(asChildViewController: statsViewController)
+            add(asChildViewController: summaryViewController)
         } else {
-            return 60
+            remove(asChildViewController: summaryViewController)
+            add(asChildViewController: statsViewController)
         }
     }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if (indexPath.section == 0 && indexPath.row == 0) || (indexPath.section == 1 && indexPath.row == 0) {
-            return 44
-        } else {
-            return 60
-        }
+    
+    //----------------------------------------------------------------
+    
+    func setupView() {
+//        setupSegmentedControl()
+        
+        updateView()
     }
     
+    /*func getTeamStats() {
+        for participant in 0..<matchData.info.participants.count {
+            
+            //                print("\(game.match.participants[6].player.summonerName)")
+            //                print("\(game.match.participantsInfo[6].teamId)")
+            let players = matchData.info.participants
+            let teamID = players[participant].teamId
+            let stats = players[participant]
+            
+            if teamID == 100 {
+                blueTeamKills += stats.kills
+                blueTeamDeaths += stats.deaths
+                blueTeamAssists += stats.assists
+            } else {
+                redTeamKills += stats.kills
+                redTeamDeaths += stats.deaths
+                redTeamAssists += stats.assists
+            }
+            
+        }
+    }*/
 }

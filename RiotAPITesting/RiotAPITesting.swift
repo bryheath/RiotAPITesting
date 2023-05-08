@@ -8,7 +8,7 @@
 import Foundation
 import LeagueAPI
 
-public let league: League_API = League_API(APIToken: /*API Key Here*/)
+public let league: League_API = League_API(APIToken: "RGAPI-883962ab-8934-4ac6-b117-c4a5c0b35f11")
 public var preferredRegion: Region = Region.NA
 public var preferredWorldRegion: WorldRegion {
     switch preferredRegion {

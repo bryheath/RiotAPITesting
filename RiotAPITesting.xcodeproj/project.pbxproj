@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9326B5F82A098D5D00ABBF92 /* GameDetailsSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9326B5F72A098D5D00ABBF92 /* GameDetailsSummaryViewController.swift */; };
+		9326B5FA2A098FCF00ABBF92 /* GameDetailsStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9326B5F92A098FCF00ABBF92 /* GameDetailsStatsViewController.swift */; };
 		9362ED7F29DCCF440044AA0C /* LeagueAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9362ED7D29DCCF3B0044AA0C /* LeagueAPI.framework */; };
 		9362ED8029DCCF440044AA0C /* LeagueAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9362ED7D29DCCF3B0044AA0C /* LeagueAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		93636270299C347600138BF9 /* WhatWasIDoingLast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363626F299C347600138BF9 /* WhatWasIDoingLast.swift */; };
@@ -220,6 +222,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9326B5F72A098D5D00ABBF92 /* GameDetailsSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsSummaryViewController.swift; sourceTree = "<group>"; };
+		9326B5F92A098FCF00ABBF92 /* GameDetailsStatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsStatsViewController.swift; sourceTree = "<group>"; };
 		9362ED7D29DCCF3B0044AA0C /* LeagueAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LeagueAPI.framework; sourceTree = "<group>"; };
 		9363626F299C347600138BF9 /* WhatWasIDoingLast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhatWasIDoingLast.swift; sourceTree = "<group>"; };
 		93DC942E29E4F4BA00A8C996 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
@@ -436,6 +440,8 @@
 			children = (
 				BE1B794026A3709E00AB3A46 /* GameListTableViewController.swift */,
 				BE153B2B26B74F5E0019447E /* GameDetailsViewController.swift */,
+				9326B5F72A098D5D00ABBF92 /* GameDetailsSummaryViewController.swift */,
+				9326B5F92A098FCF00ABBF92 /* GameDetailsStatsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -964,6 +970,7 @@
 				BEC1E4952698E9EA00BC3F62 /* ViewController.swift in Sources */,
 				BE6B708F26A8DA720074BEA4 /* JSONNull.swift in Sources */,
 				BE6B708A26A8CE3B0074BEA4 /* OfflineData.swift in Sources */,
+				9326B5F82A098D5D00ABBF92 /* GameDetailsSummaryViewController.swift in Sources */,
 				BE153B2C26B74F5E0019447E /* GameDetailsViewController.swift in Sources */,
 				BE1B794926A3843A00AB3A46 /* MatchData.swift in Sources */,
 				BE6B708C26A8D0790074BEA4 /* ChampionFull.swift in Sources */,
@@ -976,6 +983,7 @@
 				BEC1E4932698E9EA00BC3F62 /* SceneDelegate.swift in Sources */,
 				BE385DE128E5021500ABD85F /* JSONSchemaSupport.swift in Sources */,
 				BE1B794126A3709E00AB3A46 /* GameListTableViewController.swift in Sources */,
+				9326B5FA2A098FCF00ABBF92 /* GameDetailsStatsViewController.swift in Sources */,
 				BEEA303926A7D93D009E3C78 /* UILabelExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
